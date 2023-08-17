@@ -1,0 +1,14 @@
+{
+  "data": {
+    "page": {
+      "currentPageReport": "Affichage {first} - {last} de {totalRecords} items."
+    },
+    "title": {
+      "travailClasses": "TRAVAIL DES CLASSES",
+      "travailClassesMatiere": "TRAVAIL DES CLASSES EN {{ matiere }}",
+      "travailDisciplineClasses": "DISCIPLINE DES CLASSES",
+      "travailDisciplineApprenants": "DISCIPLINE DES APPRENANTS",
+      "disciplineClasse": "DISCIPLINE DES CLASSES"
+    }
+  }
+}

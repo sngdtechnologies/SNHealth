@@ -1,0 +1,20 @@
+{
+  "overlay": {
+    "confirm.delete": {
+      "header": "Confirmation de la suppression",
+      "message1": "Voulez vous vraiment effectuer la suppresion de",
+      "message2": "?",
+      "message": "Voulez vous vraiment effectuer cette suppresion?"
+    },
+    "confirm.message": {
+      "header": "Confirmation d'une action",
+      "message": "Voulez vous vraiment effectuer cette action?"
+    },
+    "confirm.active.message": "Voulez vous vraiment faire cette activer?",
+    "confirm.desactive.message": "Voulez vous vraiment faire cette désactivation?",
+    "confirm.apprenant.active.message": "Voulez vous vraiment activer l'apprenant {{nom}} [{{matricule}}]?",
+    "confirm.apprenant.desactive.message": "Voulez vous vraiment désactiver l'apprenant {{nom}} [{{matricule}}]?",
+    "confirm.enseignant.active.message": "Voulez vous vraiment activer l'enseignant {{nom}} [{{matricule}}]?",
+    "confirm.enseignant.desactive.message": "Voulez vous vraiment désactiver l'enseignant {{nom}} [{{matricule}}]?"
+  }
+}

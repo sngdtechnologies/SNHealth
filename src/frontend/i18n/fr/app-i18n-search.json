@@ -1,0 +1,10 @@
+{
+  "search": {
+    "nomApprenant": "Nom de l'apprenant",
+    "lieuNaissance": "Lieu de Naissance",
+    "apprenant.nom.contient": "Recherche des apprenants dont le nom contient",
+    "enseignant.nom.contient": "Recherche des enseignants dont le nom contient",
+    "parent.nom.contient": "Recherche des parents dont le nom contient",
+    "radio.rechercheAvance": "Voulez vous faire une recherche avancée ?"
+  }
+}

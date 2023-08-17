@@ -1,0 +1,25 @@
+{
+  "title": {
+    "table": {
+      "matieres-enseignants": "LISTE DES MATIERES & ENSEIGNANTS",
+      "groupe-matiere": {
+        "niveau": "GROUPE DE MATIERE DU NIVEAU : {{niveau}}",
+        "moyenne": "GROUPE DE MATIERE DE LA MOYENNE : {{moyenne}}"
+      },
+      "apprenant": "APPRENANTS DE LA: ",
+      "apprenantSansClasse": "APPRENANTS SANS CLASSE",
+      "apprenantDeLaClasse": "APPRENANTS DE LA CLASSE",
+      "apprenantAyantPourOptionMatiere": "APPRENANT AYANT POUR OPTION LA MATIERE:",
+      "consultationDiscipline": "CONSULTATION DE LA DISCIPLINE",
+      "disciplineAprenant": "DISCIPLINE DES APPRENANTS",
+      "discipline": "DISCIPLINE",
+      "mentionTravail": "MENTION(S) DU TRAVAIL",
+      "bourseFinAnnee": "BOURSES SCOLAIRES DE FIN D'ANNEE",
+      "statistiqueEnseignant": "STATISTIQUES SUR LES ENSEIGNANTS",
+      "statistiqueApprenant": "STATISTIQUES SUR LES APPRENANTS",
+      "travailApprenant": "TRAVAIL GENERALE DES APPRENANTS",
+      "matricule": "GESTIONS DES MATRICULES DES APPRENANTS"
+      
+    }
+  }
+}

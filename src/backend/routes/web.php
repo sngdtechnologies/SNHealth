@@ -19,7 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/debug', function () {
-    return response()->make(User::all(), 200);
+    $data = User::all();
+    // $headers = ["x-total-count" => $data->count(), "cache-control" => "no-cache"];
+    return response()->json($data, 200);
 });
 
 require __DIR__.'/auth.php';

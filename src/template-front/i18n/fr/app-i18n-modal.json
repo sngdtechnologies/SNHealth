@@ -1,0 +1,19 @@
+{
+  "modal": {
+    "confirm": {
+      "title": "Confirmation",
+      "message": "Voulez vous vraiment effectuer cette opération?"
+    },
+    "delete": {
+      "header": "Confirmation de la suppression",
+      "message": "Voulez vous vraiment effectuer cette suppresion?"
+    },
+    "cloture": {
+      "confirm": {
+        "title": "Confirmer une clôture",
+        "message": "La clôture d'une période implique l'effacement de toutes les Moyennes et Données Disciplinaires antérieurement calculées pour cette période. Etes-vous sûr de vouloir effectuer cette clôture ?"
+      }
+    },
+    "title": "NOTE DE BAS DE PAGE"
+  }
+}

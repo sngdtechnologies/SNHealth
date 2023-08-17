@@ -1,0 +1,24 @@
+{
+  "stats": {
+    "apprenant.nombre": "Nombre total d'apprenants <{{param1}} >",
+    "apprenant.nombre.section": "Nombre d'apprenants de la section <{{param1}} >",
+    "apprenant.nombre.niveau": "Nombre d'apprenants du niveau <{{param1}} >",
+    "apprenant.nombre.sexe": "Nombre d'apprenants de sexe <{{param1}} >",
+    "apprenant.nombre.niveau.sexe": "Nombre d'apprenants du niveau <{{param1}} > et de sexe <{{param2}} >",
+    "apprenant.nombre.niveau.sexe.matiere.option": "Nombre d'apprenants du niveau <{{param1}} > et de sexe <{{param2}} > et matière d'option <{{param3}} >",
+    "moyenne.classe": "Moyenne de la Classe",
+    "moyenne.min": "Moyenne Minimale",
+    "moyenne.max": "Moyenne Maximale",
+    "moyenne.nombre": "Nombre de Moyennes",
+    "moyenne.imax4": "Moyennes inférieures ou égales à {{max}}",
+    "note.classe": "Moyenne de l'évaluation",
+    "note.min": "Note Minimale",
+    "note.max": "Note Maximale",
+    "note.sbareme2": "Nombre de Note supérieur à {{bareme2}}",
+    "note.ibareme4": "Notes inférieures ou égales à {{bareme4}}",
+    "enseignant.nombre": "Nombre total d'enseignants <{{param1}} >",
+    "enseignant.sexe": "Nombre d'enseignants de sexe <{{param1}} >",
+    "enseignant.diplome": "Nombre d'enseignants ayant pour diplôme <{{param1}} >",
+    "enseignant.diplome": "Nombre d'enseignants ayant pour diplôme <{{param1}} >"
+  }
+}

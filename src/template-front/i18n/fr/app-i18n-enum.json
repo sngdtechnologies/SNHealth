@@ -1,0 +1,28 @@
+{
+  "enum": {
+    "Genre": {
+      "null": "",
+      "F": "F",
+      "M": "M"
+    },
+    "MotifNotification": {
+      "null": "",
+      "PAIEMENT": "PAIEMENT",
+      "DISCIPLINE": "DISCIPLINE",
+      "NOTE": "NOTE",
+      "BULLETIN": "BULLETIN"
+    },
+    "TypeNotification": {
+      "null": "",
+      "SMS": "SMS",
+      "EMAIL": "EMAIL",
+      "NOTIFICATION": "NOTIFICATION"
+    },
+    "Decision": {
+      "null": "",
+      "admins": "ADMIS(E)",
+      "redouble": "REDOUBLE",
+      "exclu": "EXCLU(E)"
+    }
+  }
+}

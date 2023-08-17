@@ -1,0 +1,109 @@
+{
+  "acces": {
+    "title": {
+      "main": "Liste des droits d'acces",
+      "table": "Liste des droits d'acces"
+    }
+  },
+  "annee": {
+    "title": {
+      "main": "Gestion des Années Academiques",
+      "createOrEdit": "Créer ou éditer une  Annee"
+    }
+  },
+  "anneeFinance": {
+    "title": {
+      "main": "Gestion des Années Financières",
+      "createOrEdit": "Créer ou éditer une  Année financière"
+    }
+  },
+  "appreciation": {
+    "title": {
+      "main": "Appréciations Automatiques Des Notes",
+      "createOrEdit": "Créer ou éditer une Appreciation"
+    }
+  },
+  "apprenant": {
+    "title": {
+      "main": "Apprenants",
+      "createOrEdit": "Créer ou éditer un Apprenant"
+    }
+  },
+  "apprenantClasse": {
+    "title": {
+      "main": "Apprenant Classes",
+      "createOrEdit": "Créer ou éditer un Apprenant Classe"
+    }
+  },
+  "badge": {
+    "title": {
+      "main": "Production des Badges"
+    }
+  },
+  "bourse": {
+    "title": {
+      "main": "Bourses",
+      "createOrEdit": "Créer ou éditer une Bourse"
+    }
+  },
+  "certificatScolarite": {
+    "title": {
+      "main": "CERTIFICAT DE SCOLARITE"
+    }
+  },
+  "certificatRadiation": {
+    "title": {
+      "main": "CERTIFICAT DE RADIATION"
+    }
+  },
+  "classe": {
+    "title": {
+      "main": "Classes",
+      "createOrEdit": "Créer ou éditer une Classe",
+      "table": "Nom des classes"
+    }
+  },
+  "cycle": {
+    "title": {
+      "main": "Cycles",
+      "createOrEdit": "Créer ou éditer un Cycle"
+    }
+  },
+  "discipline": {
+    "title": {
+      "main": "Disciplines",
+      "createOrEdit": "Créer ou éditer une Discipline"
+    }
+  },
+  "document": {
+    "title": {
+      "main": "Documents",
+      "createOrEdit": "Créer ou éditer un Documents"
+    }
+  },
+  "enseignant": {
+    "title": {
+      "main": "Enseignants",
+      "createOrEdit": "Créer ou éditer un Enseignant"
+    }
+  },
+  "etablissement": {
+    "title": {
+      "main": "Etablissements",
+      "createOrEdit": "Créer ou éditer un Etablissement",
+      "detail": "Information sur l'établissement",
+      "main.systeme": "Administration des établissements"
+    }
+  },
+  "email": {
+    "title": {
+      "main": "Envoi des E-Mails"
+    }
+  },
+  "evaluation": {
+    "title": {
+      "main": "Evaluations",
+      "createOrEdit": "Créer ou éditer une Evaluation"
+    }
+  }
+}

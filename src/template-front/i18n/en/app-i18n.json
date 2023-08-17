@@ -1,0 +1,21 @@
+{
+  "entite.action": {
+    "delete": "Supprime",
+    "edit": "Modiffier",
+    "view": "Voir",
+    "back": "Retour",
+    "save": "Enregistrer"
+  },
+  "table": {
+    "empty": "Aucune information disponible",
+    "title": {
+      "apprenantclasse": "APPRENANT DE LA : {{classe}}",
+      "apprenantclasse.classement": "APPRENANT DE LA : {{classe}} A NE PAS CLASSER",
+      "cloture.annee": "Clôture Année",
+      "cloture.periode": "Clôture Trimestrielle Nr. {{numero}} de la: {{classe}}",
+      "cloture.sousperiode": "Clôture Séquentielle Nr. {{numero}} de la: {{classe}}",
+      "enseignant": "ENSEIGNANTS",
+      "matiereclasse": "MATIERES DE LA : {{classe}}"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "heading": {
+    "default": "Heading",
+    "donnees": "Données",
+    "compte": "Compte",
+    "configurations": "Configurations",
+    "ressources": "Ressources",
+    "editions": "Éditions",
+    "consultations": "Consultations",
+    "systeme": "Système",
+    "administration": "Administration"
+  },
+  "menu": {
+    "home": "Accueil",
+    "main1": {
+      "main": "Données",
+      "saisieSanctions": "Saisie de Sanctions",
+      "saisieNotes": "Saisie de Notes",
+      "noteSpeciale": "Création de Notes Spéciales",
+      "gestionEvaluation": "Gestion Avancée des Evaluations",
+      "clotureSousPeriode": "Clôture de Sous-Période",
+      "cloturePeriode": "Clôture de Période",
+      "clotureAnneeScolaire": "Clôture de fin d'Année Scolaire",
+      "decisionAnnuelle": "Décision de fin d'année"
+    },
+    "main2": {
+      "main": "Editions",
+      "liste.classe": "Listes de Classes",
+      "liste.groupe": "Listes de Groupes",
+      "noteAnalEval": "Notes et Analyse d'Evaluation",
+      "noteMatiere": "Ensemble de Notes par Matière",
+      "noteType": "Ensemble de Notes d'un Type",
+      "releveNotesPeriode": "Relevé de Notes Période",
+      "bulletin.sousPeriode": "Bulletin Sous-Période",
+      "bulletin.periode": "Bulletin Période",
+      "bulletin.annuel": "Bulletin de Fin d'Année",
+      "livretScolaire": "Récapitulatif pour le Livret Scolaire",
+      "situationDiscipline": "Situation Disciplinaire",
+      "recapitulatifSynthes": "Récapitulatifs de Synthèse",
+      "moyennesGenMatiere": "Moyennes Générales et par Matière",
+      "edition.diplome": "Edition des Diplômes",
+      "prix.finAnnee": "Prix de fin d'année",
+      "bourses.scolaires": "Bourses Scolaires",
+      "certificat.scolarité": "Certificat de Scolarité",
+      "certificat.radiation": "Certificat de Radiation"
+    },
+    "main3": {
+      "main": "Système",
+      "gestionAnnee": "Gestion des Années",
+      "gestionEtablissement": "Gestion des Paramètres d'un établissement",
+      "gestionUtilisateur": "Gestion des utilisateurs",
+      "gestionGroupeUtilisateur": "Gestion des groupe d'utilisateurs",
+      "systeme.journal": "Journal des Messages Système",
+      "systeme.sauvegarde": "Sauvegarde des Donnnées"
+    },
+    "main4": {
+      "main": "Ressources",
+      "dossierApprenant": "Dossiers des Apprenants",
+      "dossierEnseignant": "Dossiers des Enseignants",
+      "dossierClasse": "Dossiers des Classes",
+      "matieres": "Gestion des Matières",
+      "niveaux": "Gestion des Niveaux",
+      "periode": "Gestion des Périodes",
+      "sousPeriode": "Gestion Sous Période",
+      "typeEvaluation": "Gestion des Types d'Evaluation"
+    },
+    "main5": {
+      "main": "Configurations",
+      "apprenant.classe": "Apprenant dans les Classes",
+      "apprenant.matiereOption": "Apprenant et Matière d'Option",
+      "parametrage.matiereEnseignant": "Matières dans les Classes",
+      "parametrage.matiereCoefNiveau": "Paramétrage Matières, Coefficients, Groupe par Niveau",
+      "parametrage.appreciationAuto": "Paramétrage des Appréciations des Notes",
+      "parametrage.mentionAuto": "Paramétrage des Mentions de Travail",
+      "parametrage.bourses": "Paramétrage des Bourses",
+      "selectionAnnee": "Sélection d'une Année",
+      "selectionEtablissement": "Sélection d'un Etablissement"
+    },
+    "main6": {
+      "main": "Consultations",
+      "consultationNotes": "Consultation de Notes",
+      "stat.apprenant": "Statistiques Apprenant",
+      "stat.enseignant": "Statistiques Enseignants",
+      "stat.travailClasse": "Travail des Classes",
+      "stat.travaiApprenantNiv": "Travail des Apprenants par Niveau",
+      "mention.AppreciationManuel": "Mentions de Travail et Appréciations Manuelles"
+    },
+    "main7": {
+      "main": "Aide",
+      "aide.apropos": "A propos de Gesco",
+      "aide.rubrique": "Rubrique d'aide"
+    }
+  }
+}

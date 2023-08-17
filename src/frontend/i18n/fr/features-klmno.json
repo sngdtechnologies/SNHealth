@@ -1,0 +1,71 @@
+{
+  "logSystem": {
+    "title": {
+      "main": "Evènements Système",
+      "createOrEdit": "Créer ou éditer un Log System"
+    }
+  },
+  "matiere": {
+    "title": {
+      "main": "Matieres",
+      "createOrEdit": "Créer ou éditer une Matiere",
+      "table": "Nom des matieres"
+    }
+  },
+  "matiereClasse": {
+    "title": {
+      "main": "Matieres Classes",
+      "createOrEdit": "Créer ou éditer une Matiere Classe"
+    }
+  },
+  "matiereNiveau": {
+    "title": {
+      "main": "Matieres Niveaus",
+      "createOrEdit": "Créer ou éditer une Matiere Niveau"
+    }
+  },
+  "mention": {
+    "title": {
+      "main": "Mentions",
+      "createOrEdit": "Créer ou éditer une Mention"
+    }
+  },
+  "menu": {
+    "title": {
+      "main": "Menus",
+      "refreshList": "Actualiser la liste",
+      "table": "Liste des menus de l'application"
+    }
+  },
+  "motifSanction": {
+    "title": {
+      "main": "Motif Sanctions",
+      "createOrEdit": "Créer ou éditer un Motif Sanction"
+    }
+  },
+  "moyenne": {
+    "title": {
+      "main": "Moyennes",
+      "createOrEdit": "Créer ou éditer une Moyenne",
+      "groupeMatiere": "Parametrage de la moyenne: {{moyenne}}"
+    }
+  },
+  "niveau": {
+    "title": {
+      "main": "Niveaus",
+      "createOrEdit": "Créer ou éditer un Niveaus"
+    }
+  },
+  "nomenclature": {
+    "title": {
+      "main": "Nomenclatures",
+      "createOrEdit": "Créer ou éditer une Nomenclature"
+    }
+  },
+  "note": {
+    "title": {
+      "main": "Notes",
+      "createOrEdit": "Créer ou éditer une Note"
+    }
+  }
+}

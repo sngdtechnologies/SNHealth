@@ -1,0 +1,17 @@
+{
+  "groupeMatiere": {
+    "title": {
+      "main": "GroupeMatieres",
+      "createOrEdit": "Créer ou éditer un groupe de matière"
+    }
+  },
+  "groupeUser": {
+    "title": {
+      "main": "Groupes des utilisateurs",
+      "detail": "Groupe d'utilisateur",
+      "createOrEdit": "Créer ou éditer un Groupe User",
+      "users": "Utilisateurs d'un groupe"
+    },
+    "users.title.table": "Liste des utilisateurs du groupe {{nomGroupe}}"
+  }
+}

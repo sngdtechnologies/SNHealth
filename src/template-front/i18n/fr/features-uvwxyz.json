@@ -1,0 +1,9 @@
+{
+  "utilisateur": {
+    "title": {
+      "main": "Gestion des Utilisateurs",
+      "createOrEdit": "Créer ou éditer un utilisateur",
+      "config": "Parametres de l'utilisateur [<strong>{{username}}</strong>]"
+    }
+  }
+}

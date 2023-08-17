@@ -1,0 +1,54 @@
+{
+  "messages": {
+    "error": "Une erreur a été rencontrée",
+    "success": "Opération effectuée avec success",
+    "error.saisie.note.min.max": "Veuillez verifier les valeurs saisies. Les notes doivent etre comprise entre {{min}} et {{max}}",
+    "classe.select": "Vous n'avez pas sélectionné de classe.",
+    "sousPeriode.select": "Vous n'avez pas sélectionné de sous-période.",
+    "cloture": {
+      "success": "La clôture a été effectuée avec succes",
+      "confirm": "La clôture d'une période implique l'effacement de toutes les Moyennes et Données Disciplinaires antérieurement calculées pour cette période. Etes-vous sûr de vouloir effectuer cette clôture ?"
+    },
+    "image.maxSize": "La taille de l'image sélectionée ne doit pas excéder {{imageSize}}",
+    "user": {
+      "matiere": "Les matieres choisies doivent ètre enseignées dans les classes choisies."
+    }
+  },
+  "confirm": {
+    "matriculeApprenant.header": "Initialisation des matricules",
+    "matriculeApprenant.message": "Les matricules des apprenants actifs n'ayant pas de matricule seront générés. Voulez vous vraiment effectuer cette action?",
+    "matriculeEnseignant.header": "Initialisation des matricules",
+    "matriculeEnseignant.message": "Les matricules des enseignants actifs n'ayant pas de matricule seront générés. Voulez vous vraiment effectuer cette action?"
+  },
+  "gescoApp": {
+    "sanctionPeriode": {
+      "created": "L' enregistrement a été effectuée avec succès",
+      "deleted": "La suppression a été effectuée avec succès",
+      "updated": "La mise à jour a été effectuée avec succès"
+    },
+    "message": {
+      "created": "L' enregistrement a été effectuée avec succès",
+      "updated": "La mise à jour a été effectuée avec succès",
+      "deleted": "La suppression a été effectuée avec succès",
+      "clotured": "La cloture a été effectuée avec succès",
+      "smssended": "Sms envoyé avec succès",
+      "delete": {
+        "question": "Etes-vous certain de vouloir effectuer cette suppression?"
+      }
+    },
+    "etablissement": {
+      "initGroupRoot": {
+        "title": "Confirmez l'operation d'initialiser le groupe root",
+        "question": "Etes-vous certain de vouloir initialiser le groupe root de l'Etablissement {{ id }} ?"
+      },
+      "principalAdmin": {
+        "title": "Utilisateur pour cet établissement"
+      }
+    },
+    "evaluation": {
+      "delete": {
+        "question": "Si vous avez choisi plusieurs évaluations, seule celle ayant le plus petit numéro sera supprimée. Voulez vous vraiment supprimer cette évaluation? ATTENTION: Les notes attribuées aux élèves à cette évaluation seront aussi effacées."
+      }
+    }
+  }
+}

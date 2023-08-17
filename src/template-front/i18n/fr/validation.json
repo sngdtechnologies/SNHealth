@@ -1,0 +1,7 @@
+{
+  "validation": {
+    "form": {
+      "email": "Ce champ doit être une valide adresse email."
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "error": {
+    "user.delete.notAllowed": "La suppression d'un utilisateur actif n' est pas permise",
+    "date.range": "La date de fin doit être apres la date de début",
+    "moyMinInfMoyMax": "La moyenne minimale ne doit pas être supérieure à la moyenne maximale",
+    "caisseApprenant.invalid": "L' opération est invalide et ne peut être effectuée.",
+    "caisseApprenant.invalid.niveau": "Le niveau de l'apprenant ne correspond pas à celui de la caisse.",
+    "caisseApprenant.invalid.caisseApprenant": "Les montants de la caisse de l'apprenant sont invalides",
+    "caisseApprenant.invalid.paiementApprenantItem": "Les montants des paiements de l'apprenant sont invalides",
+    "caisseApprenant.invalid.reductionCaisseApprenant": "Les montants des réductions de l'apprenant sont invalides",
+    "caisseApprenant.montant.invalid": "Le montant total des paiements ne doit pas dépasser le montant de la caisse",
+    "caisseApprenant.montantRestant.invalid": "Le montant restant ne doit pas être négatif",
+    "caisseApprenant.reductionCaisse.invalid": "Une des réductions sélectionnées n'appartient pas à la caisse",
+    "caisseApprenant.reductionCaisse.montantReduction.invalid": "Le montant total des réductions est invalide",
+    "paiement.montant.invalid": "Le montant du paiement est invalide"
+  }
+}
