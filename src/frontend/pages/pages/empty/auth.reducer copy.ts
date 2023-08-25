@@ -2,8 +2,8 @@ import { createAsyncThunk, createSlice, isFulfilled, isPending } from "@reduxjs/
 import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from "../../../store/store";
 import { EntityState, serializeAxiosError } from "../../reducer/reducer.utils";
-import axios from "../../../lib/axios";
 import { IUser, defaultUser } from "../../../model/user.model";
+import axios from "../../../config/axios";
 
 // Initial state
 const initialState: EntityState<IUser> = {

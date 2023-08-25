@@ -1,8 +1,6 @@
 import type { AppProps } from 'next/app';
 import type { Page } from '../types/types';
 import React, { useEffect } from 'react';
-import { LayoutProvider } from '../layout/context/layoutcontext';
-import Layout from '../layout/layout';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -14,8 +12,7 @@ import { useStore } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import {useAuth} from "../config/auth";
 import { ToastContainer, toast } from 'react-toastify';
-import PrivateRoute from '../shared/auth/private-route';
-import { AUTHORITIES } from '../config/constants';
+import { LayoutProvider } from './layout/context/layoutcontext';
 
 type Props = AppProps & {
     Component: Page;

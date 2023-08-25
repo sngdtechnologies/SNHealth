@@ -2,19 +2,30 @@ import React from 'react';
 import { useLocation, Navigate, PathRouteProps } from 'react-router-dom';
 import { useAppSelector } from '../../config/store';
 import ErrorBoundary from '../error/error-boundary';
+import { useAuth } from '../../config/auth';
+import { IUser, defaultUser } from '../../model/user.model';
 
 interface IOwnProps extends PathRouteProps {
   hasAnyAuthorities?: string[];
   children: React.ReactNode;
 }
 
+export const isAuthenticat = (user: IUser) => {
+  return user != null;
+}
+
 export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwnProps) => {
-  // const isAuthenticated = useAppSelector(state => state.auth.isAuthenticated);
-  const isAuthenticated = false;
+  const { user } = useAuth({ middleware: 'auth' });
+  console.log("snsd", user);
+  const isAuthenticated = isAuthenticat(user);
+  console.log('isAuthenticated', isAuthenticated);
+  // const isAuthenticated = false;
   // const sessionHasBeenFetched = useAppSelector(state => state.auth.sessionHasBeenFetched);
-  // const account = useAppSelector(state => state.auth.account);
-  // const isAuthorized = hasAnyAuthority(account.authorities, hasAnyAuthorities);
-  const isAuthorized = false;
+  const account: IUser = user ?? defaultUser;
+  const isAuthorized = hasAnyAuthority([account.authorities], hasAnyAuthorities);
+  console.log('account', account);
+  console.log('isAuthorized', isAuthorized);
+  // const isAuthorized = false;
 
   if (!children) {
     throw new Error(`A component needs to be specified for private route for path ${(rest as any).path}`);
@@ -38,7 +49,7 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
     );
   }
 
-  window.location.pathname = '/login';
+  // window.location.pathname = '/login';
 
   console.log('dnfkdf');
   return (
@@ -47,6 +58,8 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
 };
 
 export const hasAnyAuthority = (authorities: string[], hasAnyAuthorities: string[]) => {
+  console.log('authorities', authorities);
+  console.log('hasAnyAuthorities', hasAnyAuthorities);
   if (authorities && authorities.length !== 0) {
     if (hasAnyAuthorities.length === 0) {
       return true;

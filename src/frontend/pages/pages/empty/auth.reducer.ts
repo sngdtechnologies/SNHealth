@@ -3,7 +3,7 @@ import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from "../../../store/store";
 import { IUser, defaultUser } from "../../../model/user.model";
 import { EntityState, serializeAxiosError } from "../../reducer/reducer.utils";
-import axios from "../../../lib/axios";
+import axios from "../../../config/axios";
 
 const initialState: EntityState<IUser> = {
   loading: false,

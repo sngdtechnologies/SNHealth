@@ -1,56 +1,7 @@
 {
-  "paramSanction": {
+  "recherche": {
     "title": {
-      "main": "ParamSanctions",
-      "createOrEdit": "Créer ou éditer un Param Sanction"
-    }
-  },
-  "parent": {
-    "title": {
-      "main": "Parents",
-      "createOrEdit": "Créer ou éditer un Parent"
-    }
-  },
-  "periode": {
-    "title": {
-      "main": "Periode",
-      "createOrEdit": "Créer ou éditer une Periode"
-    }
-  },
-  "profil": {
-    "title": {
-      "main": "Profils",
-      "createOrEdit": "Créer ou éditer un Profil"
-    }
-  },
-  "sanction": {
-    "title": {
-      "main": "Sanctions",
-      "createOrEdit": "Créer ou éditer une Sanctions"
-    }
-  },
-  "sanctionApprenant": {
-    "title": {
-      "main": "Sanction Apprenants",
-      "createOrEdit": "Créer ou éditer une Sanction Apprenant"
-    }
-  },
-  "sanctionPeriode": {
-    "title": {
-      "main": "Sanction Periodes",
-      "createOrEdit": "Créer ou éditer une Sanction Periode"
-    }
-  },
-  "sousPeriode": {
-    "title": {
-      "main": "Sous Periodes",
-      "createOrEdit": "Créer ou éditer une Sous Periode"
-    }
-  },
-  "typeEvaluation": {
-    "title": {
-      "main": "Type Evaluations",
-      "createOrEdit": "Créer ou éditer un Type Evaluations"
+      "main": "Recherche de médecin"
     }
   }
 }

@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import axios from '../lib/axios'
+import axios from './axios'
 
 interface Props {
     middleware: string;

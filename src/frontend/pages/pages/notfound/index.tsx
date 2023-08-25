@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React from 'react';
-import AppConfig from '../../../layout/AppConfig';
 import Link from 'next/link';
 import { Page } from '../../../types/types';
 
@@ -53,7 +52,6 @@ NotFoundPage.getLayout = function getLayout(page) {
     return (
         <React.Fragment>
             {page}
-            <AppConfig simple />
         </React.Fragment>
     );
 };
