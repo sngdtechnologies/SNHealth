@@ -12,6 +12,10 @@ import { wrapper } from "../store/store";
 import { PersistGate } from 'redux-persist/integration/react';
 import { useStore } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import {useAuth} from "../config/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import PrivateRoute from '../shared/auth/private-route';
+import { AUTHORITIES } from '../config/constants';
 
 type Props = AppProps & {
     Component: Page;
@@ -20,24 +24,22 @@ type Props = AppProps & {
 function MyApp({ Component, pageProps }: Props) {
     const store: any = useStore();
     const { i18n } = useTranslation();
-    
+    const { user } = useAuth({ middleware: 'guest' })
+
     useEffect(() => {
         // i18n.changeLanguage('fr');
-    }, []);
-    
+        console.log('user', user);
+    }, [user]);
+
     return (
         <PersistGate persistor={store.__persistor} loading={<div>Loading</div>}>
+            <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast"/>
             {(Component.getLayout) ? (
                     <LayoutProvider>{Component.getLayout(<Component {...pageProps} />)}</LayoutProvider>
                 ) : (
-                    <LayoutProvider>
-                        <Layout>
-                            <Component {...pageProps} />
-                        </Layout>
-                    </LayoutProvider>
+                    <Component {...pageProps} />
                 )
             }
-            
         </PersistGate>
     );
 }

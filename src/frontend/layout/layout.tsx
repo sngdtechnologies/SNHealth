@@ -12,8 +12,13 @@ import AppConfig from './AppConfig';
 import { LayoutContext } from './context/layoutcontext';
 import PrimeReact from 'primereact/api';
 import { ChildContainerProps, LayoutState, AppTopbarRef } from '../types/types';
+import { useAuth } from '../config/auth.reducer';
 
 const Layout = ({ children }: ChildContainerProps) => {
+    // const { login } = useAuth({
+    //     middleware: 'auth',
+    //     redirectIfAuthenticated: '/login',
+    // })
     const { layoutConfig, layoutState, setLayoutState } = useContext(LayoutContext);
     const topbarRef = useRef<AppTopbarRef>(null);
     const sidebarRef = useRef<HTMLDivElement>(null);
