@@ -1,17 +1,10 @@
 {
-  "groupeMatiere": {
-    "title": {
-      "main": "GroupeMatieres",
-      "createOrEdit": "Créer ou éditer un groupe de matière"
-    }
+  "footer": {
+
   },
-  "groupeUser": {
-    "title": {
-      "main": "Groupes des utilisateurs",
-      "detail": "Groupe d'utilisateur",
-      "createOrEdit": "Créer ou éditer un Groupe User",
-      "users": "Utilisateurs d'un groupe"
-    },
-    "users.title.table": "Liste des utilisateurs du groupe {{nomGroupe}}"
+  "home": {
+    "description" : "SNHealth est la plateforme de téléconsultation médicale en ligne qui vous permet de consulter des médecins qualifiés et expérimentés, directement depuis chez vous. Grâce à notre service sécurisé et convivial, vous pouvez bénéficier d'un diagnostic médical, obtenir des conseils personnalisés et recevoir des prescriptions, le tout sans avoir à vous déplacer. Notre équipe de professionnels de la santé est disponible 24h/24 et 7j/7 pour répondre à vos besoins de santé, que ce soit pour une simple consultation, un suivi médical ou une prescription renouvelable. Gagnez du temps, évitez les files d'attente et profitez de soins de qualité, accessibles en un clic avec SNHealth.",
+    "title" : "Votre solution de téléconsultation médicale en ligne.",
+    "subTitle" : "Accédez à des soins de qualité; où que vous soyez."
   }
 }

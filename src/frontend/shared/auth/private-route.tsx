@@ -2,8 +2,9 @@ import React from 'react';
 import { useLocation, Navigate, PathRouteProps } from 'react-router-dom';
 import { useAppSelector } from '../../config/store';
 import ErrorBoundary from '../error/error-boundary';
-import { useAuth } from '../../config/auth';
-import { IUser, defaultUser } from '../../model/user.model';
+import { IUser } from '../../model/user.model';
+import { useAuth } from '../../config/auth.reducer';
+import Custom401 from '../../pages/auth/error/401';
 
 interface IOwnProps extends PathRouteProps {
   hasAnyAuthorities?: string[];
@@ -21,8 +22,9 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
   console.log('isAuthenticated', isAuthenticated);
   // const isAuthenticated = false;
   // const sessionHasBeenFetched = useAppSelector(state => state.auth.sessionHasBeenFetched);
-  const account: IUser = user ?? defaultUser;
-  const isAuthorized = hasAnyAuthority([account.authorities], hasAnyAuthorities);
+  const account: IUser = user ?? {};
+  const authorities = account.authorities ?? '';
+  const isAuthorized = hasAnyAuthority([authorities], hasAnyAuthorities);
   console.log('account', account);
   console.log('isAuthorized', isAuthorized);
   // const isAuthorized = false;
@@ -41,11 +43,7 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
     }
 
     return (
-      <div className="insufficient-authority">
-        <div className="alert alert-danger">
-          You are not authorized to access this page.
-        </div>
-      </div>
+      <Custom401></Custom401>
     );
   }
 

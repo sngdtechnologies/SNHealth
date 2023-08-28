@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import { useAuth } from '../../config/auth'
+import { useAuth } from '../../config/_bk_auth'
 import GuestLayout from '../../utils/Layouts/GuestLayout'
 import AuthCard from '../../utils/AuthCard'
 import ApplicationLogo from '../../utils/ApplicationLogo'

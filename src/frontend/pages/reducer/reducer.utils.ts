@@ -92,7 +92,7 @@ export const createEntitySlice = <T, Reducers extends SliceCaseReducers<EntitySt
   name: string;
   initialState: EntityState<T>;
   reducers?: ValidateSliceCaseReducers<EntityState<T>, Reducers>;
-  extraReducers?: (builder: ActionReducerMapBuilder<EntityState<T>>) => void;
+  extraReducers: (builder: ActionReducerMapBuilder<EntityState<T>>) => void;
   skipRejectionHandling?: boolean;
 }) => {
   return createSlice({

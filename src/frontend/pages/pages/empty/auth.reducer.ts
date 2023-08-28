@@ -1,15 +1,17 @@
 import { createSlice, createAsyncThunk, isPending, isFulfilled } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper"; 
 import { AppState } from "../../../store/store";
-import { IUser, defaultUser } from "../../../model/user.model";
+import { IUser } from "../../../model/user.model";
 import { EntityState, serializeAxiosError } from "../../reducer/reducer.utils";
 import axios from "../../../config/axios";
+import { toast } from "react-toastify";
+import notificationMiddleware from '../../../config/notification-middleware';
 
 const initialState: EntityState<IUser> = {
   loading: false,
   errorMessage: null,
   entities: [],
-  entity: defaultUser,
+  entity: {},
   updating: false,
   totalItems: 0,
   updateSuccess: false
@@ -54,8 +56,8 @@ export const authSlice = createSlice({
       })
       // Handle the result of the getEntity async thunk
       .addMatcher(isFulfilled(getEntity), (state, action) => {
-        console.log('action.payload.headers', action.payload.headers);
-        console.log('action.payload.headersx-total-count', action.payload.headers['x-total-count']);
+        // console.log('action.payload.headers', action.payload.headers);
+        // console.log('action.payload.headersx-total-count', action.payload.headers['x-total-count']);
         return {
           ...state,
           loading: false,

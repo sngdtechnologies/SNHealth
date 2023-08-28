@@ -1,128 +1,138 @@
-import useSWR from 'swr'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import axios from '../lib/axios'
+// src/hooks/useAuth.js
 
-export const useAuth = ({ middleware = '', redirectIfAuthenticated = ''} = {}) => {
-    const router = useRouter()
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from './store';
+import { AUTH_LOGIN } from '../pages/auth/route.const';
+import axios from './axios';
+import { fetchUser, logout } from './auth';
+import { ADMIN } from '../pages/admin/route.const';
+import { MEDECIN } from '../pages/medecin/route.const';
+import { PATIENT } from '../pages/patient/route.const';
+import { serializeAxiosError } from '../pages/reducer/reducer.utils';
+import { toast } from 'react-toastify';
 
-    const { data: user, error, mutate } = useSWR('/api/user', () =>
-        axios
-            .get('/api/user')
-            .then(res => res.data)
-            .catch(error => {
-                if (error.response.status !== 409) throw error
+// Custom hook
+export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) => {
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+  const { entity, errorMessage } = useAppSelector((state) => state.auth);
 
-                router.push('/verify-email')
-            }), 
-    )
+  const csrf = async () => {
+    await axios.get('/sanctum/csrf-cookie');
+  };
 
-    const csrf = () => axios.get('/sanctum/csrf-cookie')
+  const register = async (props: any) => {
+    await csrf();
 
-    const register = async (props: any) => {
-        await csrf()
-
-        props.setErrors([])
-
-        axios
-            .post('/register', props)
-            .then(() => mutate())
-            .catch(error => {
-                if (error.response.status !== 422) throw error
-
-                props.setErrors(error.response.data.errors)
-            })
+    try {
+      await axios.post('/register', props);
+      dispatch(fetchUser());
+      props.setLoader(false);
+    } catch (error: any) {
+      if (error?.response?.status === 422) {
+        props.setErrors(error.response.data.errors);
+      } else {
+        console.log('serializeAxiosError', serializeAxiosError(error));
+      }
     }
+  };
 
-    const login = async (props: any) => {
-        await csrf()
+  const login = async (props: any) => {
+    await csrf();
 
-        props.setErrors([])
-        props.setStatus(null)
-
-        axios
-            .post('/login', props)
-            .then(() => mutate())
-            .catch(error => {
-                if (error.response.status !== 422) throw error
-
-                props.setErrors(error.response.data.errors)
-            })
+    try {
+      await axios.post('/login', props);
+      props.setLoader(false);
+      dispatch(fetchUser());
+    } catch (error: any) {
+      toast.error(JSON.stringify(error.response.data.errors));
+      if (error?.response?.status === 422) {
+        props.setErrors(error.response.data.errors);
+      } else {
+        console.log('serializeAxiosError', serializeAxiosError(error));
+      }
     }
+  };
 
-    const forgotPassword = async (props: any) => {
-        await csrf()
+  const forgotPassword = async (props: any) => {
+    await csrf();
 
-        props.setErrors([])
-        props.setStatus(null)
-        const email = props.email
-
-        axios
-            .post('/forgot-password', { email })
-            .then(response => props.setStatus(response.data.status))
-            .catch(error => {
-                if (error.response.status !== 422) throw error
-
-                props.setErrors(error.response.data.errors)
-            })
+    try {
+      const email = props.email;
+      await axios.post('/forgot-password', { email });
+      props.setStatus('success');
+    } catch (error: any) {
+      if (error?.response?.status === 422) {
+        props.setErrors(error.response.data.errors);
+      } else {
+        console.log('serializeAxiosError', serializeAxiosError(error));
+      }
     }
+  };
 
-    const resetPassword = async (props: any) => {
-        await csrf()
+  const resetPassword = async (props: any) => {
+    await csrf();
 
-        props.setErrors([])
-        props.setStatus(null)
-
-        axios
-            .post('/reset-password', { token: router.query.token, ...props })
-            .then(response =>
-                router.push('/login?reset=' + btoa(response.data.status)),
-            )
-            .catch(error => {
-                if (error.response.status !== 422) throw error
-
-                props.setErrors(error.response.data.errors)
-            })
+    try {
+      const token = router.query.token;
+      const data = { token, ...props };
+      await axios.post('/reset-password', data);
+      router.push(AUTH_LOGIN + '?reset=' + btoa('success'));
+    } catch (error: any) {
+      if (error?.response?.status === 422) {
+        props.setErrors(error.response.data.errors);
+      } else {
+        console.log('serializeAxiosError', serializeAxiosError(error));
+      }
     }
+  };
 
-    const resendEmailVerification = (props: any) => {
-        axios
-            .post('/email/verification-notification')
-            .then(response => props.setStatus(response.data.status))
+  const resendEmailVerification = async (props: any) => {
+    try {
+      await axios.post('/email/verification-notification');
+      props.setStatus('success');
+    } catch (error) {
+      console.log('serializeAxiosError', serializeAxiosError(error));
     }
+  };
 
-    const logout = async () => {
-        if (!error) {
-            await axios.post('/logout').then(() => mutate())
-        }
-
-        window.location.pathname = '/login'
+  const logoutUser = async (props: any = null) => {
+    if (!errorMessage) {
+      await csrf();
+      // dispatch(logout());
+      // console.log('logout');
+      await axios.post('/logout');
+      dispatch(logout());
+      props.setLoader(false);
+      console.log('dispatch');
     }
+    router.push(AUTH_LOGIN);
+  };
 
-    const getAllUsers = async () => {
-        await axios.get('/debug').then((response) => console.log('All users this ', response.data))
-        console.log(mutate())
+  useEffect(() => {
+    if (middleware === 'guest' && redirectIfAuthenticated && entity.name != null) {
+      entity.authorities == "admin"
+        ? router.push(ADMIN)
+        : entity.authorities == "medecin"
+          ? router.push(MEDECIN)
+          : router.push(PATIENT);
     }
-
-    useEffect(() => {
-        if (middleware === 'guest' && redirectIfAuthenticated && user)
-            router.push(redirectIfAuthenticated)
-        if (
-            window.location.pathname === '/verify-email' &&
-            user?.email_verified_at
-        )
-            router.push(redirectIfAuthenticated)
-        if (middleware === 'auth' && error) logout()
-    }, [user, error])
-
-    return {
-        user,
-        register,
-        login,
-        forgotPassword,
-        resetPassword,
-        resendEmailVerification,
-        logout,
-        getAllUsers
+    if (window.location.pathname === '/verify-email' && entity?.email_verified_at) {
+      router.push(redirectIfAuthenticated);
     }
-}
+    if (middleware === 'auth' && errorMessage) {
+      logoutUser();
+    }
+  }, [entity, errorMessage]);
+
+  return {
+    user: entity,
+    register,
+    login,
+    forgotPassword,
+    resetPassword,
+    resendEmailVerification,
+    logoutUser
+  };
+};

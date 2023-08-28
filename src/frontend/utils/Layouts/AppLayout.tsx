@@ -1,13 +1,13 @@
 import { ReactNode } from "react"
-import { useAuth } from "../../config/auth"
+import { useAuth } from "../../config/_bk_auth"
 import Navigation from "./Navigation"
 
 const AppLayout = ({ header, children }: { header: ReactNode, children: ReactNode }) => {
-    const { user } = useAuth({ middleware: 'auth' })
+    // const { user } = useAuth({ middleware: 'auth' })
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <Navigation user={user} />
+            <Navigation  />
 
             {/* Page Heading */}
             <header className="bg-white shadow">

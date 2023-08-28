@@ -1,6 +1,6 @@
 import { AnyAction } from "@reduxjs/toolkit";
 
-const getErrorMessage = (errorData: { message: any; fieldErrors: { field: any; objectName: any; message: any; }[]; }) => {
+const getErrorMessage = (errorData: any) => {
   let message = errorData.message;
   if (errorData.fieldErrors) {
     errorData.fieldErrors.forEach((fErr: { field: any; objectName: any; message: any; }) => {
@@ -10,7 +10,7 @@ const getErrorMessage = (errorData: { message: any; fieldErrors: { field: any; o
   return message;
 };
 
-export default () => next => action => {
+export default () => (next: any) => (action: any) => {
   /**
    *
    * The error middleware serves to log error messages from dispatch

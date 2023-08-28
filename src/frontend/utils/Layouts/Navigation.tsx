@@ -2,15 +2,16 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { IUser } from '../../model/user.model'
-import { useAuth } from '../../config/auth'
 import ApplicationLogo from '../ApplicationLogo'
 import NavLink from '../NavLink'
 import ResponsiveNavLink, { ResponsiveNavButton } from '../ResponsiveNavLink'
+import { HOME } from '../../pages/route.const'
+import { useAuth } from '../../config/auth.reducer'
 
-const Navigation = ({ user }:{ user: IUser }) => {
+const Navigation = () => {
     const router = useRouter()
 
-    const { logout } = useAuth()
+    const { logoutUser } = useAuth()
 
     const [open, setOpen] = useState(false)
 
@@ -22,7 +23,7 @@ const Navigation = ({ user }:{ user: IUser }) => {
                     <div className="flex">
                         {/* Logo */}
                         <div className="flex-shrink-0 flex items-center">
-                            <Link href="/dashboard">
+                            <Link href={HOME}>
                                 <ApplicationLogo className="block h-10 w-auto fill-current text-gray-600" />
                             </Link>
                         </div>
@@ -30,8 +31,8 @@ const Navigation = ({ user }:{ user: IUser }) => {
                         {/* Navigation Links */}
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <NavLink
-                                href="/dashboard"
-                                active={router.pathname === '/dashboard'}>
+                                href={HOME}
+                                active={router.pathname === HOME}>
                                 Dashboard
                             </NavLink>
                         </div>
@@ -61,14 +62,14 @@ const Navigation = ({ user }:{ user: IUser }) => {
                                 </button>
                             }> */}
                             {/* Authentication */}
-                            {/* <DropdownButton onClick={logout}>
-                                Logout
+                            {/* <DropdownButton onClick={logoutUser}>
+                                LogoutUser
                             </DropdownButton> */}
                         {/* </Dropdown> */}
                         <button
-                            onClick={logout}
+                            onClick={logoutUser}
                             className={`w-full text-left block px-4 py-2 text-sm leading-5 text-gray-700 focus:outline-none transition duration-150 ease-in-out`}>
-                            Logout
+                            LogoutUser
                         </button>
                     </div>
 
@@ -135,20 +136,20 @@ const Navigation = ({ user }:{ user: IUser }) => {
                                 </svg>
                             </div>
 
-                            <div className="ml-3">
+                            {/* <div className="ml-3">
                                 <div className="font-medium text-base text-gray-800">
                                     {user?.name}
                                 </div>
                                 <div className="font-medium text-sm text-gray-500">
                                     {user?.email}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="mt-3 space-y-1">
                             {/* Authentication */}
-                            <ResponsiveNavButton onClick={logout}>
-                                Logout
+                            <ResponsiveNavButton onClick={logoutUser}>
+                                LogoutUser
                             </ResponsiveNavButton>
                         </div>
                     </div>

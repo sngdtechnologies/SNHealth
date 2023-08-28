@@ -12,12 +12,12 @@ const addNotificationError = (content?: any) => {
   }
 };
 
-const addErrorAlert = (message: string, key?: string | undefined, trans: string) => {
-  key = key ? key : message;
-  toast.error(trans);
+const addErrorAlert = (props: any) => {
+  props.key = props.key ? props.key : props.message;
+  toast.error(props.trans);
 };
 
-export default () => next => action => {
+export default () => (next: any) => (action: any) => {
   const { error, payload } = action;
   const { t } = useTranslation();
 
@@ -25,8 +25,12 @@ export default () => next => action => {
    *
    * The notification middleware serves to add success and error notifications
    */
+  console.log('isFulfilledAction(action)', isFulfilledAction(action));
+  console.log('payload', payload);
+  console.log('payload.headers', payload.headers);
   if (isFulfilledAction(action) && payload && payload.headers) {
     const headers = payload?.headers;
+    console.log('payload.headers', payload.headers);
     let alert: string | null = null;
     let alertParams: string | null = null;
     headers &&
@@ -50,7 +54,7 @@ export default () => next => action => {
       if (
         !(
           response.status === 401 &&
-          (error.message === '' || (data && data.path && (data.path.includes('/api/account') || data.path.includes('/api/authenticate'))))
+          (error.message === '' || (data && data.path && (data.path.includes('/api/user') || data.path.includes('/api/authenticate'))))
         )
       ) {
         switch (response.status) {
