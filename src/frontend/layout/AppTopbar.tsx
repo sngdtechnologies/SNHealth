@@ -3,9 +3,8 @@
 import Link from 'next/link';
 import { classNames } from 'primereact/utils';
 import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
+import { AppTopbarRef } from '../types/types';
 import { LayoutContext } from './context/layoutcontext';
-import { AppTopbarRef } from '../../../types/types';
-import { Button } from 'primereact/button';
 
 const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
     const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
@@ -22,11 +21,11 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
     return (
         <div className="layout-topbar">
             <Link href="/" className="layout-topbar-logo">
-                <img src={`/layout/images/logo-dark.jpg`} width="120px" height={'35px'} alt="logo" />
-                <span></span>
+                <img src={`/layout/images/logo-${layoutConfig.colorScheme !== 'light' ? 'white' : 'dark'}.svg`} width="47.22px" height={'35px'} alt="logo" />
+                <span>SAKAI</span>
             </Link>
 
-            <button ref={menubuttonRef} type="button" className="p-link layout-menu-button layout-topbar-button ml-0" onClick={onMenuToggle}>
+            <button ref={menubuttonRef} type="button" className="p-link layout-menu-button layout-topbar-button" onClick={onMenuToggle}>
                 <i className="pi pi-bars" />
             </button>
 
@@ -35,10 +34,20 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
             </button>
 
             <div ref={topbarmenuRef} className={classNames('layout-topbar-menu', { 'layout-topbar-menu-mobile-active': layoutState.profileSidebarVisible })}>
-                <Button icon="pi pi-bell" rounded text aria-label="Notification" className="p-link" badge="2" badgeClassName="p-badge-danger p-0 ml-0 mb-3"/>
-                <Button icon="pi pi-user" rounded text aria-label="Profil" className="p-link"/>
-                <Button icon="pi pi-cog" rounded text aria-label="Setting" className="p-link"/>
-                <Button icon="pi pi-sign-out" rounded text aria-label="Sign-out" className="p-link"/>
+                <button type="button" className="p-link layout-topbar-button">
+                    <i className="pi pi-calendar"></i>
+                    <span>Calendar</span>
+                </button>
+                <button type="button" className="p-link layout-topbar-button">
+                    <i className="pi pi-user"></i>
+                    <span>Profile</span>
+                </button>
+                <Link href="/documentation">
+                    <button type="button" className="p-link layout-topbar-button">
+                        <i className="pi pi-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                </Link>
             </div>
         </div>
     );

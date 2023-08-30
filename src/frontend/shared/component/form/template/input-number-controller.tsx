@@ -1,11 +1,10 @@
 import React from 'react';
-import { translate } from 'react-jhipster';
-import { FieldErrorMessage, LabelName } from 'app/components/form/form';
 import { Controller } from 'react-hook-form';
 import { classNames } from 'primereact/utils';
 import { InputNumber } from "primereact/inputnumber";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../../i18n/i18n";
+import { FieldErrorMessage, LabelName } from '../form';
 
 export const InputNumberController = (props: any) => {
   const errors = props.errors;

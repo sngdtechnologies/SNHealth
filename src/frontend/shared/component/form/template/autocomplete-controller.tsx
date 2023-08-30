@@ -1,7 +1,7 @@
 import React from 'react';
 import { classNames } from 'primereact/utils';
 import { AutoComplete } from "primereact/autocomplete";
-import { LabelName } from '../form';
+import { FieldErrorMessage, LabelName } from '../form';
 import { useTranslation } from "react-i18next";
 import i18n from "../../../../i18n/i18n";
 import { Controller } from 'react-hook-form';

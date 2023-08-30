@@ -9,7 +9,7 @@ import { Button } from 'primereact/button';
 import { Translate } from '../../../shared/component/translate';
 import AppFooter from './app-footer';
 
-const Layout = ({ children }: ChildContainerProps) => {
+const LayoutMedecin = ({ children }: ChildContainerProps) => {
     
     return (
         <React.Fragment>
@@ -43,4 +43,4 @@ const Layout = ({ children }: ChildContainerProps) => {
     );
 };
 
-export default Layout;
+export default LayoutMedecin;

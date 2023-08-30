@@ -4,7 +4,7 @@ import { classNames } from 'primereact/utils';
 import { InputTextarea } from "primereact/inputtextarea";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../../i18n/i18n";
-import { LabelName } from '../form';
+import { FieldErrorMessage, LabelName } from '../form';
 
 export const InputTextareaController = (props: any) => {
   const errors = props.errors;

@@ -5,161 +5,99 @@ import AppMenuitem from './AppMenuitem';
 import { LayoutContext } from './context/layoutcontext';
 import { MenuProvider } from './context/menucontext';
 import Link from 'next/link';
-import { AppMenuItem } from '../types/types';
+import { AppMenuItem } from '../../../types/types';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n/i18n';
+import { ROUTE_ADMIN_ACCES_ATTRIBUTION, ROUTE_ADMIN_ACCES_CONSULTATION, ROUTE_ADMIN_CONSULTATION_LOG, ROUTE_ADMIN_CONSULTATION_MEDECIN, ROUTE_ADMIN_CONSULTATION_PATIENT, ROUTE_ADMIN_CONSULTATION_PUB, ROUTE_ADMIN_CONSULTATION_TARIF, ROUTE_ADMIN_ROLE_ATTRIBUTION, ROUTE_ADMIN_ROLE_CONSULTATION, ROUTE_ADMIN_USER_ATTRIBUTION, ROUTE_ADMIN_USER_CONSULTATION } from '../route.const';
 
 const AppMenu = () => {
     const { layoutConfig } = useContext(LayoutContext);
+    const router = useRouter();
+    const { t } = useTranslation('menu', {i18n});
 
     const model: AppMenuItem[] = [
         {
-            label: 'Home',
-            items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
-        },
-        {
-            label: 'UI Components',
-            items: [
-                { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
-                { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
-                { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
-                { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', to: '/uikit/invalidstate' },
-                { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
-                { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
-                { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
-                { label: 'Tree', icon: 'pi pi-fw pi-share-alt', to: '/uikit/tree' },
-                { label: 'Panel', icon: 'pi pi-fw pi-tablet', to: '/uikit/panel' },
-                { label: 'Overlay', icon: 'pi pi-fw pi-clone', to: '/uikit/overlay' },
-                { label: 'Media', icon: 'pi pi-fw pi-image', to: '/uikit/media' },
-                { label: 'Menu', icon: 'pi pi-fw pi-bars', to: '/uikit/menu', preventExact: true },
-                { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
-                { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
-                { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
-                { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
-            ]
-        },
-        {
-            label: 'Prime Blocks',
-            items: [
-                { label: 'Free Blocks', icon: 'pi pi-fw pi-eye', to: '/blocks', badge: 'NEW' },
-                { label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: 'https://blocks.primereact.org', target: '_blank' }
-            ]
-        },
-        {
-            label: 'Utilities',
-            items: [
-                { label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', to: '/utilities/icons' },
-                { label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: 'https://www.primefaces.org/primeflex/', target: '_blank' }
-            ]
-        },
-        {
-            label: 'Pages',
-            icon: 'pi pi-fw pi-briefcase',
-            to: '/pages',
+            label: t('gestion.title'),
+            icon: 'pi pi-fw pi-home',
             items: [
                 {
-                    label: 'Landing',
-                    icon: 'pi pi-fw pi-globe',
-                    to: '/landing'
+                    label: t('gestion.medecin.title'),
+                    icon: 'pi pi-fw pi-heart',
+                    to: ROUTE_ADMIN_CONSULTATION_MEDECIN
                 },
                 {
-                    label: 'Auth',
-                    icon: 'pi pi-fw pi-user',
-                    items: [
-                        {
-                            label: 'Login',
-                            icon: 'pi pi-fw pi-sign-in',
-                            to: '/auth/login'
-                        },
-                        {
-                            label: 'Error',
-                            icon: 'pi pi-fw pi-times-circle',
-                            to: '/auth/error'
-                        },
-                        {
-                            label: 'Access Denied',
-                            icon: 'pi pi-fw pi-lock',
-                            to: '/auth/access'
-                        }
-                    ]
+                    label: t('gestion.patient.title'),
+                    icon: 'pi pi-fw pi-heart',
+                    to: ROUTE_ADMIN_CONSULTATION_PATIENT
                 },
                 {
-                    label: 'Crud',
-                    icon: 'pi pi-fw pi-pencil',
-                    to: '/pages/crud'
+                    label: t('gestion.tarif.title'),
+                    icon: 'pi pi-fw pi-dollar',
+                    to: ROUTE_ADMIN_CONSULTATION_TARIF
                 },
                 {
-                    label: 'Timeline',
-                    icon: 'pi pi-fw pi-calendar',
-                    to: '/pages/timeline'
-                },
-                {
-                    label: 'Not Found',
+                    label: t('gestion.log.title'),
                     icon: 'pi pi-fw pi-exclamation-circle',
-                    to: '/pages/notfound'
+                    to: ROUTE_ADMIN_CONSULTATION_LOG
                 },
                 {
-                    label: 'Empty',
-                    icon: 'pi pi-fw pi-circle-off',
-                    to: '/pages/empty'
+                    label: t('gestion.pub.title'),
+                    icon: 'pi pi-fw pi-bookmark',
+                    to: ROUTE_ADMIN_CONSULTATION_PUB
                 }
             ]
         },
         {
-            label: 'Hierarchy',
+            label: t('gestionUser.title'),
             items: [
-                {
-                    label: 'Submenu 1',
-                    icon: 'pi pi-fw pi-bookmark',
+                { 
+                    label: t('gestionUser.role.title'), 
+                    icon: 'pi pi-fw pi-user', 
                     items: [
                         {
-                            label: 'Submenu 1.1',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [
-                                { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' }
-                            ]
+                            label: t('gestionUser.role.consultation'),
+                            icon: 'pi pi-fw pi-info',
+                            to: ROUTE_ADMIN_ROLE_CONSULTATION
                         },
                         {
-                            label: 'Submenu 1.2',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [{ label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }]
-                        }
+                            label: t('gestionUser.role.attribution'),
+                            icon: 'pi pi-fw pi-slack',
+                            to: ROUTE_ADMIN_ROLE_ATTRIBUTION
+                        },
                     ]
                 },
-                {
-                    label: 'Submenu 2',
-                    icon: 'pi pi-fw pi-bookmark',
+                { 
+                    label: t('gestionUser.acces.title'), 
+                    icon: 'pi pi-fw pi-th-large', 
                     items: [
                         {
-                            label: 'Submenu 2.1',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [
-                                { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' }
-                            ]
+                            label: t('gestionUser.acces.consultation'),
+                            icon: 'pi pi-fw pi-info',
+                            to: ROUTE_ADMIN_ACCES_CONSULTATION
                         },
                         {
-                            label: 'Submenu 2.2',
-                            icon: 'pi pi-fw pi-bookmark',
-                            items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }]
-                        }
+                            label: t('gestionUser.acces.attribution'),
+                            icon: 'pi pi-fw pi-slack',
+                            to: ROUTE_ADMIN_ACCES_ATTRIBUTION
+                        },
                     ]
-                }
-            ]
-        },
-        {
-            label: 'Get Started',
-            items: [
-                {
-                    label: 'Documentation',
-                    icon: 'pi pi-fw pi-question',
-                    to: '/documentation'
                 },
-                {
-                    label: 'View Source',
-                    icon: 'pi pi-fw pi-search',
-                    url: 'https://github.com/primefaces/sakai-react',
-                    target: '_blank'
+                { 
+                    label: t('gestionUser.user.title'), 
+                    icon: 'pi pi-fw pi-user', 
+                    items: [
+                        {
+                            label: t('gestionUser.user.consultation'),
+                            icon: 'pi pi-fw pi-info',
+                            to: ROUTE_ADMIN_USER_CONSULTATION
+                        },
+                        {
+                            label: t('gestionUser.user.attribution'),
+                            icon: 'pi pi-fw pi-slack',
+                            to: ROUTE_ADMIN_USER_ATTRIBUTION
+                        },
+                    ]
                 }
             ]
         }
@@ -171,10 +109,6 @@ const AppMenu = () => {
                 {model.map((item, i) => {
                     return !item?.seperator ? <AppMenuitem item={item} root={true} index={i} key={item.label} /> : <li className="menu-separator"></li>;
                 })}
-
-                <Link href="https://blocks.primereact.org" target="_blank" style={{ cursor: 'pointer' }}>
-                    <img alt="Prime Blocks" className="w-full mt-3" src={`/layout/images/banner-primeblocks${layoutConfig.colorScheme === 'light' ? '' : '-dark'}.png`} />
-                </Link>
             </ul>
         </MenuProvider>
     );

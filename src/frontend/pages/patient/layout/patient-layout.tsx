@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutProvider } from './context/layoutcontext';
+import LayoutProvider from './context/layoutcontext';
 import Layout from './layout';
 import { ChildContainerProps } from '../../../types/types';
 import { AUTHORITIES } from '../../../config/constants';

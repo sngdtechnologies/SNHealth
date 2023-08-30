@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import type { Page } from '../types/types';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'primereact/resources/primereact.css';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -12,11 +12,16 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { useStore } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer, toast } from 'react-toastify';
-import { LayoutProvider } from './layout/context/layoutcontext';
 import { useAppDispatch } from '../config/store';
 import { useAuth } from '../config/auth.reducer';
-import { fetchUser } from '../config/auth';
 import { ProgressSpinner } from "primereact/progressspinner";
+import LayoutAdmin from './admin/layout/layout';
+import LayoutPatient from './patient/layout/layout';
+import LayoutMedecin from './medecin/layout/layout';
+import { LayoutProvider } from './layout/context/layoutcontext';
+import LayoutPatientProvider from './patient/layout/context/layoutcontext';
+import LayoutMedecinProvider from './medecin/layout/context/layoutcontext';
+import LayoutAdminProvider from './admin/layout/context/layoutcontext';
 
 type Props = AppProps & {
     Component: Page;
@@ -27,6 +32,8 @@ function MyApp({ Component, pageProps }: Props) {
     // const dispatch = useAppDispatch();
     const { user } = useAuth({ middleware: 'guest' })
 
+    const [account, setAccount] = useState<any>(null);
+
     // useEffect(() => {
     //     dispatch(fetchUser());
     // }, [])
@@ -34,6 +41,7 @@ function MyApp({ Component, pageProps }: Props) {
     useEffect(() => {
         // i18n.changeLanguage('fr');
         console.log('user', user);
+        setAccount(user);
     }, [user]);
 
     return (
@@ -41,9 +49,29 @@ function MyApp({ Component, pageProps }: Props) {
             <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast"/>
             {(Component.getLayout) ? (
                     <LayoutProvider>{Component.getLayout(<Component {...pageProps} />)}</LayoutProvider>
-                ) : (
-                    <Component {...pageProps} />
-                )
+                ) : (<>
+                    {account && account.authorities == "admin"
+                        ? (
+                            <LayoutAdminProvider>
+                                <LayoutAdmin>
+                                    <Component {...pageProps} />
+                                </LayoutAdmin>
+                            </LayoutAdminProvider>
+                        )
+                        : account && account.authorities == "medecin"
+                            ? <LayoutMedecinProvider>
+                                <LayoutMedecin>
+                                    <Component {...pageProps} />
+                                </LayoutMedecin>
+                            </LayoutMedecinProvider>
+                            : account && account.authorities == "patient"
+                                ? <LayoutPatientProvider>
+                                    <LayoutPatient>
+                                        <Component {...pageProps} />
+                                    </LayoutPatient>
+                                </LayoutPatientProvider>
+                                : <Component {...pageProps} />}
+                </>)
             }
         </PersistGate>
     );

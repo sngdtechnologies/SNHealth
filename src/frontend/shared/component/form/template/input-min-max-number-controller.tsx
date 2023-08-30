@@ -21,7 +21,7 @@ export const InputValidatedNumberController = (props: any) => {
 
   const { t } = useTranslation('action', {i18n});
 
-  const onChange = v => {
+  const onChange = (v: any) => {
     props.onChange ? props.onChange(v) : '';
   };
 

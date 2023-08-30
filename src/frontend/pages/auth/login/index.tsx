@@ -20,8 +20,7 @@ const LoginPage: Page = () => {
 
     const router = useRouter();
     const { login } = useAuth({
-        middleware: 'guest',
-        redirectIfAuthenticated: HOME,
+        // middleware: 'guest'
     })
     const containerClassName = classNames('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden', { 'p-input-filled': 'true' });
 

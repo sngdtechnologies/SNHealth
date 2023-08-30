@@ -1,8 +1,8 @@
 import React, { useState, createContext } from 'react';
-import { LayoutState, ChildContainerProps, LayoutConfig, LayoutContextProps } from '../../../../types/types';
+import { LayoutState, ChildContainerProps, LayoutConfig, LayoutContextProps } from '../../types/types';
 export const LayoutContext = createContext({} as LayoutContextProps);
 
-const LayoutProvider = ({ children }: ChildContainerProps) => {
+export const LayoutProvider = ({ children }: ChildContainerProps) => {
     const [layoutConfig, setLayoutConfig] = useState<LayoutConfig>({
         ripple: false,
         inputStyle: 'outlined',
@@ -56,5 +56,3 @@ const LayoutProvider = ({ children }: ChildContainerProps) => {
 
     return <LayoutContext.Provider value={value}>{children}</LayoutContext.Provider>;
 };
-
-export default LayoutProvider;

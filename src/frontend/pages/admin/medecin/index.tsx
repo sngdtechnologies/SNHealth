@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../config/store';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../i18n/i18n';
 
-const ConsultationPatient = () => {
+const ConsultationMedecin = () => {
     const { t } = useTranslation('text', {i18n});
     const users = useAppSelector(state => state.auth);
     const dispatch = useAppDispatch();
@@ -16,14 +16,10 @@ const ConsultationPatient = () => {
         // dispatch(getEntity())
     }
     return (
-        <div>
-        <button
-            onClick={getAllUser}
-        >
-            {t('click')}
-        </button>
-        </div>
+      <div>
+        Consultation medecin
+      </div>
     );
 };
 
-export default ConsultationPatient;
+export default ConsultationMedecin;

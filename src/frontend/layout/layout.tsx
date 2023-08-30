@@ -11,13 +11,9 @@ import AppTopbar from './AppTopbar';
 import AppConfig from './AppConfig';
 import { LayoutContext } from './context/layoutcontext';
 import PrimeReact from 'primereact/api';
-import { AppTopbarRef, ChildContainerProps, LayoutState } from '../../../types/types';
+import { ChildContainerProps, LayoutState, AppTopbarRef } from '../types/types';
 
-const LayoutAdmin = ({ children }: ChildContainerProps) => {
-    // const { login } = useAuth({
-    //     middleware: 'auth',
-    //     redirectIfAuthenticated: '/login',
-    // })
+const Layout = ({ children }: ChildContainerProps) => {
     const { layoutConfig, layoutState, setLayoutState } = useContext(LayoutContext);
     const topbarRef = useRef<AppTopbarRef>(null);
     const sidebarRef = useRef<HTMLDivElement>(null);
@@ -141,18 +137,18 @@ const LayoutAdmin = ({ children }: ChildContainerProps) => {
 
             <div className={containerClass}>
                 <AppTopbar ref={topbarRef} />
-                <div ref={sidebarRef} className="layout-sidebar layout-sidebar">
+                <div ref={sidebarRef} className="layout-sidebar">
                     <AppSidebar />
                 </div>
-                <div className="layout-main-container" style={{padding: "6rem 1rem 2rem 1rem"}}>
+                <div className="layout-main-container">
                     <div className="layout-main">{children}</div>
                     <AppFooter />
                 </div>
-                {/* <AppConfig /> */}
+                <AppConfig />
                 <div className="layout-mask"></div>
             </div>
         </React.Fragment>
     );
 };
 
-export default LayoutAdmin;
+export default Layout;

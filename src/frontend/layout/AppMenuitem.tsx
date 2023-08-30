@@ -5,7 +5,7 @@ import { classNames } from 'primereact/utils';
 import React, { useEffect, useContext } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { MenuContext } from './context/menucontext';
-import { AppMenuItemProps } from '../../../types/types';
+import { AppMenuItemProps } from '../types/types';
 
 const AppMenuitem = (props: AppMenuItemProps) => {
     const { activeMenu, setActiveMenu } = useContext(MenuContext);
