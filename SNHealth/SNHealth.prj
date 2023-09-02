@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{E4C2F8B3-8D3A-4B60-B41D-684261F55432}" Label="" LastModificationDate="1692825644" Name="SNHealth" Objects="23" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="16.7.1.6488"?>
+<?PowerDesigner AppLocale="UTF16" ID="{E4C2F8B3-8D3A-4B60-B41D-684261F55432}" Label="" LastModificationDate="1693562718" Name="SNHealth" Objects="24" Symbols="0" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" signature="PRJ_MODEL_XML" version="16.7.1.6488"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -578,7 +578,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Code>Definition_de_cas_d_utilisation_1</a:Code>
 <a:CreationDate>1692647481</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692654166</a:ModificationDate>
+<a:ModificationDate>1693551971</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Définition de cas d&#39;utilisation_1.moo</a:Location>
 <a:Extension>moo</a:Extension>
@@ -591,7 +591,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Code>Definition_de_cas_d_utilisation_2</a:Code>
 <a:CreationDate>1692647518</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692686689</a:ModificationDate>
+<a:ModificationDate>1693552509</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Définition de cas d&#39;utilisation_2.moo</a:Location>
 <a:Extension>moo</a:Extension>
@@ -604,7 +604,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Code>Definition_de_cas_d_utilisation_3</a:Code>
 <a:CreationDate>1692686325</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692690714</a:ModificationDate>
+<a:ModificationDate>1692822812</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Définition de cas d&#39;utilisation_3.moo</a:Location>
 <a:Extension>moo</a:Extension>
@@ -617,7 +617,7 @@ Shadow=0</a:DisplayPreferences>
 <a:Code>Diagramme_de_classes_UML_1</a:Code>
 <a:CreationDate>1692693589</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692777565</a:ModificationDate>
+<a:ModificationDate>1693391309</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Diagramme de classes UML_1.moo</a:Location>
 <a:Extension>moo</a:Extension>
@@ -648,6 +648,19 @@ Shadow=0</a:DisplayPreferences>
 <a:Location>file:///%[PRJ_ROOT_DIR]%/Définition de cas d&#39;utilisation_5.moo</a:Location>
 <a:Extension>moo</a:Extension>
 <a:ModelDocument.ModelID>86E93AD1-6468-47FD-9786-3D97DD16582D</a:ModelDocument.ModelID>
+<a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
+</o:ModelDocument>
+<o:ModelDocument Id="o10">
+<a:ObjectID>5CD81DAA-50C7-41E2-A6B6-0F8E3A6059AB</a:ObjectID>
+<a:Name>Définition de cas d&#39;utilisation_6</a:Name>
+<a:Code>Definition_de_cas_d_utilisation_6</a:Code>
+<a:CreationDate>1693562564</a:CreationDate>
+<a:Creator>Smirbirkoff</a:Creator>
+<a:ModificationDate>1693562718</a:ModificationDate>
+<a:Modifier>Smirbirkoff</a:Modifier>
+<a:Location>file:///%[PRJ_ROOT_DIR]%/Définition de cas d&#39;utilisation_6.moo</a:Location>
+<a:Extension>moo</a:Extension>
+<a:ModelDocument.ModelID>ED14F212-1162-42B2-A850-301B6127F27C</a:ModelDocument.ModelID>
 <a:ModelClassID>18112060-1A4B-11D1-83D9-444553540000</a:ModelClassID>
 </o:ModelDocument>
 </c:ModelsAndFiles>

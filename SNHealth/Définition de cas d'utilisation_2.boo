@@ -1600,7 +1600,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencySymbol Id="o30">
 <a:CreationDate>1692683762</a:CreationDate>
 <a:ModificationDate>1692684758</a:ModificationDate>
-<a:Rect>((-4865,7575), (8468,9318))</a:Rect>
+<a:Rect>((-4865,7575), (8468,9317))</a:Rect>
 <a:ListOfPoints>((8068,8275),(-4465,8275))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>

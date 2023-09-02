@@ -1,0 +1,4 @@
+# Comment ajouter le fichier helper :
+    - creer un fichier dans le repertoire "app/Http/Helpers.php"
+    - dans composer.json, ajouter ""files": ["app/Http/Helpers.php"]," dans l'objet "autoload"
+    - executer la commande "composer dump-autoload" dans le cmd

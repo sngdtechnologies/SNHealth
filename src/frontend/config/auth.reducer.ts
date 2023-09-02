@@ -3,14 +3,15 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from './store';
-import { AUTH_LOGIN } from '../pages/auth/route.const';
+import { AUTH_404, AUTH_LOGIN, AUTH_REGISTER } from '../pages/auth/route.const';
 import axios from './axios';
 import { fetchUser, logout } from './auth';
 import { ROUTE_ADMIN } from '../pages/admin/route.const';
-import { MEDECIN } from '../pages/medecin/route.const';
-import { PATIENT } from '../pages/patient/route.const';
+import { ROUTE_MEDECIN } from '../pages/medecin/route.const';
+import { ROUTE_PATIENT } from '../pages/patient/route.const';
 import { serializeAxiosError } from '../pages/reducer/reducer.utils';
 import { toast } from 'react-toastify';
+import { HOME } from '../pages/route.const';
 
 // Custom hook
 export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) => {
@@ -29,6 +30,7 @@ export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) 
       await axios.post('/register', props);
       dispatch(fetchUser());
       props.setLoader(false);
+      router.push(AUTH_LOGIN);
     } catch (error: any) {
       if (error?.response?.status === 422) {
         props.setErrors(error.response.data.errors);
@@ -43,16 +45,16 @@ export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) 
 
     try {
       await axios.post('/login', props);
-      props.setLoader(false);
       dispatch(fetchUser());
     } catch (error: any) {
       toast.error(JSON.stringify(error.response.data.errors));
       if (error?.response?.status === 422) {
-        props.setErrors(error.response.data.errors);
+        props ? props.setErrors(error.response.data.errors) : null;
       } else {
         console.log('serializeAxiosError', serializeAxiosError(error));
       }
     }
+    props ? props.setLoader(false) : null;
   };
 
   const forgotPassword = async (props: any) => {
@@ -105,8 +107,8 @@ export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) 
         // console.log('logout');
         await axios.post('/logout');
         dispatch(logout());
-        props.setLoader(false);
-        console.log('dispatch');
+        // props != null ? props.setLoader(false) : null;
+        // console.log('dispatch');
         router.push(AUTH_LOGIN);
       } catch (error) {
         console.log('serializeAxiosError', serializeAxiosError(error));
@@ -116,11 +118,35 @@ export const useAuth = ({ middleware = '', redirectIfAuthenticated = '' } = {}) 
 
   useEffect(() => {
     if (middleware === 'guest' && entity.name != null) {
-      console.log('router', router);
+      // basePath.includes('/admin') && entity.authorities != "admin" ? router.push(AUTH_404) : null;
+      // basePath.includes('/patient') && entity.authorities != "patient" ? router.push(AUTH_404) : null;
+      // basePath.includes('/medecin') && entity.authorities != "medecin" ? router.push(AUTH_404) : null;
+      // // console.log('router', router);
+      entity.authorities == "admin" 
+      ? router.push(ROUTE_ADMIN)
+      : entity.authorities == "medecin"
+        ? router.push(ROUTE_MEDECIN)
+        : entity.authorities == "patient"
+            ? router.push(ROUTE_PATIENT)
+            : null
+      
     }
+
+    const basePath = router.pathname;
+    if ((basePath.includes('/auth/register') || basePath.includes('/auth/login')) && entity.name != null) {
+      entity.authorities == "admin" 
+      ? router.push(ROUTE_ADMIN)
+      : entity.authorities == "medecin"
+        ? router.push(ROUTE_MEDECIN)
+        : entity.authorities == "patient"
+          ? router.push(ROUTE_PATIENT)
+          : null
+    }
+
     if (window.location.pathname === '/verify-email' && entity?.email_verified_at) {
       router.push(redirectIfAuthenticated);
     }
+    
     if (middleware === 'auth' && errorMessage) {
       logoutUser();
     }

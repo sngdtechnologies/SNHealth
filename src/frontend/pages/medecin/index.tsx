@@ -1,7 +1,9 @@
 import React from 'react';
 import { Translate } from '../../shared/component/translate';
+import { useAuth } from '../../config/auth.reducer';
 
 const Dashboard = () => {
+    const { user } = useAuth({ middleware: 'guest' })
     return (
         <div className="grid">
             <div className="col-12">

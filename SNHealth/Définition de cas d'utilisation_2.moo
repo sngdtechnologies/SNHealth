@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{4A85F246-026F-4250-8F9D-7DF062A8C2F7}" Label="" LastModificationDate="1692686689" Name="Définition de cas d&#39;utilisation_2" Objects="121" Symbols="28" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
+<?PowerDesigner AppLocale="UTF16" ID="{4A85F246-026F-4250-8F9D-7DF062A8C2F7}" Label="" LastModificationDate="1693552509" Name="Définition de cas d&#39;utilisation_2" Objects="121" Symbols="28" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1600,7 +1600,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencySymbol Id="o30">
 <a:CreationDate>1692683762</a:CreationDate>
 <a:ModificationDate>1692684758</a:ModificationDate>
-<a:Rect>((-4865,7575), (8468,9317))</a:Rect>
+<a:Rect>((-4865,7575), (8468,9318))</a:Rect>
 <a:ListOfPoints>((8068,8275),(-4465,8275))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1958,9 +1958,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>Dependance_2</a:Code>
 <a:CreationDate>1692655091</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692655229</a:ModificationDate>
+<a:ModificationDate>1693552509</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
-<a:Stereotype>include</a:Stereotype>
+<a:Stereotype>extend</a:Stereotype>
 <c:Object1>
 <o:UseCase Ref="o45"/>
 </c:Object1>

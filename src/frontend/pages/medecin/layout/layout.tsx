@@ -7,7 +7,7 @@ import AppNav from './app-nav';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { Translate } from '../../../shared/component/translate';
-import AppFooter from './app-footer';
+import AppFooter from '../../layout/app-footer';
 
 const LayoutMedecin = ({ children }: ChildContainerProps) => {
     

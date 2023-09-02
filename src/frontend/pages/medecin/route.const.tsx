@@ -1,1 +1,1 @@
-export const MEDECIN = "/medecin";
+export const ROUTE_MEDECIN = "/medecin";

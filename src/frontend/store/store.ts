@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action, combineReducers } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import { persistReducer, persistStore } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import storage from "redux-persist/lib/storage/session";
 import rootReducer from "../pages/reducer/reducer";
 
 const makeConfiguredStore = () =>

@@ -14,14 +14,19 @@ import { NodeRef } from '../../../types/layout';
 import { AUTH_LOGIN, AUTH_REGISTER } from '../../auth/route.const';
 
 const AppNav = (props: any) => {
-    const [isHidden, setIsHidden] = useState(false);
-    const {  } = useContext(LayoutContext);
-    const menuRef = useRef<HTMLElement | null>(null);
-    const router = useRouter();
     const { logoutUser, user } = useAuth();
-    const [loader, setLoader] = useState(false);
-
+    
+    const {  } = useContext(LayoutContext);
+    
+    const menuRef = useRef<HTMLElement | null>(null);
+    
+    const router = useRouter();
+    
     const { t } = useTranslation('action', {i18n});
+    
+    
+    const [isHidden, setIsHidden] = useState(false);
+    const [loader, setLoader] = useState(false);
 
     const toggleMenuItemClick = () => {
         setIsHidden((prevState) => !prevState);
@@ -33,7 +38,7 @@ const AppNav = (props: any) => {
     }
     
     return (
-        <div className="py-4 px-2 mx-0 md:mx-6 lg:mx-8 lg:px-4 flex align-items-center justify-content-between relative lg:static">
+        <div className="py-4 px-4 mx-0 md:mx-6 lg:mx-6 lg:px-6 flex align-items-center justify-content-between relative lg:static">
             <Link href="/" className="flex align-items-center">
                 <img src={`/layout/images/logo-dark.jpg`} alt="Sakai Logo" height="50" className="mr-0 lg:mr-2" />
                 <span className="text-900 font-medium text-2xl line-height-3 mr-8"></span>
@@ -75,14 +80,10 @@ const AppNav = (props: any) => {
                     </li>
                 </ul>
                 <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                    { user.name == null ? (
-                        <>
-                            <Button label={t('login')} onClick={() => router.push(AUTH_LOGIN)} text className="border-none font-light line-height-2 text-blue-500"></Button>
-                            <Button label={t('register')} onClick={() => router.push(AUTH_REGISTER)} rounded className="border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></Button>
-                        </>
-                    ) : (
-                        <Button label={t('logout')} onClick={onLogout} loading={loader} rounded className="border-none ml-5 font-light line-height-2 bg-blue-500 text-white"></Button>
-                    )}
+                    <Button icon="pi pi-bell" rounded text aria-label="Notification" className="p-link" badge="2" badgeClassName="p-badge-danger p-0 ml-0 mb-3"/>
+                    <Button icon="pi pi-user" rounded text aria-label="Profil" className="p-link"/>
+                    <Button icon="pi pi-cog" rounded text aria-label="Setting" className="p-link"/>
+                    <Button icon="pi pi-sign-out" rounded text aria-label="Sign-out" onClick={onLogout} className="p-link"/>
                 </div>
             </div>
         </div>

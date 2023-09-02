@@ -6,12 +6,14 @@ import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'reac
 import { LayoutContext } from './context/layoutcontext';
 import { AppTopbarRef } from '../../../types/types';
 import { Button } from 'primereact/button';
+import { useAuth } from '../../../config/auth.reducer';
 
 const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
     const { layoutConfig, layoutState, onMenuToggle, showProfileSidebar } = useContext(LayoutContext);
     const menubuttonRef = useRef(null);
     const topbarmenuRef = useRef(null);
     const topbarmenubuttonRef = useRef(null);
+    const { logoutUser, user } = useAuth();
 
     useImperativeHandle(ref, () => ({
         menubutton: menubuttonRef.current,
@@ -38,7 +40,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
                 <Button icon="pi pi-bell" rounded text aria-label="Notification" className="p-link" badge="2" badgeClassName="p-badge-danger p-0 ml-0 mb-3"/>
                 <Button icon="pi pi-user" rounded text aria-label="Profil" className="p-link"/>
                 <Button icon="pi pi-cog" rounded text aria-label="Setting" className="p-link"/>
-                <Button icon="pi pi-sign-out" rounded text aria-label="Sign-out" className="p-link"/>
+                <Button icon="pi pi-sign-out" rounded text aria-label="Sign-out" onClick={logoutUser} className="p-link"/>
             </div>
         </div>
     );

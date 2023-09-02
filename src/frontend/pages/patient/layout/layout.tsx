@@ -7,7 +7,7 @@ import AppNav from './app-nav';
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { Translate } from '../../../shared/component/translate';
-import AppFooter from './app-footer';
+import AppFooter from '../../layout/app-footer';
 
 const LayoutPatient = ({ children }: ChildContainerProps) => {
     
@@ -30,10 +30,12 @@ const LayoutPatient = ({ children }: ChildContainerProps) => {
 
             <div>
                 <div className="surface-0 flex justify-content-center">
-                    <div id="home" className="landing-wrapper overflow-hidden">
+                    <div id="home" className="landing-wrapper overflow-hidden" style={{width: "100%"}}>
                         <AppNav></AppNav>
 
-                        { children }
+                        <div className='py-4 px-4 mx-0 md:mx-6 lg:mx-6 lg:px-6'>
+                            { children }
+                        </div>
 
                         <AppFooter></AppFooter>
                     </div>

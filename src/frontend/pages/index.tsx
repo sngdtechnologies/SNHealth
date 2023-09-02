@@ -18,6 +18,7 @@ import { useAuth } from '../config/auth.reducer';
 import { useTranslation } from 'react-i18next';
 import i18n from '../i18n/i18n';
 import { InputText } from 'primereact/inputtext';
+import AppFooter from './layout/app-footer';
 
 const LandingPage: Page = () => {
     const [isHidden, setIsHidden] = useState(false);
@@ -38,6 +39,8 @@ const LandingPage: Page = () => {
         setLoader(true);
         logoutUser({setLoader})
     }
+
+    console.log('user', user);
 
     return (
         <div className="surface-0 flex justify-content-center">
@@ -87,7 +90,6 @@ const LandingPage: Page = () => {
                 <div
                     id="hero"
                     className="flex flex-column pt-4 px-2 lg:px-4 overflow-hidden"
-                    style={{ background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EEEFAF 0%, #C3E3FA 100%)', clipPath: 'ellipse(150% 87% at 93% 13%)' }}
                 >
                     <div className="grid mx-4 md:mx-8 mt-0 md:mt-4 mb-8">
                         <div className='col-12 lg:col-5 my-auto flex flex-column lg:align-items-start'>
@@ -125,56 +127,7 @@ const LandingPage: Page = () => {
                     </div>
                 </div>
 
-                
-
-                <div className="py-4 px-4 mx-0 mt-8 lg:mx-8">
-                    <div className="grid justify-content-between">
-                        <div className="col-12 md:col-2">
-                            <Link href="/" className="flex flex-wrap align-items-center justify-content-center md:justify-content-start md:mb-0 mb-3 cursor-pointer">
-                                <img src={`/layout/images/logo-v.jpg`} alt="footer sections" width="100" height="100" className="mr-2" />
-                                <span className="font-medium text-3xl text-900"></span>
-                            </Link>
-                        </div>
-
-                        <div className="col-12 md:col-8 lg:col-10">
-                            <div className="grid text-center md:text-left">
-                                <div className="col-12 md:col">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900"><Translate context="link" contentKey="link"></Translate></h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="contact"></Translate></a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="blog"></Translate></a>
-                                </div>
-
-                                <div className="col-12 md:col mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900"><Translate context="link" contentKey="communaute"></Translate></h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="facebook"></Translate></a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="faq"></Translate></a>
-                                    <a className="line-height-3 text-xl block cursor-pointer text-700"><Translate context="link" contentKey="blog"></Translate></a>
-                                </div>
-
-                                <div className="col-12 md:col mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900"><Translate context="link" contentKey="info.legal"></Translate></h4>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="policy"></Translate></a>
-                                    <a className="line-height-3 text-xl block cursor-pointer mb-2 text-700"><Translate context="link" contentKey="terms"></Translate></a>
-                                </div>
-
-                                <div className="col-12 md:col-4 mt-4 md:mt-0">
-                                    <h4 className="font-medium text-2xl line-height-3 mb-3 text-900"><Translate context="link" contentKey="newsletter"></Translate></h4>
-                                    <div className="grid">
-                                        <div className="col-12 md:col-8">
-                                            <span className="p-float-label">
-                                                <InputText id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                                                <label htmlFor="email">Email</label>
-                                            </span>
-                                        </div>
-                                        <div className="col-12 md:col-4">
-                                            <Button raised ><Translate context='link' contentKey='follow'></Translate></Button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AppFooter></AppFooter>
             </div>
         </div>
     );

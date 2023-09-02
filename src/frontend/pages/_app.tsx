@@ -6,6 +6,7 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import '../styles/layout/layout.scss';
 import '../styles/demo/Demos.scss';
+import '../styles/layout/style.scss';
 import { wrapper } from "../store/store";
 import 'react-toastify/dist/ReactToastify.css';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -22,6 +23,8 @@ import { LayoutProvider } from './layout/context/layoutcontext';
 import LayoutPatientProvider from './patient/layout/context/layoutcontext';
 import LayoutMedecinProvider from './medecin/layout/context/layoutcontext';
 import LayoutAdminProvider from './admin/layout/context/layoutcontext';
+import { useRouter } from 'next/router';
+import { HOME } from './route.const';
 
 type Props = AppProps & {
     Component: Page;
@@ -30,17 +33,24 @@ type Props = AppProps & {
 function MyApp({ Component, pageProps }: Props) {
     const store: any = useStore();
     // const dispatch = useAppDispatch();
-    const { user } = useAuth({ middleware: 'guest' })
+    const { user } = useAuth();
+    const router = useRouter();
 
     const [account, setAccount] = useState<any>(null);
 
     // useEffect(() => {
     //     dispatch(fetchUser());
     // }, [])
+
+    const basePath = router.pathname;
+    // console.log('basePath.endsWit', basePath.includes('/admin'));
     
     useEffect(() => {
         // i18n.changeLanguage('fr');
         console.log('user', user);
+        // if (user.name == null) {
+        //     router.push(HOME);
+        // }
         setAccount(user);
     }, [user]);
 

@@ -4,7 +4,9 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{E4C2F8B3-8D3A-4B60-B41D-684261F55432}" Name="SNHealth" Selected="Yes" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="SNHealth.prj"/>
+		<Model Expanded="Yes" ID="{E4C2F8B3-8D3A-4B60-B41D-684261F55432}" Loaded="No" Name="SNHealth" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="SNHealth.prj"/>
+		<Model Expanded="Yes" ID="{6D9D89D2-0987-4A67-BBC1-711BBEDD9C5D}" Loaded="No" Name="Diagramme de classes UML_1" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Diagramme de donnee UML_1.mpd"/>
+		<Model Expanded="Yes" ID="{E4C2F8B3-8D3A-4B60-B41D-684261F55432}" Name="SNHealth" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="SNHealth.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

@@ -17,11 +17,21 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $type = ['patient', 'medecin'];
+        $data = $type[mt_rand(0, 1)];
+        
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
+            'role_id' => role('nom', '=', $data)->id,
+            'name' => $this->faker->name(),
+            'prenom' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'telephone' => $this->faker->phoneNumber(),
+            'photo' => '',
+            'pseudo' => $this->faker->userName(),
+            'authorities' => $data,
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => '$2y$10$uw1J0O2WZ1W.lBGMKXVgFeGl8U1pL3rUkffopmN.z1KUjUJ20aaVe', // password
+            'statut' => get_setting('statut')->random(),
             'remember_token' => Str::random(10),
         ];
     }
