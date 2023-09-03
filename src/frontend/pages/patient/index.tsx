@@ -41,12 +41,14 @@ const Recherche = () => {
     }
 
     const onPageChange = (event: any) => {
+        console.log('event', event);
         setFirst(event.first);
         setRows(event.rows);
     };
 
     const ligne = [false, true];
-    const medecinList: any[] = [
+    // const medecinList = null;
+    const medecinList = [
         {
             name: 'Medecin 1',
             category: 'Chirugient Pédiatrique',
@@ -84,31 +86,40 @@ const Recherche = () => {
             <div className="surface-0">
                 <div className="">
                     <div className="search-bar py-2">
-                        {/* <span className="p-input-icon-left w-full">
-                            <i className="pi pi-search pl-2" />
-                            <InputText placeholder="Search" className='w-full py-3 pl-6' style={{ borderRadius: "20px 20px" }}/>
-                        </span> */}
-                        <SearchBar onChange={onSearch} control={control} onKeyDown={handleKeyDown}/>
+                        { medecinList  == null ? (
+                            <div className="flex align-items-center justify-content-center">
+                                <img src={`/layout/images/logo-search.svg`} alt="" height="" className="border-circle w-20rem h-20rem" />
+                            </div>
+                        ) : null}
+                        <SearchBar onChange={onSearch} control={control} onKeyDown={handleKeyDown} className="mt-4"/>
                     </div>
-                    <div className="grap-1 pl-4 pb-4">
-                        <span className="font-bold text-sm text-gray-500 white-space-nowrap">110000 médecin</span>
-                    </div>
-                </div>
-                <div className="grid">
-                    { medecinList.map((m) => (
-                        <div className="col-12 md:col-3">
-                            <ItemSearch
-                                name={m.name}
-                                category={m.category}
-                                isOnLigne={m.isOnLigne}
-                                isAbonner={m.isAbonner}
-                            />
+                    { medecinList != null ? (
+                        <div className="grap-1 pl-4 pb-4">
+                            <span className="font-bold text-sm text-gray-500 white-space-nowrap" style={{ letterSpacing: "1px" }}>11,0000 médecin</span>
                         </div>
-                    ))}
+                    ) : null}
                 </div>
-                <div className="">
-                    <Paginator first={first} rows={rows} totalRecords={120} rowsPerPageOptions={[10, 20, 30]} onPageChange={onPageChange} />
-                </div>
+                
+                { medecinList != null ? (
+                    <div className="grid">
+                        { medecinList.map((m: any) => (
+                            <div className="col-12 md:col-3">
+                                <ItemSearch
+                                    name={m.name}
+                                    category={m.category}
+                                    isOnLigne={m.isOnLigne}
+                                    isAbonner={m.isAbonner}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                ) : null}
+                
+                { medecinList != null ? (
+                    <div className="">
+                        <Paginator first={first} rows={rows} totalRecords={120} rowsPerPageOptions={[10, 20, 30]} onPageChange={onPageChange} />
+                    </div>
+                ) : null}
             </div>
         </>
     );

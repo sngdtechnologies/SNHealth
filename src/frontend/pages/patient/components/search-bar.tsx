@@ -10,9 +10,9 @@ export const SearchBar = (props: any) => {
     const p = useTranslation('placeholder', {i18n}).t;
     const control = props.control;
 
-    const className = props.className ? props.className : '';
-    const classIconName = props.classIconName ? props.classIconName : '';
-    const classInputName = props.classInputName ? props.classInputName : '';
+    const className = props.className ? ' ' + props.className : '';
+    const classIconName = props.classIconName ? ' ' + props.classIconName : '';
+    const classInputName = props.classInputName ? ' ' + props.classInputName : '';
     const placeholder = props.placeholder ? props.placeholder : p("search");
 
     const name = props.name ? props.name : 'search';
