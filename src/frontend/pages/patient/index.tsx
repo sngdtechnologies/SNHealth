@@ -11,24 +11,36 @@ import { useForm } from 'react-hook-form';
 import { classNames } from 'primereact/utils';
 import { ItemSearch } from './components/itemSearch';
 import { Paginator } from 'primereact/paginator';
+import { useAppDispatch, useAppSelector } from '../../config/store';
+import { getMedecinSearch } from './search.reducer';
         
 
 const Recherche = () => {
     const { user } = useAuth({ middleware: 'guest' });
     
     const { getValues, setValue, control } = useForm();
+
+    const dispatch = useAppDispatch();
+    const data = useAppSelector(state => state.search.entity);
     
     const [touch, setTouch] = useState<string>('');
     const [search, setSearch] = useState<string>('');
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
+    const [medecinList, setMedecinList] = useState<any>([]);
 
     useEffect(() => {
         if (search != null && touch == "Enter") {
             console.log('Recherche', search);
+            dispatch(getMedecinSearch());
+            setTouch('');
         }
     }, [touch])
-    
+
+    useEffect(() => {
+        console.log('data', data);
+        setMedecinList(data?.data);
+    }, [data])
 
     const onSearch = (s: any) => {
         // console.log('s', s);
@@ -46,47 +58,12 @@ const Recherche = () => {
         setRows(event.rows);
     };
 
-    const ligne = [false, true];
-    // const medecinList = null;
-    const medecinList = [
-        {
-            name: 'Medecin 1',
-            category: 'Chirugient Pédiatrique',
-            isOnLigne: ligne[Math.random()],
-            isAbonner: ligne[Math.random()],
-        },
-        {
-            name: 'Medecin 2',
-            category: 'Dentiste',
-            isOnLigne: ligne[Math.random()],
-            isAbonner: ligne[Math.random()],
-        },
-        {
-            name: 'Medecin 3',
-            category: 'Pédiatre',
-            isOnLigne: ligne[Math.random()],
-            isAbonner: ligne[Math.random()],
-        },
-        {
-            name: 'Medecin 4',
-            category: 'Chirugient Cardio Thoracique',
-            isOnLigne: ligne[Math.random()],
-            isAbonner: ligne[Math.random()],
-        },
-        {
-            name: 'Medecin 5',
-            category: 'Chirugient Général',
-            isOnLigne: ligne[Math.random()],
-            isAbonner: ligne[Math.random()],
-        }
-    ];
-
     return (
         <>
             <div className="surface-0">
                 <div className="">
                     <div className="search-bar py-2">
-                        { medecinList  == null ? (
+                        { medecinList == null ? (
                             <div className="flex align-items-center justify-content-center">
                                 <img src={`/layout/images/logo-search.svg`} alt="" height="" className="border-circle w-20rem h-20rem" />
                             </div>
@@ -104,12 +81,7 @@ const Recherche = () => {
                     <div className="grid">
                         { medecinList.map((m: any) => (
                             <div className="col-12 md:col-3">
-                                <ItemSearch
-                                    name={m.name}
-                                    category={m.category}
-                                    isOnLigne={m.isOnLigne}
-                                    isAbonner={m.isAbonner}
-                                />
+                                <ItemSearch data={m}/>
                             </div>
                         ))}
                     </div>

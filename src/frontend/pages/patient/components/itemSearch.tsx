@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { classNames } from 'primereact/utils';
 import { useTranslation } from "react-i18next";
 import i18n from '../../../i18n/i18n';
@@ -10,14 +10,15 @@ import Avis from '../../../shared/component/pages/avis';
 export const ItemSearch = (props: any) => {
     const t = useTranslation('placeholder', {i18n}).t;
 
+    const data = props.data;
     const className = props.className ? ' ' + props.className : '';
-    const name = props.name ? props.name : '';
-    const category = props.category ? props.category : '';
-    const isOnLigne = props.isOnLigne ? props.isOnLigne : false;
-    const isAbonner = props.isAbonner ? props.isAbonner : false;
+    const name = data.nom + ' ' + data.prenom;
+    const category = data.categoriTitle;
+    const isOnLigne = false;
+    const isAbonner = false;
+    const note = Math.round(data.note / data.nombreAvis);
 
-    const [rating, setRating] = useState<any>(null);
-    const [IsVisibleAvis, setIsVisibleAvis] = useState<any>(true);
+    const [isVisibleAvis, setIsVisibleAvis] = useState<any>(true);
     const [displayResponsive, setDisplayResponsive] = useState(false);
     const dialogFuncMap = {
         'displayResponsive': setDisplayResponsive
@@ -40,8 +41,12 @@ export const ItemSearch = (props: any) => {
         }
     ];
 
+    useEffect(() => {
+        console.log('isVisibleAviskfldfkdkf  df', isVisibleAvis)
+    }, [isVisibleAvis])
+
     const handleChangeIsVisibleAvis = () => {
-        setIsVisibleAvis(!IsVisibleAvis)
+        setIsVisibleAvis(!isVisibleAvis)
     }
 
     const onHide = (name: string) => {
@@ -61,7 +66,7 @@ export const ItemSearch = (props: any) => {
             <div className="content border-round-sm">
                 <div className="content-image bg-cover bg-no-repeat bg-center relative border-round-top" style={{ height: "244px", backgroundImage: "url('/layout/images/img_4.jpg')" }}>
                     <div className="rating mt-2 border-round-sm absolute ml-2 p-2 flex align-items-center gap-2 bg-black-alpha-20 w-9rem" style={{ backdropFilter: "blur(27px)" }}>
-                        <Rating value={rating} onChange={(e) => setRating(e.value)} cancel={false} onIcon={<i className="pi pi-star-fill text-yellow-500"></i>} disabled/>
+                        <Rating value={ note } cancel={false} onIcon={<i className="pi pi-star-fill text-yellow-500"></i>}/>
                     </div>
                 </div>
                 <div className="content-info pt-1">
@@ -111,9 +116,7 @@ export const ItemSearch = (props: any) => {
                         </button>
                     </div>
                 </div>
-                <div className={ classNames("align-items-center border-round absolute bg-white justify-content-center py-6 px-6 gap-3 transition-duration-200 fadein animation-duration-1000 shadow-8", {"fadeout d-none": IsVisibleAvis }) } style={{ marginTop: "-200px", marginLeft: "-10px", zIndex: "1" }}>
-                    <Avis onChange={onChangeAvis}/>
-                </div>
+                <Avis onChange={onChangeAvis} onClick={handleChangeIsVisibleAvis} isVisibleAvis={isVisibleAvis}/>
             </div>
 
             <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }}>

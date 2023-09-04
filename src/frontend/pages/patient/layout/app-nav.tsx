@@ -80,7 +80,7 @@ const AppNav = (props: any) => {
                     </li>
                 </ul>
                 <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                    <Button icon="pi pi-bell" rounded text aria-label="Notification" className="p-link" badge="2" badgeClassName="p-badge-danger p-0 ml-0 mb-3"/>
+                    <Button icon="pi pi-bell" rounded text aria-label="Notification" className="p-link" badge="2" badgeClassName="p-badge-danger p-0 ml-0 mb-3 fadeout animation-duration-1000 animation-iteration-infinite"/>
                     <Button icon="pi pi-user" rounded text aria-label="Profil" className="p-link"/>
                     <Button icon="pi pi-cog" rounded text aria-label="Setting" className="p-link"/>
                     <Button icon="pi pi-sign-out" rounded text aria-label="Sign-out" onClick={onLogout} className="p-link"/>

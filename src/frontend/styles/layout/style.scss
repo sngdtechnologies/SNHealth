@@ -188,3 +188,87 @@
 .d-none {
   display: none !important;
 }
+
+.avis {
+  margin-top: -200px;
+  margin-left: -10px;
+  z-index: 1;
+  padding: 5rem 10rem !important;
+  border-radius: 40px !important;
+
+  .avis-close {
+    border-radius: 50px;
+    margin-top: -100px;
+    margin-left: 340px;
+    position: absolute;
+
+    &.comment {
+      margin-top: -60px;
+      margin-left: 265px;
+    }
+  }
+
+  .p-rating .p-rating-item * {
+    font-size: xx-large;
+  }
+
+  .p-rating .p-rating-item {
+    animation: zoomindown 1000ms 500ms linear;
+    -webkit-animation: zoomindown 1000ms 500ms linear;
+  }
+
+  &.comment {
+    padding: 2rem 3rem !important;
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+  }
+}
+
+@media (max-width: 547px) {
+  .avis {
+    margin-top: -210px;
+    margin-left: 0px;
+    z-index: 1;
+    padding: 3rem 5rem !important;
+    border-radius: 40px !important;
+    -webkit-border-radius: 40px !important;
+    -moz-border-radius: 40px !important;
+    -ms-border-radius: 40px !important;
+    -o-border-radius: 40px !important;
+
+    .avis-close {
+      border-radius: 50px;
+      margin-top: -60px;
+      margin-left: 270px;
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 396px) {
+  .avis {
+    // margin-top: -210px;
+    // margin-left: 0px;
+    // z-index: 1;
+    // padding: 3rem 5rem !important;
+    // border-radius: 40px !important;
+    // -webkit-border-radius: 40px !important;
+    // -moz-border-radius: 40px !important;
+    // -ms-border-radius: 40px !important;
+    // -o-border-radius: 40px !important;
+
+    // .avis-close {
+    //   border-radius: 50px;
+    //   margin-top: -60px;
+    //   margin-left: 270px;
+    //   position: absolute;
+    // }
+
+    .p-rating .p-rating-item * {
+      font-size: large;
+    }
+  }
+}
