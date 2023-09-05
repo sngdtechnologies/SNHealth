@@ -7,12 +7,21 @@ import { Dropdown } from 'primereact/dropdown';
 
 import { SpeedDial } from 'primereact/speeddial';
 import { SearchBar } from './components/search-bar';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { classNames } from 'primereact/utils';
 import { ItemSearch } from './components/itemSearch';
 import { Paginator } from 'primereact/paginator';
 import { useAppDispatch, useAppSelector } from '../../config/store';
-import { getMedecinSearch } from './search.reducer';
+import { getAllCategori, getMedecinSearch } from './search.reducer';
+
+import { Skeleton } from 'primereact/skeleton';
+import ItemSearchLoading from './components/itemSearchLoading';
+
+import { MultiSelect } from 'primereact/multiselect';
+import FilterSearch from './components/filterSearch';
+import { getIds } from '../../shared/component/function/collection-function';
+         
+        
         
 
 const Recherche = () => {
@@ -21,25 +30,37 @@ const Recherche = () => {
     const { getValues, setValue, control } = useForm();
 
     const dispatch = useAppDispatch();
-    const data = useAppSelector(state => state.search.entity);
+    const data: any = useAppSelector(state => state.search.entity);
+    const loadingSearch = useAppSelector(state => state.search.loadingSearch);
     
     const [touch, setTouch] = useState<string>('');
     const [search, setSearch] = useState<string>('');
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
     const [medecinList, setMedecinList] = useState<any>([]);
-
+    const [totalRecords, setTotalRecords] = useState<number>(0);
+    const [categoriList, setCategoriList] = useState<any>([]);
+    
     useEffect(() => {
         if (search != null && touch == "Enter") {
-            console.log('Recherche', search);
-            dispatch(getMedecinSearch());
+            console.log('Recherche', {search: search, page: 1});
+            dispatch(getMedecinSearch({search: search, page: 1}));
             setTouch('');
         }
     }, [touch])
 
     useEffect(() => {
-        console.log('data', data);
-        setMedecinList(data?.data);
+        console.log('Recherche', {search: search, page: 1, categoris: getIds(categoriList)});
+        dispatch(getMedecinSearch({search: search, page: 1, categoris: getIds(categoriList)}));
+    }, [categoriList])
+    
+
+    useEffect(() => {
+        // console.log('data', data);
+        if (data) {
+            setMedecinList(data?.data);
+            setTotalRecords(data?.total);
+        }
     }, [data])
 
     const onSearch = (s: any) => {
@@ -53,45 +74,66 @@ const Recherche = () => {
     }
 
     const onPageChange = (event: any) => {
-        console.log('event', event);
+        // console.log('event', event);
         setFirst(event.first);
         setRows(event.rows);
+        dispatch(getMedecinSearch({search: search, page: event.page + 1}));
     };
+
+    const onChangeCategori = (v: any) => {
+        // console.log('v', v);
+        setCategoriList(v);
+    }
 
     return (
         <>
             <div className="surface-0">
-                <div className="">
-                    <div className="search-bar py-2">
-                        { medecinList == null ? (
-                            <div className="flex align-items-center justify-content-center">
-                                <img src={`/layout/images/logo-search.svg`} alt="" height="" className="border-circle w-20rem h-20rem" />
+                <div className="grid mt-4">
+                    <div className={ classNames("col-12", {"md:col-9": medecinList != null}, {"md:col-12": medecinList == null}) }>
+                        <div className="">
+                            <div className="search-bar mt-4 mb-2">
+                                { medecinList == null && !loadingSearch ? (
+                                    <div className="flex align-items-center justify-content-center">
+                                        <img src={`/layout/images/logo-search.svg`} alt="" height="" className="border-circle w-20rem h-20rem" />
+                                    </div>
+                                ) : null}
+                                <SearchBar onChange={onSearch} control={control} onKeyDown={handleKeyDown}/>
                             </div>
-                        ) : null}
-                        <SearchBar onChange={onSearch} control={control} onKeyDown={handleKeyDown} className="mt-4"/>
+                            { medecinList != null && !loadingSearch ? (
+                                <div className="grap-1 pl-4 pb-4">
+                                    <span className="font-bold text-sm text-gray-500 white-space-nowrap" style={{ letterSpacing: "1px" }}>{totalRecords} résultat{totalRecords > 1 ? 's' : ''}</span>
+                                </div>
+                            ) : null}
+                        </div>
+                        
+                        { loadingSearch ? (
+                            <ItemSearchLoading/>
+                        ) : (
+                            <>
+                                { medecinList != null ? (
+                                    <div className="grid">
+                                        { medecinList.map((m: any) => (
+                                            <div className="col-12 md:col-4">
+                                                <ItemSearch data={m}/>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : null}
+                                
+                                { medecinList != null ? (
+                                    <div className="">
+                                        <Paginator first={first} rows={rows} totalRecords={totalRecords} onPageChange={onPageChange} template={{ layout: 'PrevPageLink CurrentPageReport NextPageLink' }}  />
+                                    </div>
+                                ) : null}
+                            </>
+                        )}
                     </div>
                     { medecinList != null ? (
-                        <div className="grap-1 pl-4 pb-4">
-                            <span className="font-bold text-sm text-gray-500 white-space-nowrap" style={{ letterSpacing: "1px" }}>11,0000 médecin</span>
+                        <div className="col-12 md:col-3 mt-1 field p-fluid">
+                            <FilterSearch control={control} labelNameCategori="categori" onChangeCategori={onChangeCategori}/>
                         </div>
                     ) : null}
                 </div>
-                
-                { medecinList != null ? (
-                    <div className="grid">
-                        { medecinList.map((m: any) => (
-                            <div className="col-12 md:col-3">
-                                <ItemSearch data={m}/>
-                            </div>
-                        ))}
-                    </div>
-                ) : null}
-                
-                { medecinList != null ? (
-                    <div className="">
-                        <Paginator first={first} rows={rows} totalRecords={120} rowsPerPageOptions={[10, 20, 30]} onPageChange={onPageChange} />
-                    </div>
-                ) : null}
             </div>
         </>
     );

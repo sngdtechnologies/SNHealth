@@ -2,23 +2,34 @@ import { createSlice, createAsyncThunk, isFulfilled, isPending, isRejected } fro
 import { HYDRATE } from 'next-redux-wrapper';
 import axios from '../../config/axios';
 import { serializeAxiosError } from '../reducer/reducer.utils';
+import { toast } from 'react-toastify';
 
 const initialState = {
   loading: false,
+  loadingSearch: false,
   errorMessage: null,
   entities: [],
   entity: {},
   updating: false,
   totalItems: 0,
-  updateSuccess: false
+  updateSuccess: false,
+  categoris: []
 };
 
 const apiUrl = '/api/patient';
+
 // Action thunks
 export const getMedecinSearch = createAsyncThunk(
   'patient/fetch_search_medecin', 
+  async (param: any) => {
+    return axios.get(`api/medecins/search?page=${param.page}&search=${param.search}&categoris=${param.categoris}`);
+  }, { serializeError: serializeAxiosError }
+);
+
+export const getAllCategori = createAsyncThunk(
+  'patient/fetch_get_all_categori', 
   async () => {
-    return axios.get(`${apiUrl}/medecin-search`);
+    return axios.get(`/api/categoris/all`);
   }, { serializeError: serializeAxiosError }
 );
 
@@ -46,19 +57,32 @@ export const searchSlice = createSlice({
       // Handle the result of the getEntity async thunk
       .addMatcher(isFulfilled(getMedecinSearch), (state, action: any) => {
         // console.log('action.payload getMedecinSearch', action.payload);
+        // toast.success('Opération effectuée avec succès');
+        return {
+          ...state,
+          loadingSearch: false,
+          entity: action.payload.data
+        };
+      })
+      .addMatcher(isFulfilled(getAllCategori), (state, action: any) => {
+        // console.log('action.payload', action.payload);
         return {
           ...state,
           loading: false,
-          entity: action.payload.data,
-          totalItems: parseInt(action.payload.headers['x-total-count'], 10),
+          categoris: action.payload.data
         };
       })
       .addMatcher(isPending(getMedecinSearch), (state: any ) => {
         state.errorMessage = null;
         state.updateSuccess = false;
+        state.loadingSearch = true;
+      })
+      .addMatcher(isPending(getAllCategori), (state: any ) => {
+        state.errorMessage = null;
+        state.updateSuccess = false;
         state.loading = true;
       })
-      .addMatcher(isRejected(getMedecinSearch), (state, action: any ) => {
+      .addMatcher(isRejected(getMedecinSearch, getAllCategori), (state, action: any ) => {
         state.errorMessage = action.payload;
       });
   },

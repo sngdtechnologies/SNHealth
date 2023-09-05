@@ -22,6 +22,7 @@ class Medecin extends Model
         'email',
         'telephone',
         'photo',
+        'bio',
         'sexe',
         'adresse',
         'date',

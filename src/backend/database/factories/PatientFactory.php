@@ -16,6 +16,7 @@ class PatientFactory extends Factory
      */
     public function definition(): array
     {
+        $images = ['patient-1.jpg', 'patient-2.jpg', 'patient-3.jpg', 'patient-4.jpg', 'patient-5.jpg'];
         return [
             'user_id' => user()::select('id')->get()->random(),
             'nom' => $this->faker->name,
@@ -24,7 +25,7 @@ class PatientFactory extends Factory
             'date_naissance' => $this->faker->date(),
             'lieu_naissance' => $this->faker->date(),
             'telephone' => $this->faker->phoneNumber(),
-            'photo' => '',
+            'photo' => '/demo/images/avatar/patient/'.$images[mt_rand(0, 4)],
             'sexe' => get_setting('sexe')->random(),
             'adresse' => $this->faker->address(),
             'is_abonner' => mt_rand(0, 1),

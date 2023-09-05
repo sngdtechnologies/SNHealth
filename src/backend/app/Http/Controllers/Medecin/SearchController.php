@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Patient;
+namespace App\Http\Controllers\Medecin;
 
 use App\Http\Controllers\Controller;
 use DB;
@@ -10,7 +10,7 @@ use Illuminate\Http\Response;
 class SearchController extends Controller
 {
     
-    public function index(Request $request): Response
+    public function index(Request $request)//: Response
     {
         $medecins = medecin()::selectRaw('
             medecins.*, c.title as categoriTitle, c.description as categoriDescription,
@@ -23,9 +23,12 @@ class SearchController extends Controller
                 ->orWhere('medecins.prenom', 'LIKE', "%$request->search%")
                 ->orWhere('c.title', 'LIKE', "%$request->search%")
                 ->orWhere('c.description', 'LIKE', "%$request->search%");
-        })
-        ->paginate();
+        });
         
-        return response($medecins, 200);
+        if ($request->categoris != null) {
+            $medecins->whereIn('medecins.categori_id', explode(',', $request->categoris));
+        }
+        
+        return response($medecins->paginate(10), 200);
     }
 }

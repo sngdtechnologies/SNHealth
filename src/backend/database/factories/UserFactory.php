@@ -19,6 +19,7 @@ class UserFactory extends Factory
     {
         $type = ['patient', 'medecin'];
         $data = $type[mt_rand(0, 1)];
+        $images = ['medecin-1.jpg', 'medecin-2.jpg', 'medecin-3.jpg', 'medecin-4.jpg', 'medecin-5.jpg'];
         
         return [
             'role_id' => role('nom', '=', $data)->id,
@@ -26,7 +27,7 @@ class UserFactory extends Factory
             'prenom' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'telephone' => $this->faker->phoneNumber(),
-            'photo' => '',
+            'photo' => '/demo/images/avatar/medecin/'.$images[mt_rand(0, 4)],
             'pseudo' => $this->faker->userName(),
             'authorities' => $data,
             'email_verified_at' => now(),

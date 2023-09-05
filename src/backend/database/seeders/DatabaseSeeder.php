@@ -20,25 +20,25 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         $this->call([
-            // RoleSeeder::class,
-            // MenuSeeder::class,
-            // RoleMenuSeeder::class,
-            // UserSeeder::class,
-            // HistoriqueSeeder::class,
-            // CategoriSeeder::class,
-            // MedecinSeeder::class,
-            // PatientSeeder::class,
+            RoleSeeder::class,
+            MenuSeeder::class,
+            RoleMenuSeeder::class,
+            UserSeeder::class,
+            HistoriqueSeeder::class,
+            CategoriSeeder::class,
+            MedecinSeeder::class,
+            PatientSeeder::class,
             AvisSeeder::class,
-            // FactureSeeder::class,
-            // SymptomeSeeder::class,
-            // RappelSeeder::class,
-            // NotificationSeeder::class,
-            // RendezVousSeeder::class,
-            // AbonnementSeeder::class,
-            // PrescriptionSeeder::class,
-            // DossierMedicalSeeder::class,
-            // PubliciteSeeder::class,
-            // LogSeeder::class
+            FactureSeeder::class,
+            SymptomeSeeder::class,
+            RappelSeeder::class,
+            NotificationSeeder::class,
+            RendezVousSeeder::class,
+            AbonnementSeeder::class,
+            PrescriptionSeeder::class,
+            DossierMedicalSeeder::class,
+            PubliciteSeeder::class,
+            LogSeeder::class
         ]);
     }
 }

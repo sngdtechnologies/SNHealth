@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{86E93AD1-6468-47FD-9786-3D97DD16582D}" Label="" LastModificationDate="1692829406" Name="Définition de cas d&#39;utilisation_5" Objects="146" Symbols="40" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
+<?PowerDesigner AppLocale="UTF16" ID="{86E93AD1-6468-47FD-9786-3D97DD16582D}" Label="" LastModificationDate="1692829406" Name="Définition de cas d&#39;utilisation_5" Objects="147" Symbols="40" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1444,9 +1444,9 @@ Shadow=0</a:DisplayPreferences>
 <a:SymbolType>32</a:SymbolType>
 </o:PredefinedSymbol>
 <o:TextSymbol Id="o8">
-<a:Text>Digramme de cas d&#39;utilisation &quot;Module Gestion des utilisateurs&quot;</a:Text>
+<a:Text>Digramme de cas d&#39;utilisation &quot;Module Patient&quot;</a:Text>
 <a:CreationDate>1692825517</a:CreationDate>
-<a:ModificationDate>1692825517</a:ModificationDate>
+<a:ModificationDate>1692829934</a:ModificationDate>
 <a:Rect>((-9789,19835), (12783,18787))</a:Rect>
 <a:TextStyle>4130</a:TextStyle>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
@@ -1474,7 +1474,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencySymbol Id="o10">
 <a:CreationDate>1692827655</a:CreationDate>
 <a:ModificationDate>1692827655</a:ModificationDate>
-<a:Rect>((-3288,16024), (12662,17755))</a:Rect>
+<a:Rect>((-3288,16024), (12662,17769))</a:Rect>
 <a:ListOfPoints>((-2888,16724),(12262,16724))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1495,7 +1495,7 @@ Shadow=0</a:DisplayPreferences>
 <a:CreationDate>1692827678</a:CreationDate>
 <a:ModificationDate>1692829257</a:ModificationDate>
 <a:CenterTextOffset>(-1200, 394)</a:CenterTextOffset>
-<a:Rect>((5713,-250), (14390,5431))</a:Rect>
+<a:Rect>((5713,-250), (14390,5388))</a:Rect>
 <a:ListOfPoints>((13040,150),(13040,4600),(6113,4600))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1516,7 +1516,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencySymbol Id="o18">
 <a:CreationDate>1692828660</a:CreationDate>
 <a:ModificationDate>1692829257</a:ModificationDate>
-<a:Rect>((-3138,-452), (12300,1241))</a:Rect>
+<a:Rect>((-3138,-452), (12300,1198))</a:Rect>
 <a:ListOfPoints>((11900,248),(-2738,248))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1599,8 +1599,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o29">
 <a:CreationDate>1692829076</a:CreationDate>
 <a:ModificationDate>1692829591</a:ModificationDate>
-<a:Rect>((-18239,2698), (-6037,10362))</a:Rect>
-<a:ListOfPoints>((-17839,3098),(-17839,9737),(-6437,9737))</a:ListOfPoints>
+<a:Rect>((-18239,-4937), (-6037,10362))</a:Rect>
+<a:ListOfPoints>((-17839,3098),(-17839,-4537),(-11812,-4537),(-11812,9737),(-6437,9737))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1662,8 +1662,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o37">
 <a:CreationDate>1692829225</a:CreationDate>
 <a:ModificationDate>1692829624</a:ModificationDate>
-<a:Rect>((-18239,748), (-6864,1998))</a:Rect>
-<a:ListOfPoints>((-17839,1373),(-7264,1373))</a:ListOfPoints>
+<a:Rect>((-18239,673), (-6864,1923))</a:Rect>
+<a:ListOfPoints>((-17839,1298),(-7264,1298))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1724,8 +1724,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o44">
 <a:CreationDate>1692829236</a:CreationDate>
 <a:ModificationDate>1692829634</a:ModificationDate>
-<a:Rect>((-19738,-6386), (521,-1225))</a:Rect>
-<a:ListOfPoints>((-19338,-1625),(-19338,-5761),(121,-5761))</a:ListOfPoints>
+<a:Rect>((-19738,-6386), (521,4101))</a:Rect>
+<a:ListOfPoints>((-19338,-501),(-19338,3701),(-14154,3701),(-14154,-5761),(121,-5761))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1787,8 +1787,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o53">
 <a:CreationDate>1692829375</a:CreationDate>
 <a:ModificationDate>1692829666</a:ModificationDate>
-<a:Rect>((-21913,-13451), (-959,-101))</a:Rect>
-<a:ListOfPoints>((-21513,-501),(-21513,-12826),(-1359,-12826))</a:ListOfPoints>
+<a:Rect>((-21913,-13262), (-959,-101))</a:Rect>
+<a:ListOfPoints>((-21513,-501),(-21513,-12637),(-1359,-12637))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1808,8 +1808,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o56">
 <a:CreationDate>1692829400</a:CreationDate>
 <a:ModificationDate>1692829675</a:ModificationDate>
-<a:Rect>((-22813,-16125), (5137,-101))</a:Rect>
-<a:ListOfPoints>((-22413,-501),(-22413,-15500),(4737,-15500))</a:ListOfPoints>
+<a:Rect>((-21364,-16125), (5137,-101))</a:Rect>
+<a:ListOfPoints>((-20964,-501),(-20964,-15500),(4737,-15500))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>

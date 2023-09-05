@@ -16,6 +16,7 @@ class MedecinFactory extends Factory
      */
     public function definition(): array
     {
+        $images = ['medecin-1.jpg', 'medecin-2.jpg', 'medecin-3.jpg', 'medecin-4.jpg', 'medecin-5.jpg'];
         return [
             'user_id' => user()::select('id')->get()->random(),
             'categori_id' => categori()::select('id')->get()->random(),
@@ -23,7 +24,8 @@ class MedecinFactory extends Factory
             'prenom' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail(),
             'telephone' => $this->faker->phoneNumber(),
-            'photo' => '',
+            'bio' => $this->faker->sentence(),
+            'photo' => '/demo/images/avatar/medecin/'.$images[mt_rand(0, 4)],
             'sexe' => get_setting('sexe')->random(),
             'adresse' => $this->faker->address(),
             'date' => $this->faker->dateTime(),

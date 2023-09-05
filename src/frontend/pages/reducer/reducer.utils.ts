@@ -8,6 +8,7 @@ import {
   ValidateSliceCaseReducers,
 } from '@reduxjs/toolkit';
 import { AxiosError } from 'axios';
+import { toast } from 'react-toastify';
 
 /**
  * Model for redux actions with pagination
@@ -52,6 +53,9 @@ const commonErrorProperties: Array<keyof SerializedError> = ['name', 'message', 
 export const serializeAxiosError = (value: any): AxiosError | SerializedError => {
   if (typeof value === 'object' && value !== null) {
     if (value.isAxiosError) {
+      // console.log('simpleErrdfdor', { message: String(value) })
+      toast.error(String(value));
+
       return value;
     } else {
       const simpleError: SerializedError = {};
@@ -61,9 +65,12 @@ export const serializeAxiosError = (value: any): AxiosError | SerializedError =>
         }
       }
 
+      // console.log('simpleError', { message: String(value) })
+      toast.error(String(simpleError));
       return simpleError;
     }
   }
+  console.log('simpleErrdfdor', value)
   return { message: String(value) };
 };
 

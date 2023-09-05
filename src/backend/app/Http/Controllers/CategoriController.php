@@ -17,6 +17,14 @@ class CategoriController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     */
+    public function all()
+    {
+        return response(categori()::all(), 200);
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()

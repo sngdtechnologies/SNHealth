@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: Props) {
     
     useEffect(() => {
         // i18n.changeLanguage('fr');
-        console.log('user', user);
+        // console.log('user', user);
         // if (user.name == null) {
         //     router.push(HOME);
         // }

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Patient\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +15,6 @@ use App\Http\Controllers\Patient\SearchController;
 
 Route::prefix('patient')->group(function () {
 
-    Route::get('/medecin-search', [SearchController::class, 'index']);
+    // Route::get('/medecin/search/{search}', [SearchController::class, 'index']);
 });
 

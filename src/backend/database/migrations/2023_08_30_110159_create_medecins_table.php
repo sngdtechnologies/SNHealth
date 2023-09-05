@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->string('sexe', 1)->nullable();
             $table->string('adresse', 254)->nullable();
+            $table->string('bio', 254)->nullable();
             $table->string('statut', 254)->nullable();
             $table->string('commentaire', 254)->nullable();
             $table->dateTime('date')->nullable();
