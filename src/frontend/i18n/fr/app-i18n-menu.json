@@ -35,6 +35,21 @@
       "pub": {
         "title": "Pubs"
       }
+    },
+    "medecin": {
+      "annexe": "Autre",
+      "title": "Consultation",
+      "compte": "Compte",
+      "configuration": {
+        "tarif": "Tarif"
+      },
+      "notification": "Notification",
+      "rapport": "Rapport",
+      "suivie": "Suivre mes patients"
+    },
+    "medecinConfig": {
+      "tarif": "Mes tarifs",
+      "title": "Configuration"
     }
   }
 }
