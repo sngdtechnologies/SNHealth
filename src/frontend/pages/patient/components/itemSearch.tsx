@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { classNames } from 'primereact/utils';
 import { useTranslation } from "react-i18next";
 import i18n from '../../../i18n/i18n';
@@ -8,43 +8,35 @@ import { Dialog } from 'primereact/dialog';
 import { Badge } from 'primereact/badge';
 import Avis from '../../../shared/component/pages/avis';
 import { Button } from 'primereact/button';
+import { useEventListener } from 'primereact/hooks';
 
 export const ItemSearch = (props: any) => {
     const t = useTranslation('placeholder', {i18n}).t;
+    const elementRef = useRef(null);
 
     const data = props.data;
     const className = props.className ? ' ' + props.className : '';
     const name = data.nom + ' ' + data.prenom;
     const category = data.categoriTitle;
     const isOnLigne = false;
-    const isAbonner = false;
     const note = Math.round(data.note / data.nombreAvis);
     const image = data.photo;
 
     const [isVisibleAvis, setIsVisibleAvis] = useState<any>(true);
     const [displayResponsive, setDisplayResponsive] = useState(false);
     const [abonner, setAbonner] = useState(false);
+    const [isHoverImage, setIsHoverImage] = useState(false);
+    const [clickTo, setClickTo] = useState(false);
+    const [actionTo, setActionTo] = useState<any>(null);
 
     const dialogFuncMap = {
         'displayResponsive': setDisplayResponsive
     }
 
-    const items = [
-        {
-            label: 'Call',
-            icon: 'pi pi-phone',
-            command: () => {
-                onClick('displayResponsive')
-            }
-        },
-        {
-            label: 'Info',
-            icon: 'pi pi-pencil',
-            command: () => {
-                handleChangeIsVisibleAvis
-            }
-        }
-    ];
+    const action = {
+        sms: 1,
+        call: 2 
+    }
 
     useEffect(() => {
         console.log('isVisibleAviskfldfkdkf  df', isVisibleAvis)
@@ -67,77 +59,104 @@ export const ItemSearch = (props: any) => {
     } 
 
     const handleChangeIsAbonner = () => {
-        setAbonner(!abonner)
+        setAbonner(!abonner);
+    }
+
+    const handleClickTo = (v: any) => {
+        setClickTo(true);
+        setActionTo(v);
+    }
+
+    const [bindMouseEnterListener, unbindMouseEnterListener] = useEventListener({
+        target: elementRef,
+        type: 'mouseenter',
+        listener: () => {
+            setIsHoverImage(true);
+        }
+    });
+
+    const [bindMouseLeaveListener, unbindMouseLeaveListener] = useEventListener({
+        target: elementRef,
+        type: 'mouseleave',
+        listener: () => {
+            setIsHoverImage(false);
+        }
+    });
+
+    useEffect(() => {
+        bindMouseEnterListener();
+        bindMouseLeaveListener();
+
+        return () => {
+            unbindMouseEnterListener();
+            unbindMouseLeaveListener();
+        };
+    }, [bindMouseEnterListener, bindMouseLeaveListener, unbindMouseEnterListener, unbindMouseLeaveListener]);
+
+    const modalHeader = () => {
+        return <>
+            { clickTo ? (
+                <Button onClick={() => { setClickTo(false); setActionTo(null); }} icon="pi pi-arrow-left" link />
+            ) : "Que souhaitez-vous faire ?"}
+        </>
     }
 
     return (
         <div className={ classNames("border-round-xl shadow-2 pb-2", className) } style={{ background: "var(--style-cards-fancy-bg)", border: "1px solid rgba(255, 255, 255, 0.1)", backgroundBlendMode: "normal, color-dodge"}}>
-            <div className="content border-round-sm">
-                <div className="content-image bg-cover bg-no-repeat bg-center relative border-round-top" style={{ height: "244px", backgroundImage: `url('${image}')` }}>
-                    { isOnLigne ? (
-                        <Badge severity="success" className='absolute right-0 mr-2 mt-2'></Badge>
-                    ) : null }
-                    <div className="rating mt-2 border-round-sm absolute ml-2 p-2 flex align-items-center gap-2 bg-black-alpha-20 w-9rem" style={{ backdropFilter: "blur(27px)" }}>
-                        <Rating value={ note } cancel={false} onIcon={<i className="pi pi-star-fill text-yellow-500"></i>}/>
-                    </div>
-                </div>
-                <div className="content-info pt-1">
-                    <div className="flex align-items-center justify-content-between py-2 px-3">
-                        <span className="font-medium text-gray-900">{ name }</span>
-                        <i className="pi pi-verified text-green-900"></i>
-                    </div>
-                    <div className="flex align-items-start justify-content-between py-2 px-3 grap-1 text-xs">
-                        <span className="font-small text-gray-900 white-space-nowrap underline">Spécialité { category }</span>
-                        {/* <span className="font-small bg-green-500 text-white border-round px-2 py-1 text-xs">{ isOnLigne ? 'En ligne' : 'Hors ligne' }</span> */}
-                    </div>
-                    {/* <div className="flex align-items-center justify-content-between py-2 px-3 gap-2">
-                        <div className="flex align-items-center justify-content-center gap-1 border-right-1 surface-border pr-2">
-                            <i className="pi pi-bolt "></i>
-                            <span className="font-small text-gray-900 white-space-nowrap">Charge</span>
+            <div className="content" ref={elementRef}>
+                { isHoverImage == false ? (<>
+                    <div className="content-image bg-cover bg-no-repeat bg-center relative border-round-top" style={{ height: "244px", backgroundImage: `url('${image}')` }}>
+                        { isOnLigne ? (
+                            <Badge severity="success" className='absolute right-0 mr-2 mt-2'></Badge>
+                        ) : null }
+                        <div className="rating mt-2 border-round-sm absolute ml-2 p-2 flex align-items-center gap-2 bg-black-alpha-20 w-9rem" style={{ backdropFilter: "blur(27px)" }}>
+                            <Rating value={ note } cancel={false} onIcon={<i className="pi pi-star-fill text-yellow-500"></i>}/>
                         </div>
-                        <div className="flex align-items-center gap-1 justify-content-center gap-1 border-right-1 surface-border px-2">
-                            <i className="pi pi-wifi "></i>
-                            <span className="font-small text-gray-900 white-space-nowrap">Wifi</span>
-                        </div>
-                        <div className="flex align-items-center gap-1 justify-content-center gap-1 pl-2">
-                            <i className="pi pi-book "></i>
-                            <span className="font-small text-gray-900 white-space-nowrap">Library</span>
-                        </div>
-                    </div> */}
-                    <div className="flex align-items-center justify-content-center pt-2 px-3 gap-3">
-                        <Button onClick={handleChangeIsAbonner} icon="pi pi-bell" className='text-xs' severity={ abonner ? 'danger' : 'info' } rounded text={!abonner} raised aria-label="abonner" />
-                        {/* <button className="p-2 flex align-items-center justify-content-center bg-red-400 shadow-1 border-none cursor-pointer hover:bg-black-alpha-20 transition-duration-200 border-round">
-                            <span className="font-bold text-white white-space-nowrap">{ isAbonner ? "Abonner" : "Désabonner" }</span>
-                            <i className="pi pi-info-circle text-gray-900"></i>
-                        </button> */}
-                        <div className="p-3 flex align-items-center justify-content-center transition-duration-200">
-                            {/* <span className="font-bold text-white white-space-nowrap">S'abonner</span> */}
-                            {/* <i className="pi pi-info-circle text-gray-900"></i> */}
-                            <SpeedDial model={items} style={{ marginBottom: "115px", zIndex: "0" }}/>
-                        </div>
-                        {/* <button className="p-3 flex align-items-center justify-content-center bg-black-alpha-10 shadow-1 border-none cursor-pointer hover:bg-black-alpha-20 transition-duration-200" style={{ borderRadius: "50px" }}>
-                            <span className="font-medium text-gray-900 white-space-nowrap">Contact</span>
-                            <i className="pi pi-info-circle text-gray-900"></i>
-                        </button>
-                        <button className="p-3 flex align-items-center justify-content-center bg-black-alpha-10 shadow-1 border-none cursor-pointer hover:bg-black-alpha-20 transition-duration-200" style={{ borderRadius: "50px" }}>
-                            <span className="font-medium text-gray-900 white-space-nowrap">Contact</span>
-                            <i className="pi pi-send text-gray-900"></i>
-                        </button> */}
-                        <Button onClick={handleChangeIsVisibleAvis} icon="pi pi-thumbs-up-fill" className='text-xs' severity="info" rounded text raised aria-label="note" />
-                        {/* <button onClick={handleChangeIsVisibleAvis} className="w-2rem h-2rem flex align-items-center justify-content-center bg-gray-900 shadow-1 border-none cursor-pointer hover:bg-gray-800 transition-duration-200 zoomin animation-duration-2000" style={{ borderRadius: "50px" }}>
-                            <span className="font-medium text-white white-space-nowrap">Rate</span>
-                            <i className="pi pi-thumbs-up-fill text-white text-xs"></i>
-                        </button> */}
                     </div>
-                </div>
-                <Avis onChange={onChangeAvis} onClick={handleChangeIsVisibleAvis} isVisibleAvis={isVisibleAvis}/>
+                </>) : (
+                    <div className="text-center px-2 pt-2 zoomin animation-duration-500" style={{ height: "244px" }}>
+                        <div className="font-small text-gray-900">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptate nesciunt debitis est impedit
+                            molestias unde tempora nam? Temporibus ratione distinctio nobis inventore nam, exercitationem nisi aliquam 
+                            sed velit. In!
+                        </div>
+                    </div>
+                ) }
             </div>
+            <div className="content-info">
+                <div className="flex align-items-center justify-content-between py-2 px-3">
+                    <span className="font-medium text-gray-900">{ name }</span>
+                    <i className="pi pi-verified text-green-900"></i>
+                </div>
+                <div className="flex align-items-start justify-content-between pt-2 px-3 grap-1 text-xs">
+                    <span className="font-small text-gray-900 underline">Spécialité { category }</span>
+                </div>
+            </div>
+            <div className="content-action">
+                <div className="flex align-items-center justify-content-center pt-2 px-3 gap-3">
+                    <Button onClick={handleChangeIsAbonner} icon="pi pi-bell" className='text-xs' severity={ abonner ? 'danger' : 'info' } rounded text={!abonner} raised aria-label="abonner" />
+                    <Button onClick={() => onClick('displayResponsive')} icon="pi pi-phone" className='text-xs' severity="info" rounded text raised aria-label="appel" />
+                    <Button onClick={handleChangeIsVisibleAvis} icon="pi pi-thumbs-up-fill" className='text-xs' severity="info" rounded text raised aria-label="note" />
+                </div>
+            </div>
+            <Avis onChange={onChangeAvis} onClick={handleChangeIsVisibleAvis} isVisibleAvis={isVisibleAvis}/>
 
-            <Dialog visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }}>
-                <div className="p-fluid">
-                    <div className="field grid">
-                        
-                    </div>
+            <Dialog visible={displayResponsive} position='top' header={modalHeader} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }}>
+                <div className="grid p-fluid py-4">
+                    { !clickTo ? (<>
+                        <Button onClick={() => handleClickTo(1)} className='col-12' label="Envoyer un message" severity="help" />
+                        <Button onClick={() => handleClickTo(2)} className='col-12 mt-4' label="Lancer un appel" severity="help" />
+                    </>) : (<>
+                        { actionTo == 1 ? (
+                            <div className='text-center'>
+                                Chatbot
+                            </div>
+                        ) : actionTo == 2 ? (
+                            <div className='text-center'>
+                                Call
+                            </div>
+                        ) : (null)}
+                    </>) }
                 </div>
             </Dialog>
         </div>

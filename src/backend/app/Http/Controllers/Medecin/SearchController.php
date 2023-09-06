@@ -10,7 +10,7 @@ use Illuminate\Http\Response;
 class SearchController extends Controller
 {
     
-    public function index(Request $request)//: Response
+    public function index(Request $request): Response
     {
         $medecins = medecin()::selectRaw('
             medecins.*, c.title as categoriTitle, c.description as categoriDescription,

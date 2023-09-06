@@ -14,7 +14,7 @@ const LayoutPatient = ({ children }: ChildContainerProps) => {
     return (
         <React.Fragment>
             <Head>
-                <title>{process.env.APP_NAME} | Free Admin Template for NextJS</title>
+                <title>{process.env.APP_NAME} | </title>
                 <meta charSet="UTF-8" />
                 <meta name="description" content="The ultimate collection of design-agnostic, flexible and accessible React UI Components." />
                 <meta name="robots" content="index, follow" />

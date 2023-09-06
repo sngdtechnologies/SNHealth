@@ -33,27 +33,29 @@ const Recherche = () => {
     const data: any = useAppSelector(state => state.search.entity);
     const loadingSearch = useAppSelector(state => state.search.loadingSearch);
     
-    const [touch, setTouch] = useState<string>('');
-    const [search, setSearch] = useState<string>('');
+    const [touch, setTouch] = useState<any>(null);
+    const [search, setSearch] = useState<any>(null);
     const [first, setFirst] = useState(0);
+    const [page, setPage] = useState(0);
     const [rows, setRows] = useState(10);
     const [medecinList, setMedecinList] = useState<any>([]);
     const [totalRecords, setTotalRecords] = useState<number>(0);
     const [categoriList, setCategoriList] = useState<any>([]);
     
     useEffect(() => {
-        if (search != null && touch == "Enter") {
-            console.log('Recherche', {search: search, page: 1});
-            dispatch(getMedecinSearch({search: search, page: 1}));
+        console.log('search', search);
+        console.log('touch', touch);
+        if ((search != null && touch == "Enter") || (categoriList.length > 0)) {
+            console.log('categoriList', categoriList);
+            console.log('Recherche', {search: search, page: 1, categoris: getIds(categoriList)});
+            dispatch(getMedecinSearch({search: search, page: 1, categoris: getIds(categoriList)}));
             setTouch('');
         }
-    }, [touch])
+    }, [touch, categoriList])
 
     useEffect(() => {
-        console.log('Recherche', {search: search, page: 1, categoris: getIds(categoriList)});
-        dispatch(getMedecinSearch({search: search, page: 1, categoris: getIds(categoriList)}));
-    }, [categoriList])
-    
+        dispatch(getMedecinSearch({search: search, page: page + 1, categoris: getIds(categoriList)}));
+    }, [page])
 
     useEffect(() => {
         // console.log('data', data);
@@ -77,7 +79,7 @@ const Recherche = () => {
         // console.log('event', event);
         setFirst(event.first);
         setRows(event.rows);
-        dispatch(getMedecinSearch({search: search, page: event.page + 1}));
+        setPage(event.page);
     };
 
     const onChangeCategori = (v: any) => {
@@ -93,7 +95,7 @@ const Recherche = () => {
                         <div className="">
                             <div className="search-bar mt-4 mb-2">
                                 { medecinList == null && !loadingSearch ? (
-                                    <div className="flex align-items-center justify-content-center">
+                                    <div className="flex align-items-center justify-content-center pb-4">
                                         <img src={`/layout/images/logo-search.svg`} alt="" height="" className="border-circle w-20rem h-20rem" />
                                     </div>
                                 ) : null}
