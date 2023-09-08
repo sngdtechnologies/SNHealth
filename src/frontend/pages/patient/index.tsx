@@ -38,7 +38,7 @@ const Recherche = () => {
     const [first, setFirst] = useState(0);
     const [page, setPage] = useState(0);
     const [rows, setRows] = useState(10);
-    const [medecinList, setMedecinList] = useState<any>([]);
+    const [medecinList, setMedecinList] = useState<any>(null);
     const [totalRecords, setTotalRecords] = useState<number>(0);
     const [categoriList, setCategoriList] = useState<any>([]);
     
@@ -54,7 +54,9 @@ const Recherche = () => {
     }, [touch, categoriList])
 
     useEffect(() => {
-        dispatch(getMedecinSearch({search: search, page: page + 1, categoris: getIds(categoriList)}));
+        if ((search != null) || (categoriList.length > 0)) {
+            dispatch(getMedecinSearch({search: search, page: page + 1, categoris: getIds(categoriList)}));
+        }
     }, [page])
 
     useEffect(() => {

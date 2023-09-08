@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{97E4A795-0A67-4729-935E-50EFE9C5499E}" Label="" LastModificationDate="1693870868" Name="Définition de cas d&#39;utilisation_9" Objects="135" Symbols="31" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
+<?PowerDesigner AppLocale="UTF16" ID="{97E4A795-0A67-4729-935E-50EFE9C5499E}" Label="" LastModificationDate="1694100958" Name="Définition de cas d&#39;utilisation_9" Objects="126" Symbols="27" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1433,7 +1433,7 @@ Shadow=0</a:DisplayPreferences>
 <o:DependencySymbol Id="o7">
 <a:CreationDate>1693865568</a:CreationDate>
 <a:ModificationDate>1693865874</a:ModificationDate>
-<a:Rect>((-14924,15125), (-5076,20595))</a:Rect>
+<a:Rect>((-14924,15125), (-5076,20592))</a:Rect>
 <a:ListOfPoints>((-5476,19549),(-12487,19549),(-12487,15525))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1453,14 +1453,16 @@ Shadow=0</a:DisplayPreferences>
 </o:DependencySymbol>
 <o:DependencySymbol Id="o11">
 <a:CreationDate>1693865572</a:CreationDate>
-<a:ModificationDate>1693865643</a:ModificationDate>
-<a:Rect>((-1234,15669), (11962,18375))</a:Rect>
-<a:ListOfPoints>((11562,16750),(1203,16750),(1203,17975))</a:ListOfPoints>
+<a:ModificationDate>1694101109</a:ModificationDate>
+<a:CenterTextOffset>(-800, 394)</a:CenterTextOffset>
+<a:Rect>((1825,16099), (13199,20483))</a:Rect>
+<a:ListOfPoints>((11562,16499),(11562,19603),(2225,19603))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
 <a:ShadowColor>12632256</a:ShadowColor>
 <a:FontList>CENTER 0 Arial,8,N</a:FontList>
+<a:AutomaticRoutingState>2</a:AutomaticRoutingState>
 <c:SourceSymbol>
 <o:UseCaseSymbol Ref="o12"/>
 </c:SourceSymbol>
@@ -1656,8 +1658,8 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociationSymbol Id="o39">
 <a:CreationDate>1693865915</a:CreationDate>
 <a:ModificationDate>1693870817</a:ModificationDate>
-<a:Rect>((-22032,1112), (-17525,2407))</a:Rect>
-<a:ListOfPoints>((-21632,2007),(-21632,1737),(-17925,1737))</a:ListOfPoints>
+<a:Rect>((-23007,1112), (-17525,2407))</a:Rect>
+<a:ListOfPoints>((-22607,2007),(-22607,1737),(-17925,1737))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1738,7 +1740,7 @@ Shadow=0</a:DisplayPreferences>
 </o:UseCaseAssociationSymbol>
 <o:ActorSymbol Id="o33">
 <a:CreationDate>1693864680</a:CreationDate>
-<a:ModificationDate>1693865869</a:ModificationDate>
+<a:ModificationDate>1694100958</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
 <a:Rect>((-25007,3131), (-20208,6730))</a:Rect>
 <a:LineColor>128</a:LineColor>
@@ -2095,11 +2097,11 @@ LABL 0 Arial,8,N</a:FontList>
 <c:Actors>
 <o:Actor Id="o48">
 <a:ObjectID>0921966C-5390-4C45-A278-7E40469BB076</a:ObjectID>
-<a:Name>Patient</a:Name>
-<a:Code>Patient</a:Code>
+<a:Name>Médecin</a:Name>
+<a:Code>Medecin</a:Code>
 <a:CreationDate>1693864680</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693864681</a:ModificationDate>
+<a:ModificationDate>1694100958</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:Actor>
 <o:Actor Id="o49">

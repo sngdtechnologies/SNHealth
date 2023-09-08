@@ -3,16 +3,17 @@ import { classNames } from 'primereact/utils';
 import { useTranslation } from "react-i18next";
 import i18n from '../../../i18n/i18n';
 import { Rating } from 'primereact/rating';
-import { SpeedDial } from 'primereact/speeddial';
-import { Dialog } from 'primereact/dialog';
 import { Badge } from 'primereact/badge';
 import Avis from '../../../shared/component/pages/avis';
 import { Button } from 'primereact/button';
 import { useEventListener } from 'primereact/hooks';
+import { ConfirmPopup } from 'primereact/confirmpopup';
+import DynamicDialog from './dynamicDialog';
 
 export const ItemSearch = (props: any) => {
     const t = useTranslation('placeholder', {i18n}).t;
     const elementRef = useRef(null);
+    const buttonEl = useRef<any>(null);
 
     const data = props.data;
     const className = props.className ? ' ' + props.className : '';
@@ -26,17 +27,15 @@ export const ItemSearch = (props: any) => {
     const [displayResponsive, setDisplayResponsive] = useState(false);
     const [abonner, setAbonner] = useState(false);
     const [isHoverImage, setIsHoverImage] = useState(false);
-    const [clickTo, setClickTo] = useState(false);
-    const [actionTo, setActionTo] = useState<any>(null);
+    const [visibleAbonnerPopup, setVisibleAbonnerPopup] = useState(false);
+    
+    const acceptAbonnement = () => {
+        setAbonner(!abonner);
+    };
 
-    const dialogFuncMap = {
-        'displayResponsive': setDisplayResponsive
-    }
-
-    const action = {
-        sms: 1,
-        call: 2 
-    }
+    const rejectAbonnement = () => {
+        
+    };
 
     useEffect(() => {
         console.log('isVisibleAviskfldfkdkf  df', isVisibleAvis)
@@ -46,11 +45,11 @@ export const ItemSearch = (props: any) => {
         setIsVisibleAvis(!isVisibleAvis)
     }
 
-    const onHide = (name: string) => {
+    const onHide = () => {
         setDisplayResponsive(false);
     }
     
-    const onClick = (name: any) => {
+    const onClick = () => {
         setDisplayResponsive(true);
     }
 
@@ -59,12 +58,11 @@ export const ItemSearch = (props: any) => {
     } 
 
     const handleChangeIsAbonner = () => {
-        setAbonner(!abonner);
-    }
-
-    const handleClickTo = (v: any) => {
-        setClickTo(true);
-        setActionTo(v);
+        if (!abonner) {
+            setVisibleAbonnerPopup(!visibleAbonnerPopup);   
+        } else {
+            setAbonner(false);
+        }
     }
 
     const [bindMouseEnterListener, unbindMouseEnterListener] = useEventListener({
@@ -92,14 +90,24 @@ export const ItemSearch = (props: any) => {
             unbindMouseLeaveListener();
         };
     }, [bindMouseEnterListener, bindMouseLeaveListener, unbindMouseEnterListener, unbindMouseLeaveListener]);
-
-    const modalHeader = () => {
-        return <>
-            { clickTo ? (
-                <Button onClick={() => { setClickTo(false); setActionTo(null); }} icon="pi pi-arrow-left" link />
-            ) : "Que souhaitez-vous faire ?"}
-        </>
-    }
+    
+    const conversationAnswer = [
+        {
+            id: 1,
+            name: "Quelles sont vos symptôme ?",
+            isAnswer: true
+        }, 
+        {
+            id: 2,
+            name: "Quelles sont vos antécédant médicaux ?",
+            isAnswer: true
+        },
+        {
+            id: 3,
+            name: "J'ai besoin de l'heure de votre dèrnier repas",
+            isAnswer: true
+        } 
+    ];
 
     return (
         <div className={ classNames("border-round-xl shadow-2 pb-2", className) } style={{ background: "var(--style-cards-fancy-bg)", border: "1px solid rgba(255, 255, 255, 0.1)", backgroundBlendMode: "normal, color-dodge"}}>
@@ -134,31 +142,23 @@ export const ItemSearch = (props: any) => {
             </div>
             <div className="content-action">
                 <div className="flex align-items-center justify-content-center pt-2 px-3 gap-3">
-                    <Button onClick={handleChangeIsAbonner} icon="pi pi-bell" className='text-xs' severity={ abonner ? 'danger' : 'info' } rounded text={!abonner} raised aria-label="abonner" />
-                    <Button onClick={() => onClick('displayResponsive')} icon="pi pi-phone" className='text-xs' severity="info" rounded text raised aria-label="appel" />
+                    <ConfirmPopup target={buttonEl.current} visible={visibleAbonnerPopup} onHide={() => setVisibleAbonnerPopup(false)} 
+                        message="Etes-vous sûre de vouloir être suivie par ce médecin" icon="pi pi-exclamation-triangle" accept={acceptAbonnement} reject={rejectAbonnement} />
+                    <Button ref={buttonEl} onClick={handleChangeIsAbonner} icon="pi pi-bell" className='text-xs' severity={ abonner ? 'danger' : 'info' } rounded text={!abonner} raised aria-label="abonner" />
+                    <Button onClick={onClick} icon="pi pi-phone" className='text-xs' severity="info" rounded text raised aria-label="appel" />
                     <Button onClick={handleChangeIsVisibleAvis} icon="pi pi-thumbs-up-fill" className='text-xs' severity="info" rounded text raised aria-label="note" />
                 </div>
             </div>
             <Avis onChange={onChangeAvis} onClick={handleChangeIsVisibleAvis} isVisibleAvis={isVisibleAvis}/>
 
-            <Dialog visible={displayResponsive} position='top' header={modalHeader} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }}>
-                <div className="grid p-fluid py-4">
-                    { !clickTo ? (<>
-                        <Button onClick={() => handleClickTo(1)} className='col-12' label="Envoyer un message" severity="help" />
-                        <Button onClick={() => handleClickTo(2)} className='col-12 mt-4' label="Lancer un appel" severity="help" />
-                    </>) : (<>
-                        { actionTo == 1 ? (
-                            <div className='text-center'>
-                                Chatbot
-                            </div>
-                        ) : actionTo == 2 ? (
-                            <div className='text-center'>
-                                Call
-                            </div>
-                        ) : (null)}
-                    </>) }
-                </div>
-            </Dialog>
+            <DynamicDialog 
+                displayResponsive={displayResponsive}
+                conversationAnswer={conversationAnswer}
+                name={name}
+                category={category}
+                image={image}
+                onHide={onHide}
+            />
         </div>
     );
 };

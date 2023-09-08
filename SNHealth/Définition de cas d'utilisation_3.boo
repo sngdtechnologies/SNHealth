@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{DD752004-4B65-44E9-91A4-8831D5F0804B}" Label="" LastModificationDate="1693985657" Name="Définition de cas d&#39;utilisation_3" Objects="142" Symbols="38" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
+<?PowerDesigner AppLocale="UTF16" ID="{DD752004-4B65-44E9-91A4-8831D5F0804B}" Label="" LastModificationDate="1694099067" Name="Définition de cas d&#39;utilisation_3" Objects="142" Symbols="35" Target="Java" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="16.7.1.6488"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -13,7 +13,7 @@
 <a:Code>Definition_de_cas_d_utilisation_3</a:Code>
 <a:CreationDate>1692686325</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693985633</a:ModificationDate>
+<a:ModificationDate>1694099067</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:PackageOptionsText>[FolderOptions]
 
@@ -1019,7 +1019,7 @@ ColnFKNameUse=No</a:ModelOptionsText>
 <a:Code>Definition_de_cas_d_utilisation_3</a:Code>
 <a:CreationDate>1692686325</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693985633</a:ModificationDate>
+<a:ModificationDate>1694099067</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:DisplayPreferences>[DisplayPreferences]
 
@@ -1420,8 +1420,8 @@ Shadow=0</a:DisplayPreferences>
 <c:Symbols>
 <o:RectangleSymbol Id="o6">
 <a:CreationDate>1692686354</a:CreationDate>
-<a:ModificationDate>1693985557</a:ModificationDate>
-<a:Rect>((-15167,21642), (22913,-21448))</a:Rect>
+<a:ModificationDate>1694099101</a:ModificationDate>
+<a:Rect>((-15167,21642), (22913,-15638))</a:Rect>
 <a:TextStyle>4130</a:TextStyle>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>128</a:LineColor>
@@ -1495,10 +1495,10 @@ Shadow=0</a:DisplayPreferences>
 </o:DependencySymbol>
 <o:DependencySymbol Id="o18">
 <a:CreationDate>1692688836</a:CreationDate>
-<a:ModificationDate>1693898538</a:ModificationDate>
+<a:ModificationDate>1694099111</a:ModificationDate>
 <a:CenterTextOffset>(0, -400)</a:CenterTextOffset>
-<a:Rect>((6549,-4284), (11423,3423))</a:Rect>
-<a:ListOfPoints>((8986,-3884),(8986,3023))</a:ListOfPoints>
+<a:Rect>((6069,-4202), (10943,3505))</a:Rect>
+<a:ListOfPoints>((8506,-3802),(8506,3105))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1581,9 +1581,9 @@ Shadow=0</a:DisplayPreferences>
 </o:UseCaseAssociationSymbol>
 <o:UseCaseAssociationSymbol Id="o29">
 <a:CreationDate>1692690352</a:CreationDate>
-<a:ModificationDate>1693898697</a:ModificationDate>
-<a:Rect>((-19309,-14733), (-13528,-2256))</a:Rect>
-<a:ListOfPoints>((-18909,-2656),(-18909,-14108),(-13928,-14108))</a:ListOfPoints>
+<a:ModificationDate>1694099077</a:ModificationDate>
+<a:Rect>((-19309,-9933), (-13528,-2256))</a:Rect>
+<a:ListOfPoints>((-18909,-2656),(-18909,-9308),(-13928,-9308))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1600,28 +1600,7 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseAssociation Ref="o31"/>
 </c:Object>
 </o:UseCaseAssociationSymbol>
-<o:UseCaseAssociationSymbol Id="o32">
-<a:CreationDate>1692690357</a:CreationDate>
-<a:ModificationDate>1693898697</a:ModificationDate>
-<a:Rect>((-18044,-10552), (-13537,-456))</a:Rect>
-<a:ListOfPoints>((-17644,-856),(-17644,-9927),(-13937,-9927))</a:ListOfPoints>
-<a:CornerStyle>2</a:CornerStyle>
-<a:ArrowStyle>1</a:ArrowStyle>
-<a:LineColor>128</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>CENTER 0 Arial,8,N</a:FontList>
-<a:AutomaticRoutingState>3</a:AutomaticRoutingState>
-<c:SourceSymbol>
-<o:ActorSymbol Ref="o25"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o33"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:UseCaseAssociation Ref="o34"/>
-</c:Object>
-</o:UseCaseAssociationSymbol>
-<o:DependencySymbol Id="o35">
+<o:DependencySymbol Id="o32">
 <a:CreationDate>1693823346</a:CreationDate>
 <a:ModificationDate>1693898609</a:ModificationDate>
 <a:CenterTextOffset>(0, -2812)</a:CenterTextOffset>
@@ -1636,13 +1615,13 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseSymbol Ref="o9"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
+<o:UseCaseSymbol Ref="o33"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Dependency Ref="o37"/>
+<o:Dependency Ref="o34"/>
 </c:Object>
 </o:DependencySymbol>
-<o:DependencySymbol Id="o38">
+<o:DependencySymbol Id="o35">
 <a:CreationDate>1693823348</a:CreationDate>
 <a:ModificationDate>1693898527</a:ModificationDate>
 <a:Rect>((15448,-3460), (20548,3423))</a:Rect>
@@ -1656,38 +1635,17 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseSymbol Ref="o16"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:Dependency Ref="o39"/>
-</c:Object>
-</o:DependencySymbol>
-<o:DependencySymbol Id="o40">
-<a:CreationDate>1693823709</a:CreationDate>
-<a:ModificationDate>1693898430</a:ModificationDate>
-<a:Rect>((-7621,-10152), (18842,-3831))</a:Rect>
-<a:ListOfPoints>((-7221,-9106),(16292,-9106),(16292,-4231))</a:ListOfPoints>
-<a:CornerStyle>2</a:CornerStyle>
-<a:ArrowStyle>8</a:ArrowStyle>
-<a:LineColor>128</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>CENTER 0 Arial,8,N</a:FontList>
-<a:AutomaticRoutingState>3</a:AutomaticRoutingState>
-<c:SourceSymbol>
 <o:UseCaseSymbol Ref="o33"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Dependency Ref="o41"/>
+<o:Dependency Ref="o36"/>
 </c:Object>
 </o:DependencySymbol>
-<o:DependencySymbol Id="o42">
+<o:DependencySymbol Id="o37">
 <a:CreationDate>1693823927</a:CreationDate>
-<a:ModificationDate>1693898452</a:ModificationDate>
-<a:Rect>((-8424,-15154), (20548,-4084))</a:Rect>
-<a:ListOfPoints>((-8024,-14108),(17998,-14108),(17998,-4484))</a:ListOfPoints>
+<a:ModificationDate>1694099077</a:ModificationDate>
+<a:Rect>((-8424,-10354), (20548,-4084))</a:Rect>
+<a:ListOfPoints>((-8024,-9308),(17998,-9308),(17998,-4484))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1697,17 +1655,17 @@ Shadow=0</a:DisplayPreferences>
 <o:UseCaseSymbol Ref="o30"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
+<o:UseCaseSymbol Ref="o33"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Dependency Ref="o43"/>
+<o:Dependency Ref="o38"/>
 </c:Object>
 </o:DependencySymbol>
-<o:UseCaseAssociationSymbol Id="o44">
+<o:UseCaseAssociationSymbol Id="o39">
 <a:CreationDate>1693824262</a:CreationDate>
-<a:ModificationDate>1693898456</a:ModificationDate>
-<a:Rect>((-8424,-16790), (28550,-15161))</a:Rect>
-<a:ListOfPoints>((28150,-16390),(12592,-16390),(12592,-15786),(-8024,-15786))</a:ListOfPoints>
+<a:ModificationDate>1694099090</a:ModificationDate>
+<a:Rect>((-8424,-11611), (31024,-10361))</a:Rect>
+<a:ListOfPoints>((30624,-10790),(12592,-10790),(12592,-10986),(-8024,-10986))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1715,40 +1673,19 @@ Shadow=0</a:DisplayPreferences>
 <a:FontList>CENTER 0 Arial,8,N</a:FontList>
 <a:AutomaticRoutingState>3</a:AutomaticRoutingState>
 <c:SourceSymbol>
-<o:ActorSymbol Ref="o45"/>
+<o:ActorSymbol Ref="o40"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
 <o:UseCaseSymbol Ref="o30"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:UseCaseAssociation Ref="o46"/>
+<o:UseCaseAssociation Ref="o41"/>
 </c:Object>
 </o:UseCaseAssociationSymbol>
-<o:UseCaseAssociationSymbol Id="o47">
-<a:CreationDate>1693824274</a:CreationDate>
-<a:ModificationDate>1693898446</a:ModificationDate>
-<a:Rect>((-7621,-11531), (27241,-10281))</a:Rect>
-<a:ListOfPoints>((26841,-10906),(-7221,-10906))</a:ListOfPoints>
-<a:CornerStyle>2</a:CornerStyle>
-<a:ArrowStyle>1</a:ArrowStyle>
-<a:LineColor>128</a:LineColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>CENTER 0 Arial,8,N</a:FontList>
-<a:AutomaticRoutingState>4</a:AutomaticRoutingState>
-<c:SourceSymbol>
-<o:ActorSymbol Ref="o48"/>
-</c:SourceSymbol>
-<c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o33"/>
-</c:DestinationSymbol>
-<c:Object>
-<o:UseCaseAssociation Ref="o49"/>
-</c:Object>
-</o:UseCaseAssociationSymbol>
-<o:DependencySymbol Id="o50">
+<o:DependencySymbol Id="o42">
 <a:CreationDate>1693898623</a:CreationDate>
 <a:ModificationDate>1693898627</a:ModificationDate>
-<a:Rect>((-9081,-3460), (23559,20168))</a:Rect>
+<a:Rect>((-9081,-3460), (23559,20145))</a:Rect>
 <a:ListOfPoints>((-8681,19157),(21009,19157),(21009,-3060))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
@@ -1757,16 +1694,16 @@ Shadow=0</a:DisplayPreferences>
 <a:FontList>CENTER 0 Arial,8,N</a:FontList>
 <a:AutomaticRoutingState>2</a:AutomaticRoutingState>
 <c:SourceSymbol>
-<o:UseCaseSymbol Ref="o51"/>
+<o:UseCaseSymbol Ref="o43"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
+<o:UseCaseSymbol Ref="o33"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Dependency Ref="o52"/>
+<o:Dependency Ref="o44"/>
 </c:Object>
 </o:DependencySymbol>
-<o:UseCaseAssociationSymbol Id="o53">
+<o:UseCaseAssociationSymbol Id="o45">
 <a:CreationDate>1693898707</a:CreationDate>
 <a:ModificationDate>1693898719</a:ModificationDate>
 <a:Rect>((-19894,543), (-13939,19782))</a:Rect>
@@ -1780,17 +1717,17 @@ Shadow=0</a:DisplayPreferences>
 <o:ActorSymbol Ref="o25"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o51"/>
+<o:UseCaseSymbol Ref="o43"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:UseCaseAssociation Ref="o54"/>
+<o:UseCaseAssociation Ref="o46"/>
 </c:Object>
 </o:UseCaseAssociationSymbol>
-<o:UseCaseAssociationSymbol Id="o55">
+<o:UseCaseAssociationSymbol Id="o47">
 <a:CreationDate>1693985580</a:CreationDate>
-<a:ModificationDate>1693985594</a:ModificationDate>
-<a:Rect>((-20509,-19335), (-13843,-2256))</a:Rect>
-<a:ListOfPoints>((-20109,-2656),(-20109,-18710),(-14243,-18710))</a:ListOfPoints>
+<a:ModificationDate>1694099082</a:ModificationDate>
+<a:Rect>((-18109,-14135), (-13843,-2256))</a:Rect>
+<a:ListOfPoints>((-17709,-2656),(-17709,-13510),(-14243,-13510))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1800,17 +1737,17 @@ Shadow=0</a:DisplayPreferences>
 <o:ActorSymbol Ref="o25"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o56"/>
+<o:UseCaseSymbol Ref="o48"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:UseCaseAssociation Ref="o57"/>
+<o:UseCaseAssociation Ref="o49"/>
 </c:Object>
 </o:UseCaseAssociationSymbol>
-<o:DependencySymbol Id="o58">
+<o:DependencySymbol Id="o50">
 <a:CreationDate>1693985633</a:CreationDate>
-<a:ModificationDate>1693985641</a:ModificationDate>
-<a:Rect>((-8197,-19836), (23473,-2360))</a:Rect>
-<a:ListOfPoints>((-7797,-18790),(20923,-18790),(20923,-2760))</a:ListOfPoints>
+<a:ModificationDate>1694099082</a:ModificationDate>
+<a:Rect>((-8197,-14556), (23473,-2360))</a:Rect>
+<a:ListOfPoints>((-7797,-13510),(20923,-13510),(20923,-2760))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>8</a:ArrowStyle>
 <a:LineColor>128</a:LineColor>
@@ -1818,13 +1755,13 @@ Shadow=0</a:DisplayPreferences>
 <a:FontList>CENTER 0 Arial,8,N</a:FontList>
 <a:AutomaticRoutingState>2</a:AutomaticRoutingState>
 <c:SourceSymbol>
-<o:UseCaseSymbol Ref="o56"/>
+<o:UseCaseSymbol Ref="o48"/>
 </c:SourceSymbol>
 <c:DestinationSymbol>
-<o:UseCaseSymbol Ref="o36"/>
+<o:UseCaseSymbol Ref="o33"/>
 </c:DestinationSymbol>
 <c:Object>
-<o:Dependency Ref="o59"/>
+<o:Dependency Ref="o51"/>
 </c:Object>
 </o:DependencySymbol>
 <o:ActorSymbol Id="o25">
@@ -1844,10 +1781,10 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:KeepAspect>1</a:KeepAspect>
 <a:KeepCenter>1</a:KeepCenter>
 <c:Object>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object>
 </o:ActorSymbol>
-<o:UseCaseSymbol Id="o51">
+<o:UseCaseSymbol Id="o43">
 <a:CreationDate>1692686738</a:CreationDate>
 <a:ModificationDate>1693898606</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
@@ -1865,7 +1802,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o61"/>
+<o:UseCase Ref="o53"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o12">
@@ -1886,7 +1823,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o62"/>
+<o:UseCase Ref="o54"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o15">
@@ -1907,14 +1844,14 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o63"/>
+<o:UseCase Ref="o55"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o30">
 <a:CreationDate>1692686740</a:CreationDate>
-<a:ModificationDate>1693898452</a:ModificationDate>
+<a:ModificationDate>1694099077</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-13928,-15871), (-2120,-12346))</a:Rect>
+<a:Rect>((-13928,-11071), (-2120,-7546))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>128</a:LineColor>
 <a:LineWidth>1</a:LineWidth>
@@ -1928,7 +1865,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o64"/>
+<o:UseCase Ref="o56"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o16">
@@ -1949,7 +1886,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o22">
@@ -1970,28 +1907,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o66"/>
-</c:Object>
-</o:UseCaseSymbol>
-<o:UseCaseSymbol Id="o33">
-<a:CreationDate>1692686743</a:CreationDate>
-<a:ModificationDate>1693898430</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((-13937,-11616), (-505,-8240))</a:Rect>
-<a:AutoAdjustToText>0</a:AutoAdjustToText>
-<a:LineColor>128</a:LineColor>
-<a:LineWidth>1</a:LineWidth>
-<a:FillColor>10473471</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N
-LABL 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>16</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<a:ManuallyResized>1</a:ManuallyResized>
-<c:Object>
-<o:UseCase Ref="o67"/>
+<o:UseCase Ref="o58"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o19">
@@ -2012,7 +1928,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o68"/>
+<o:UseCase Ref="o59"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o9">
@@ -2033,7 +1949,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o69"/>
+<o:UseCase Ref="o60"/>
 </c:Object>
 </o:UseCaseSymbol>
 <o:UseCaseSymbol Id="o8">
@@ -2054,10 +1970,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o70"/>
+<o:UseCase Ref="o61"/>
 </c:Object>
 </o:UseCaseSymbol>
-<o:UseCaseSymbol Id="o36">
+<o:UseCaseSymbol Id="o33">
 <a:CreationDate>1692690707</a:CreationDate>
 <a:ModificationDate>1693898426</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
@@ -2075,14 +1991,14 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object>
 </o:UseCaseSymbol>
-<o:ActorSymbol Id="o45">
+<o:ActorSymbol Id="o40">
 <a:CreationDate>1693823959</a:CreationDate>
-<a:ModificationDate>1693898456</a:ModificationDate>
+<a:ModificationDate>1694099090</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((28225,-18190), (33024,-14591))</a:Rect>
+<a:Rect>((28225,-12590), (33024,-8991))</a:Rect>
 <a:LineColor>128</a:LineColor>
 <a:LineWidth>1</a:LineWidth>
 <a:FillColor>4210816</a:FillColor>
@@ -2095,34 +2011,14 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:KeepAspect>1</a:KeepAspect>
 <a:KeepCenter>1</a:KeepCenter>
 <c:Object>
-<o:Actor Ref="o72"/>
+<o:Actor Ref="o63"/>
 </c:Object>
 </o:ActorSymbol>
-<o:ActorSymbol Id="o48">
-<a:CreationDate>1693824082</a:CreationDate>
-<a:ModificationDate>1693898446</a:ModificationDate>
-<a:IconMode>-1</a:IconMode>
-<a:Rect>((26841,-12825), (31640,-9226))</a:Rect>
-<a:LineColor>128</a:LineColor>
-<a:LineWidth>1</a:LineWidth>
-<a:FillColor>4210816</a:FillColor>
-<a:ShadowColor>12632256</a:ShadowColor>
-<a:FontList>STRN 0 Arial,8,N
-DISPNAME 0 Arial,8,N</a:FontList>
-<a:BrushStyle>6</a:BrushStyle>
-<a:GradientFillMode>65</a:GradientFillMode>
-<a:GradientEndColor>16777215</a:GradientEndColor>
-<a:KeepAspect>1</a:KeepAspect>
-<a:KeepCenter>1</a:KeepCenter>
-<c:Object>
-<o:Actor Ref="o73"/>
-</c:Object>
-</o:ActorSymbol>
-<o:UseCaseSymbol Id="o56">
+<o:UseCaseSymbol Id="o48">
 <a:CreationDate>1693985520</a:CreationDate>
-<a:ModificationDate>1693985545</a:ModificationDate>
+<a:ModificationDate>1694099082</a:ModificationDate>
 <a:IconMode>-1</a:IconMode>
-<a:Rect>((-14243,-20398), (-1351,-17023))</a:Rect>
+<a:Rect>((-14243,-15198), (-1351,-11823))</a:Rect>
 <a:AutoAdjustToText>0</a:AutoAdjustToText>
 <a:LineColor>128</a:LineColor>
 <a:LineWidth>1</a:LineWidth>
@@ -2136,7 +2032,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:GradientEndColor>16777215</a:GradientEndColor>
 <a:ManuallyResized>1</a:ManuallyResized>
 <c:Object>
-<o:UseCase Ref="o74"/>
+<o:UseCase Ref="o64"/>
 </c:Object>
 </o:UseCaseSymbol>
 </c:Symbols>
@@ -2153,10 +2049,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>extend</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o69"/>
+<o:UseCase Ref="o60"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o70"/>
+<o:UseCase Ref="o61"/>
 </c:Object2>
 </o:Dependency>
 <o:Dependency Id="o13">
@@ -2169,10 +2065,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>extend</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o69"/>
+<o:UseCase Ref="o60"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o62"/>
+<o:UseCase Ref="o54"/>
 </c:Object2>
 </o:Dependency>
 <o:Dependency Id="o17">
@@ -2185,10 +2081,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>extend</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o63"/>
+<o:UseCase Ref="o55"/>
 </c:Object2>
 </o:Dependency>
 <o:Dependency Id="o20">
@@ -2201,10 +2097,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>extend</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o68"/>
+<o:UseCase Ref="o59"/>
 </c:Object2>
 </o:Dependency>
 <o:Dependency Id="o23">
@@ -2217,13 +2113,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>extend</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o66"/>
+<o:UseCase Ref="o58"/>
 </c:Object2>
 </o:Dependency>
-<o:Dependency Id="o37">
+<o:Dependency Id="o34">
 <a:ObjectID>025047B5-932E-4CF2-B9C6-89AFA5982A38</a:ObjectID>
 <a:Name>Dependance_13</a:Name>
 <a:Code>Dependance_13</a:Code>
@@ -2233,13 +2129,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>include</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o69"/>
+<o:UseCase Ref="o60"/>
 </c:Object2>
 </o:Dependency>
-<o:Dependency Id="o39">
+<o:Dependency Id="o36">
 <a:ObjectID>FAA8767E-65A7-4E5A-8FC7-A262F0C6836D</a:ObjectID>
 <a:Name>Dependance_14</a:Name>
 <a:Code>Dependance_14</a:Code>
@@ -2249,29 +2145,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>include</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object2>
 </o:Dependency>
-<o:Dependency Id="o41">
-<a:ObjectID>BD8C3665-F7C4-435D-9971-244DAC65E692</a:ObjectID>
-<a:Name>Dependance_17</a:Name>
-<a:Code>Dependance_17</a:Code>
-<a:CreationDate>1693823709</a:CreationDate>
-<a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693824359</a:ModificationDate>
-<a:Modifier>Smirbirkoff</a:Modifier>
-<a:Stereotype>include</a:Stereotype>
-<c:Object1>
-<o:UseCase Ref="o71"/>
-</c:Object1>
-<c:Object2>
-<o:UseCase Ref="o67"/>
-</c:Object2>
-</o:Dependency>
-<o:Dependency Id="o43">
+<o:Dependency Id="o38">
 <a:ObjectID>92CA6E17-0023-45C7-980D-69CCE533BD4A</a:ObjectID>
 <a:Name>Dependance_18</a:Name>
 <a:Code>Dependance_18</a:Code>
@@ -2281,13 +2161,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>include</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o64"/>
+<o:UseCase Ref="o56"/>
 </c:Object2>
 </o:Dependency>
-<o:Dependency Id="o52">
+<o:Dependency Id="o44">
 <a:ObjectID>FEF08241-87F8-41F2-94F9-A9AF9B038D00</a:ObjectID>
 <a:Name>Dependance_12</a:Name>
 <a:Code>Dependance_12</a:Code>
@@ -2297,13 +2177,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>include</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o61"/>
+<o:UseCase Ref="o53"/>
 </c:Object2>
 </o:Dependency>
-<o:Dependency Id="o59">
+<o:Dependency Id="o51">
 <a:ObjectID>B7FD9E5A-134F-49A0-B878-94B2128EBE1B</a:ObjectID>
 <a:Name>Dependance_15</a:Name>
 <a:Code>Dependance_15</a:Code>
@@ -2313,15 +2193,15 @@ LABL 0 Arial,8,N</a:FontList>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <a:Stereotype>include</a:Stereotype>
 <c:Object1>
-<o:UseCase Ref="o71"/>
+<o:UseCase Ref="o62"/>
 </c:Object1>
 <c:Object2>
-<o:UseCase Ref="o74"/>
+<o:UseCase Ref="o64"/>
 </c:Object2>
 </o:Dependency>
 </c:Dependencies>
 <c:Actors>
-<o:Actor Id="o60">
+<o:Actor Id="o52">
 <a:ObjectID>74530804-E260-48D8-984D-9C4AA68CD928</a:ObjectID>
 <a:Name>Patient</a:Name>
 <a:Code>Patient</a:Code>
@@ -2330,7 +2210,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692686699</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:Actor>
-<o:Actor Id="o72">
+<o:Actor Id="o63">
 <a:ObjectID>78C3D08D-3EA5-449E-B5C4-335C520C5AA8</a:ObjectID>
 <a:Name>Api de diagnostique médical sur image</a:Name>
 <a:Code>Api_de_diagnostique_medical_sur_image</a:Code>
@@ -2339,18 +2219,9 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693823959</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:Actor>
-<o:Actor Id="o73">
-<a:ObjectID>BBAAC171-4AD7-4735-A409-F139B744D18C</a:ObjectID>
-<a:Name>Api de chatGpt</a:Name>
-<a:Code>Api_de_chatGpt</a:Code>
-<a:CreationDate>1693824082</a:CreationDate>
-<a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693824103</a:ModificationDate>
-<a:Modifier>Smirbirkoff</a:Modifier>
-</o:Actor>
 </c:Actors>
 <c:UseCases>
-<o:UseCase Id="o61">
+<o:UseCase Id="o53">
 <a:ObjectID>617E82C7-AD92-4EF1-9989-8CED767D55EB</a:ObjectID>
 <a:Name>Créer dossier médicale</a:Name>
 <a:Code>Creer_dossier_medicale</a:Code>
@@ -2359,7 +2230,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693898639</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o62">
+<o:UseCase Id="o54">
 <a:ObjectID>9F6CA76D-3FB6-4340-B5B0-13CF141D5656</a:ObjectID>
 <a:Name>Modifier dossier médicale</a:Name>
 <a:Code>Modifier_dossier_medicale</a:Code>
@@ -2368,7 +2239,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692688744</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o63">
+<o:UseCase Id="o55">
 <a:ObjectID>83828348-BD4B-4ED9-8751-B6EA98365200</a:ObjectID>
 <a:Name>Ajouter symptôme</a:Name>
 <a:Code>Ajouter_symptome</a:Code>
@@ -2377,7 +2248,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692689103</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o64">
+<o:UseCase Id="o56">
 <a:ObjectID>061B9FE3-D6C9-45B0-BA4F-2DBB7A927FFD</a:ObjectID>
 <a:Name>Lancer analyse d’image</a:Name>
 <a:Code>Lancer_analyse_d’image</a:Code>
@@ -2386,7 +2257,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693824370</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o65">
+<o:UseCase Id="o57">
 <a:ObjectID>C2E2863B-EF1F-4FED-87EB-7079E3628AAF</a:ObjectID>
 <a:Name>Consulter liste symptôme</a:Name>
 <a:Code>Consulter_liste_symptome</a:Code>
@@ -2395,7 +2266,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693898407</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o66">
+<o:UseCase Id="o58">
 <a:ObjectID>190CC16F-C9F8-48D0-B8B1-E38C72D0EC40</a:ObjectID>
 <a:Name>Supprimer symptôme</a:Name>
 <a:Code>Supprimer_symptome</a:Code>
@@ -2404,16 +2275,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692689112</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o67">
-<a:ObjectID>BE7CBC44-B1FE-4DFA-B6BF-C8FCD19C7679</a:ObjectID>
-<a:Name>Echanger avec chatbot</a:Name>
-<a:Code>Echanger_avec_chatbot</a:Code>
-<a:CreationDate>1692686743</a:CreationDate>
-<a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693864842</a:ModificationDate>
-<a:Modifier>Smirbirkoff</a:Modifier>
-</o:UseCase>
-<o:UseCase Id="o68">
+<o:UseCase Id="o59">
 <a:ObjectID>38F3EA2C-D30A-4ECB-85F9-86AC65C8F12A</a:ObjectID>
 <a:Name>Modifier symptôme</a:Name>
 <a:Code>Modifier_symptome</a:Code>
@@ -2422,7 +2284,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692689137</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o69">
+<o:UseCase Id="o60">
 <a:ObjectID>86F668D2-1B56-4EF3-BB61-DF320E83503F</a:ObjectID>
 <a:Name>Consulter dossier médicale</a:Name>
 <a:Code>Consulter_dossier_medicale</a:Code>
@@ -2431,7 +2293,7 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693824386</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o70">
+<o:UseCase Id="o61">
 <a:ObjectID>23DDF340-F429-4FE1-9B31-4A4CC6623EFA</a:ObjectID>
 <a:Name>Supprimer dossier médicale</a:Name>
 <a:Code>Supprimer_dossier_medicale</a:Code>
@@ -2440,16 +2302,16 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693898575</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o71">
+<o:UseCase Id="o62">
 <a:ObjectID>634EB21E-E43A-4FA6-B8AD-E694F34BF33C</a:ObjectID>
-<a:Name>Se connecter</a:Name>
-<a:Code>Se_connecter</a:Code>
+<a:Name>S&#39;authentifier</a:Name>
+<a:Code>S_authentifier</a:Code>
 <a:CreationDate>1692690707</a:CreationDate>
 <a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693985657</a:ModificationDate>
+<a:ModificationDate>1694099017</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 </o:UseCase>
-<o:UseCase Id="o74">
+<o:UseCase Id="o64">
 <a:ObjectID>887A6719-DE5E-4E53-9B86-0DA816434A3D</a:ObjectID>
 <a:Name>Consulter liste prescription</a:Name>
 <a:Code>Consulter_liste_prescription</a:Code>
@@ -2469,10 +2331,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692690031</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o69"/>
+<o:UseCase Ref="o60"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object2>
 </o:UseCaseAssociation>
 <o:UseCaseAssociation Id="o28">
@@ -2484,10 +2346,10 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692690058</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o65"/>
+<o:UseCase Ref="o57"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object2>
 </o:UseCaseAssociation>
 <o:UseCaseAssociation Id="o31">
@@ -2499,28 +2361,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1692690352</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o64"/>
+<o:UseCase Ref="o56"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object2>
 </o:UseCaseAssociation>
-<o:UseCaseAssociation Id="o34">
-<a:ObjectID>A8AB3B4F-9120-4998-BAAE-452D957B7B7E</a:ObjectID>
-<a:Name>Association_6</a:Name>
-<a:Code>Association_6</a:Code>
-<a:CreationDate>1692690357</a:CreationDate>
-<a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1692690357</a:ModificationDate>
-<a:Modifier>Smirbirkoff</a:Modifier>
-<c:Object1>
-<o:UseCase Ref="o67"/>
-</c:Object1>
-<c:Object2>
-<o:Actor Ref="o60"/>
-</c:Object2>
-</o:UseCaseAssociation>
-<o:UseCaseAssociation Id="o46">
+<o:UseCaseAssociation Id="o41">
 <a:ObjectID>F749E874-DD7D-4A09-80CB-EE2ECF06C1DF</a:ObjectID>
 <a:Name>Association_11</a:Name>
 <a:Code>Association_11</a:Code>
@@ -2529,28 +2376,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693824262</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o64"/>
+<o:UseCase Ref="o56"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o72"/>
+<o:Actor Ref="o63"/>
 </c:Object2>
 </o:UseCaseAssociation>
-<o:UseCaseAssociation Id="o49">
-<a:ObjectID>1688B1AD-C531-4046-8800-F57BC9C5EC8C</a:ObjectID>
-<a:Name>Association_12</a:Name>
-<a:Code>Association_12</a:Code>
-<a:CreationDate>1693824274</a:CreationDate>
-<a:Creator>Smirbirkoff</a:Creator>
-<a:ModificationDate>1693824274</a:ModificationDate>
-<a:Modifier>Smirbirkoff</a:Modifier>
-<c:Object1>
-<o:UseCase Ref="o67"/>
-</c:Object1>
-<c:Object2>
-<o:Actor Ref="o73"/>
-</c:Object2>
-</o:UseCaseAssociation>
-<o:UseCaseAssociation Id="o54">
+<o:UseCaseAssociation Id="o46">
 <a:ObjectID>534F7759-EAD0-41DE-A5BC-B783EDA2B64F</a:ObjectID>
 <a:Name>Association_7</a:Name>
 <a:Code>Association_7</a:Code>
@@ -2559,13 +2391,13 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693898707</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o61"/>
+<o:UseCase Ref="o53"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object2>
 </o:UseCaseAssociation>
-<o:UseCaseAssociation Id="o57">
+<o:UseCaseAssociation Id="o49">
 <a:ObjectID>9770F1B2-326E-493D-9195-0F652C6A67C6</a:ObjectID>
 <a:Name>Association_8</a:Name>
 <a:Code>Association_8</a:Code>
@@ -2574,15 +2406,15 @@ LABL 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1693985580</a:ModificationDate>
 <a:Modifier>Smirbirkoff</a:Modifier>
 <c:Object1>
-<o:UseCase Ref="o74"/>
+<o:UseCase Ref="o64"/>
 </c:Object1>
 <c:Object2>
-<o:Actor Ref="o60"/>
+<o:Actor Ref="o52"/>
 </c:Object2>
 </o:UseCaseAssociation>
 </c:UseCaseAssociations>
 <c:TargetModels>
-<o:TargetModel Id="o75">
+<o:TargetModel Id="o65">
 <a:ObjectID>86AFB8FD-DC5A-4F7A-83EA-D4E8E0532572</a:ObjectID>
 <a:Name>Java</a:Name>
 <a:Code>Java</a:Code>
@@ -2598,7 +2430,7 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Shortcut Ref="o3"/>
 </c:SessionShortcuts>
 </o:TargetModel>
-<o:TargetModel Id="o76">
+<o:TargetModel Id="o66">
 <a:ObjectID>2E180E5F-49F4-4681-8136-3211140FED23</a:ObjectID>
 <a:Name>WSDL for Java</a:Name>
 <a:Code>WSDLJava</a:Code>
