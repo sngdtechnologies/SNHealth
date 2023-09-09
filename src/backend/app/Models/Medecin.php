@@ -22,7 +22,9 @@ class Medecin extends Model
         'email',
         'telephone',
         'photo',
-        'bio',
+        'biographie',
+        'tarif',
+        'is_disponible',
         'sexe',
         'adresse',
         'date',
@@ -40,7 +42,8 @@ class Medecin extends Model
         'abonnements',
         'rendez_vous',
         'prescriptions',
-        'factures'
+        'factures',
+        'questions'
     ];
 
     /**
@@ -95,5 +98,14 @@ class Medecin extends Model
     public function categori()
     {
         return $this->belongsTo(Categori::class);
+    }
+
+    /**
+     * Summary of questions
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function questions()
+    {
+        return $this->hasMany(Question::class);
     }
 }

@@ -38,7 +38,8 @@ class DatabaseSeeder extends Seeder
             PrescriptionSeeder::class,
             DossierMedicalSeeder::class,
             PubliciteSeeder::class,
-            LogSeeder::class
+            LogSeeder::class,
+            QuestionSeeder::class
         ]);
     }
 }

@@ -9,13 +9,20 @@ import { Button } from 'primereact/button';
 import { useEventListener } from 'primereact/hooks';
 import { ConfirmPopup } from 'primereact/confirmpopup';
 import DynamicDialog from './dynamicDialog';
+import { useAppDispatch, useAppSelector } from '../../../config/store';
+import { getAllQuestion } from '../search.reducer';
 
 export const ItemSearch = (props: any) => {
+    const dispatch = useAppDispatch();
+    const conversationAnswer = useAppSelector(state => state.search.questions);
+    const loadingQestion = useAppSelector(state => state.search.loadingQuestion);
+    
     const t = useTranslation('placeholder', {i18n}).t;
     const elementRef = useRef(null);
     const buttonEl = useRef<any>(null);
 
     const data = props.data;
+    const medecinId = data.id;
     const className = props.className ? ' ' + props.className : '';
     const name = data.nom + ' ' + data.prenom;
     const category = data.categoriTitle;
@@ -38,6 +45,10 @@ export const ItemSearch = (props: any) => {
     };
 
     useEffect(() => {
+        console.log('conversationAnswer', conversationAnswer);
+    }, [conversationAnswer])
+    
+    useEffect(() => {
         console.log('isVisibleAviskfldfkdkf  df', isVisibleAvis)
     }, [isVisibleAvis])
 
@@ -50,6 +61,7 @@ export const ItemSearch = (props: any) => {
     }
     
     const onClick = () => {
+        dispatch(getAllQuestion({medecinId}));
         setDisplayResponsive(true);
     }
 
@@ -90,24 +102,6 @@ export const ItemSearch = (props: any) => {
             unbindMouseLeaveListener();
         };
     }, [bindMouseEnterListener, bindMouseLeaveListener, unbindMouseEnterListener, unbindMouseLeaveListener]);
-    
-    const conversationAnswer = [
-        {
-            id: 1,
-            name: "Quelles sont vos symptôme ?",
-            isAnswer: true
-        }, 
-        {
-            id: 2,
-            name: "Quelles sont vos antécédant médicaux ?",
-            isAnswer: true
-        },
-        {
-            id: 3,
-            name: "J'ai besoin de l'heure de votre dèrnier repas",
-            isAnswer: true
-        } 
-    ];
 
     return (
         <div className={ classNames("border-round-xl shadow-2 pb-2", className) } style={{ background: "var(--style-cards-fancy-bg)", border: "1px solid rgba(255, 255, 255, 0.1)", backgroundBlendMode: "normal, color-dodge"}}>
@@ -149,11 +143,13 @@ export const ItemSearch = (props: any) => {
                     <Button onClick={handleChangeIsVisibleAvis} icon="pi pi-thumbs-up-fill" className='text-xs' severity="info" rounded text raised aria-label="note" />
                 </div>
             </div>
+            
             <Avis onChange={onChangeAvis} onClick={handleChangeIsVisibleAvis} isVisibleAvis={isVisibleAvis}/>
 
             <DynamicDialog 
                 displayResponsive={displayResponsive}
                 conversationAnswer={conversationAnswer}
+                id={medecinId}
                 name={name}
                 category={category}
                 image={image}

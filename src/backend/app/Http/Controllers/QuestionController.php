@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tarif;
-use App\Http\Requests\StoreTarifRequest;
-use App\Http\Requests\UpdateTarifRequest;
+use App\Models\Question;
+use App\Http\Requests\StoreQuestionRequest;
+use App\Http\Requests\UpdateQuestionRequest;
+use Illuminate\Http\Response;
+use Illuminate\Http\Request;
 
-class TarifController extends Controller
+class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +16,14 @@ class TarifController extends Controller
     public function index()
     {
         //
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function all(Request $request): Response
+    {
+        return response(question()::whereMedecinId($request->medecin)->get(), 200);
     }
 
     /**
@@ -27,7 +37,7 @@ class TarifController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTarifRequest $request)
+    public function store(StoreQuestionRequest $request)
     {
         //
     }
@@ -35,7 +45,7 @@ class TarifController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Tarif $tarif)
+    public function show(Question $question)
     {
         //
     }
@@ -43,7 +53,7 @@ class TarifController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Tarif $tarif)
+    public function edit(Question $question)
     {
         //
     }
@@ -51,7 +61,7 @@ class TarifController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTarifRequest $request, Tarif $tarif)
+    public function update(UpdateQuestionRequest $request, Question $question)
     {
         //
     }
@@ -59,7 +69,7 @@ class TarifController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Tarif $tarif)
+    public function destroy(Question $question)
     {
         //
     }

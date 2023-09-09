@@ -14,12 +14,12 @@ use App\Models\Notification;
 use App\Models\Patient;
 use App\Models\Prescription;
 use App\Models\Publicite;
+use App\Models\Question;
 use App\Models\Rappel;
 use App\Models\RendezVous;
 use App\Models\Role;
 use App\Models\RoleMenu;
 use App\Models\Symptome;
-use App\Models\Tarif;
 use App\Models\User;
 
 function abonnement($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Abonnement : (($comparator == null && $value == null) ? Abonnement::find($name) : Abonnement::where($name, $comparator, $value)->first()); }
@@ -35,12 +35,12 @@ function notification($name = null, $comparator = null, $value = null) { return 
 function patient($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Patient : (($comparator == null && $value == null) ? Patient::find($name) : Patient::where($name, $comparator, $value)->first()); }
 function prescription($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Prescription : (($comparator == null && $value == null) ? Prescription::find($name) : Prescription::where($name, $comparator, $value)->first()); }
 function publicite($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Publicite : (($comparator == null && $value == null) ? Publicite::find($name) : Publicite::where($name, $comparator, $value)->first()); }
+function question($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Question : (($comparator == null && $value == null) ? Question::find($name) : Question::where($name, $comparator, $value)->first()); }
 function rappel($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Rappel : (($comparator == null && $value == null) ? Rappel::find($name) : Rappel::where($name, $comparator, $value)->first()); }
 function rendezVous($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new RendezVous : (($comparator == null && $value == null) ? RendezVous::find($name) : RendezVous::where($name, $comparator, $value)->first()); }
 function role($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Role : (($comparator == null && $value == null) ? Role::find($name) : Role::where($name, $comparator, $value)->first()); }
 function roleMenu($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new RoleMenu : (($comparator == null && $value == null) ? RoleMenu::find($name) : RoleMenu::where($name, $comparator, $value)->first()); }
 function symptome($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Symptome : (($comparator == null && $value == null) ? Symptome::find($name) : Symptome::where($name, $comparator, $value)->first()); }
-function tarif($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new Tarif : (($comparator == null && $value == null) ? Tarif::find($name) : Tarif::where($name, $comparator, $value)->first()); }
 function user($name = null, $comparator = null, $value = null) { return ($name == null && $comparator == null && $value == null) ? new User : (($comparator == null && $value == null) ? User::find($name) : User::where($name, $comparator, $value)->first()); }
 
 if (!function_exists('get_setting')) {

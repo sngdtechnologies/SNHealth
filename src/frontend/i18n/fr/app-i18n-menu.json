@@ -43,13 +43,16 @@
       "configuration": {
         "tarif": "Tarif"
       },
+      "dashboard": "Dashboard",
+      "inbox": "Inbox",
       "notification": "Notification",
       "rapport": "Rapport",
       "suivie": "Suivre mes patients"
     },
     "medecinConfig": {
       "tarif": "Mes tarifs",
-      "title": "Configuration"
+      "title": "Configuration",
+      "rappel": "Rappel"
     }
   }
 }

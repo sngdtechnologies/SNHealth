@@ -29,14 +29,8 @@ class Categori extends Model
     ];
 
     protected $cascadeDeletes = [
-        'tarif',
         'medecin'
     ];
-
-    public function tarif()
-    {
-        return $this->hasOne(Tarif::class);
-    }
 
     public function medecin()
     {

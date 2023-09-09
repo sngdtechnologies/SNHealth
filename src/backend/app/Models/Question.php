@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Dyrynda\Database\Support\CascadeSoftDeletes;
 
-class Tarif extends Model
+class Question extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -15,10 +15,8 @@ class Tarif extends Model
 
     protected $fillable = [
         'id',
-        'categori_id',
-        'code_prestation',
-        'libelle_prestation',
-        'prix_unitaire',
+        'medecin_id',
+        'intitule',
         'date',
         'statut',
         'commentaire'
@@ -32,12 +30,8 @@ class Tarif extends Model
 
     protected $cascadeDeletes = [];
 
-    /**
-     * Summary of categori
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function categori()
+    public function medecin()
     {
-        return $this->belongsTo(Categori::class);
+        return $this->belongsTo(Medecin::class);
     }
 }

@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import React from 'react';
-import { ChildContainerProps } from '../../../types/types';
+import { ChildContainerProps } from '../../types/types';
 
 const Layout = ({ children }: ChildContainerProps) => {
     

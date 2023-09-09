@@ -7,13 +7,15 @@ import { toast } from 'react-toastify';
 const initialState = {
   loading: false,
   loadingSearch: false,
+  loadingQuestion: false,
   errorMessage: null,
   entities: [],
   entity: {},
   updating: false,
   totalItems: 0,
   updateSuccess: false,
-  categoris: []
+  categoris: [],
+  questions: []
 };
 
 const apiUrl = '/api/patient';
@@ -30,6 +32,13 @@ export const getAllCategori = createAsyncThunk(
   'patient/fetch_get_all_categori', 
   async () => {
     return axios.get(`/api/categoris/all`);
+  }, { serializeError: serializeAxiosError }
+);
+
+export const getAllQuestion = createAsyncThunk(
+  'patient/fetch_get_all_question', 
+  async (param: any) => {
+    return axios.get(`/api/questions/all?medecin=${param.medecinId}`);
   }, { serializeError: serializeAxiosError }
 );
 
@@ -72,6 +81,14 @@ export const searchSlice = createSlice({
           categoris: action.payload.data
         };
       })
+      .addMatcher(isFulfilled(getAllQuestion), (state, action: any) => {
+        // console.log('action.payload', action.payload);
+        return {
+          ...state,
+          loadingQuestion: false,
+          questions: action.payload.data
+        };
+      })
       .addMatcher(isPending(getMedecinSearch), (state: any ) => {
         state.errorMessage = null;
         state.updateSuccess = false;
@@ -82,7 +99,12 @@ export const searchSlice = createSlice({
         state.updateSuccess = false;
         state.loading = true;
       })
-      .addMatcher(isRejected(getMedecinSearch, getAllCategori), (state, action: any ) => {
+      .addMatcher(isPending(getAllQuestion), (state: any ) => {
+        state.errorMessage = null;
+        state.updateSuccess = false;
+        state.loadingQuestion = true;
+      })
+      .addMatcher(isRejected(getMedecinSearch, getAllCategori, getAllQuestion), (state, action: any ) => {
         state.errorMessage = action.payload;
       });
   },

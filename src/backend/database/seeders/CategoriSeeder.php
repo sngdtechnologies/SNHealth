@@ -27,7 +27,6 @@ class CategoriSeeder extends Seeder
                 ['title' => 'Psychiatrie', 'description' => "S'occupe des maladies mentales, des troubles émotionnels et du bien-être mental."],
                 ['title' => 'Gastro-entérologie', 'description' => "Se consacrant aux maladies du système digestif, y compris l'estomac, les intestins et le foie"]
             ))
-            ->hasTarif(1)
             ->create();
     }
 }

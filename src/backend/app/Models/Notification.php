@@ -15,16 +15,14 @@ class Notification extends Model
 
     protected $fillable = [
         'id',
-        'user_id',
         'sender_id',
         'receipt_id',
         'type',
         'objet',
-        'content',
         'message',
-        'telephone',
-        'email',
         'motif',
+        'is_archive',
+        'is_read',
         'date',
         'statut',
         'commentaire'

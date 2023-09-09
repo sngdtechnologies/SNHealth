@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tarifs', function (Blueprint $table) {
+        Schema::create('questions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('categori_id')->unique()->nullable()->constrained('categoris')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('code_prestation', 254)->nullable();
-            $table->string('libelle_prestation', 254)->nullable();
-            $table->integer('prix_unitaire', false, false)->length(12)->nullable();
+            $table->foreignId('medecin_id')->nullable()->constrained('medecins')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('intitule', 254)->nullable();
             $table->string('statut', 254)->nullable();
             $table->string('commentaire', 254)->nullable();
             $table->dateTime('date')->nullable();
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tarifs');
+        Schema::dropIfExists('questions');
     }
 };

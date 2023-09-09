@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categori;
 use App\Http\Requests\StoreCategoriRequest;
 use App\Http\Requests\UpdateCategoriRequest;
+use Illuminate\Http\Response;
 
 class CategoriController extends Controller
 {
@@ -19,7 +20,7 @@ class CategoriController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function all()
+    public function all(): Response
     {
         return response(categori()::all(), 200);
     }

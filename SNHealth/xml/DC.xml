@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_kkgsMBeLEd60N8ipLbB6nA" name="Diagramme de classes UML_1">
+  <packagedElement xmi:type="uml:Association" xmi:id="_JDWqUE8NEe6_FKdPctsKNA" name="Association_2" memberEnd="_JFaf0E8NEe6_FKdPctsKNA _JU9XsE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JU9XsE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JFaf0E8NEe6_FKdPctsKNA" name="user_role" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JDWqUE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JUW6wE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JUO-8E8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JU9XsE8NEe6_FKdPctsKNA" name="role_user" visibility="public" type="_Jw9-QE8NEe6_FKdPctsKNA" association="_JDWqUE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JVdG8E8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JVcf4E8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JVkbsE8NEe6_FKdPctsKNA" name="Association_5" memberEnd="_JVlp0E8NEe6_FKdPctsKNA _JVs-kE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JVs-kE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JVlp0E8NEe6_FKdPctsKNA" name="role_menu" visibility="public" type="_Jw9-QE8NEe6_FKdPctsKNA" association="_JVkbsE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JVnfAU8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JVnfAE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JVs-kE8NEe6_FKdPctsKNA" name="menu_user" visibility="public" type="_J8kxUE8NEe6_FKdPctsKNA" association="_JVkbsE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JVyeIE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JVx3EE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JV3WoE8NEe6_FKdPctsKNA" name="Association_9" memberEnd="_JV4kwE8NEe6_FKdPctsKNA _JWCVwE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JWCVwE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JV4kwE8NEe6_FKdPctsKNA" name="user_avis" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JV3WoE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JV7oEE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JV7BAE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JWCVwE8NEe6_FKdPctsKNA" name="avis_user" visibility="public" type="_J3QzgE8NEe6_FKdPctsKNA" association="_JV3WoE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWGnME8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JWGAIE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JWNU4E8NEe6_FKdPctsKNA" name="Association_10" memberEnd="_JWUpoE8NEe6_FKdPctsKNA _JWfBsE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JWfBsE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JWUpoE8NEe6_FKdPctsKNA" name="plannifier" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JWNU4E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWXs8U8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JWXs8E8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JWfBsE8NEe6_FKdPctsKNA" name="est_plannifer" visibility="public" type="_J0elQE8NEe6_FKdPctsKNA" association="_JWNU4E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWkhQE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JWj6ME8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JWoysE8NEe6_FKdPctsKNA" name="Association_14" memberEnd="_JWqA0E8NEe6_FKdPctsKNA _JWyjsE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JWyjsE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JWqA0E8NEe6_FKdPctsKNA" name="user_history" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JWoysE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JWrO8U8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JWrO8E8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JWyjsE8NEe6_FKdPctsKNA" name="history_user" visibility="public" type="_KWEPYE8NEe6_FKdPctsKNA" association="_JWoysE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JW4DQE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JW3cME8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JW8UsE8NEe6_FKdPctsKNA" name="Association_15" memberEnd="_JW-w8E8NEe6_FKdPctsKNA _JXIh8E8NEe6_FKdPctsKNA" navigableOwnedEnd="_JXIh8E8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JW-w8E8NEe6_FKdPctsKNA" name="envoyer" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JW8UsE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JXB0QE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JXBNME8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JXIh8E8NEe6_FKdPctsKNA" name="est_envoyer" visibility="public" type="_J-_zME8NEe6_FKdPctsKNA" association="_JW8UsE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JXThEE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JXS6AE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JXaOwE8NEe6_FKdPctsKNA" name="Association_16" memberEnd="_JXbc4E8NEe6_FKdPctsKNA _JXmcAE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JXmcAE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JXbc4E8NEe6_FKdPctsKNA" name="plannifer_rv" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JXaOwE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JXg8cE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JXgVYE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JXmcAE8NEe6_FKdPctsKNA" name="est_plannifier_rv" visibility="public" type="_J5rOUE8NEe6_FKdPctsKNA" association="_JXaOwE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JXr7kE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JXrUgE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JXvl8E8NEe6_FKdPctsKNA" name="Association_17" memberEnd="_JXxbIE8NEe6_FKdPctsKNA _JX_dkE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JX_dkE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JXxbIE8NEe6_FKdPctsKNA" name="medecin_abonne" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JXvl8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JX2ToE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JX1skE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JX_dkE8NEe6_FKdPctsKNA" name="abonne_medecin" visibility="public" type="_KJ9GAE8NEe6_FKdPctsKNA" association="_JXvl8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYFkME8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYE9IE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JYIngE8NEe6_FKdPctsKNA" name="Association_18" memberEnd="_JYJ1oE8NEe6_FKdPctsKNA _JYQjUE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JYQjUE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JYJ1oE8NEe6_FKdPctsKNA" name="medecin_prescript" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JYIngE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYLDwU8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYLDwE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JYQjUE8NEe6_FKdPctsKNA" name="prescript_medecin" visibility="public" type="_KHExIE8NEe6_FKdPctsKNA" association="_JYIngE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYUNsU8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYUNsE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JYa7YE8NEe6_FKdPctsKNA" name="Association_19" memberEnd="_JYcwkE8NEe6_FKdPctsKNA _JYkFUE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JYkFUE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JYcwkE8NEe6_FKdPctsKNA" name="patient_prescript" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JYa7YE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYfz4U8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYfz4E8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JYkFUE8NEe6_FKdPctsKNA" name="prescript_patient" visibility="public" type="_KHExIE8NEe6_FKdPctsKNA" association="_JYa7YE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYmhkE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYl6gE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JYqL8E8NEe6_FKdPctsKNA" name="Association_20" memberEnd="_JYraEE8NEe6_FKdPctsKNA _JYzV4E8NEe6_FKdPctsKNA" navigableOwnedEnd="_JYzV4E8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JYraEE8NEe6_FKdPctsKNA" name="patient_abonne" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JYqL8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JYudYE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JYt2UE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JYzV4E8NEe6_FKdPctsKNA" name="abonne_patient" visibility="public" type="_KJ9GAE8NEe6_FKdPctsKNA" association="_JYqL8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JY1LEE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JY0kAE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JY8f0E8NEe6_FKdPctsKNA" name="Association_21" memberEnd="_JY9t8E8NEe6_FKdPctsKNA _JZFpwE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JZFpwE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JY9t8E8NEe6_FKdPctsKNA" name="patient_rende" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JY8f0E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZAxQU8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZAxQE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JZFpwE8NEe6_FKdPctsKNA" name="rende_patient" visibility="public" type="_J5rOUE8NEe6_FKdPctsKNA" association="_JY8f0E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZHe8U8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZHe8E8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JZNlkE8NEe6_FKdPctsKNA" name="Association_22" memberEnd="_JZOzsE8NEe6_FKdPctsKNA _JZXWkE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JZXWkE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JZOzsE8NEe6_FKdPctsKNA" name="patient_user" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JZNlkE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZQo4E8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZQB0E8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JZXWkE8NEe6_FKdPctsKNA" name="user_patient" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JZNlkE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZZLwE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZYksE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JZc2IE8NEe6_FKdPctsKNA" name="Association_23" memberEnd="_JZeEQE8NEe6_FKdPctsKNA _JZkx8E8NEe6_FKdPctsKNA" navigableOwnedEnd="_JZkx8E8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JZeEQE8NEe6_FKdPctsKNA" name="avoir_compte" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JZc2IE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZgggU8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZgggE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JZkx8E8NEe6_FKdPctsKNA" name="est_lier" visibility="public" type="_JhLOwE8NEe6_FKdPctsKNA" association="_JZc2IE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZpqcE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZpDYE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JZtU0E8NEe6_FKdPctsKNA" name="Association_24" memberEnd="_JZt74E8NEe6_FKdPctsKNA _JZ2ewE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JZ2ewE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JZt74E8NEe6_FKdPctsKNA" name="patient_doc" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JZtU0E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZvxEU8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZvxEE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JZ2ewE8NEe6_FKdPctsKNA" name="doc_patient" visibility="public" type="_KDRPME8NEe6_FKdPctsKNA" association="_JZtU0E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JZ7XQU8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JZ7XQE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JZ-akE8NEe6_FKdPctsKNA" name="Association_25" memberEnd="_JZ_BoE8NEe6_FKdPctsKNA _JaNEEE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JaNEEE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JZ_BoE8NEe6_FKdPctsKNA" name="categori_medecin" visibility="public" type="_KiQRQE8NEe6_FKdPctsKNA" association="_JZ-akE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JaDTEU8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JaDTEE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JaNEEE8NEe6_FKdPctsKNA" name="medecin_categori" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JZ-akE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JaO5QE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JaOSME8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JaVm8E8NEe6_FKdPctsKNA" name="Association_26" memberEnd="_JaWOAE8NEe6_FKdPctsKNA _JaeJ0E8NEe6_FKdPctsKNA" navigableOwnedEnd="_JaeJ0E8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JaWOAE8NEe6_FKdPctsKNA" name="patient_sympt" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_JaVm8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JaYqQE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JaYDME8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JaeJ0E8NEe6_FKdPctsKNA" name="sympt_patient" visibility="public" type="_KlSXIE8NEe6_FKdPctsKNA" association="_JaVm8E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JajpYE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JajCUE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Jan60E8NEe6_FKdPctsKNA" name="Association_27" memberEnd="_JapI8E8NEe6_FKdPctsKNA _Jav2oE8NEe6_FKdPctsKNA" navigableOwnedEnd="_Jav2oE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JapI8E8NEe6_FKdPctsKNA" name="medecin_facture" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_Jan60E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Jaq-IE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JaqXEE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Jav2oE8NEe6_FKdPctsKNA" name="facture_medecin" visibility="public" type="_KoLTEE8NEe6_FKdPctsKNA" association="_Jan60E8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ja1WME8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ja0vIE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Ja5AkE8NEe6_FKdPctsKNA" name="Association_28" memberEnd="_Ja61wE8NEe6_FKdPctsKNA _JbBjcE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JbBjcE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_Ja61wE8NEe6_FKdPctsKNA" name="" visibility="public" type="_KR_AoE8NEe6_FKdPctsKNA" association="_Ja5AkE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ja8D4U8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ja8D4E8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JbBjcE8NEe6_FKdPctsKNA" name="" visibility="public" type="_KoLTEE8NEe6_FKdPctsKNA" association="_Ja5AkE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JbCxkU8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JbCxkE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JbHDAE8NEe6_FKdPctsKNA" name="Association_29" memberEnd="_JbI4ME8NEe6_FKdPctsKNA _JbRbEE8NEe6_FKdPctsKNA" navigableOwnedEnd="_JbRbEE8NEe6_FKdPctsKNA">
+    <ownedEnd xmi:id="_JbI4ME8NEe6_FKdPctsKNA" name="" visibility="public" type="_KNuLsE8NEe6_FKdPctsKNA" association="_JbHDAE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JbKtYE8NEe6_FKdPctsKNA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JbKGUE8NEe6_FKdPctsKNA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JbRbEE8NEe6_FKdPctsKNA" name="" visibility="public" type="_Kr-N8E8NEe6_FKdPctsKNA" association="_JbHDAE8NEe6_FKdPctsKNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JbWTkE8NEe6_FKdPctsKNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JbVsgE8NEe6_FKdPctsKNA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JhLOwE8NEe6_FKdPctsKNA" name="Utilisateur">
+    <ownedAttribute xmi:id="_JsML8E8NEe6_FKdPctsKNA" name="user_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Jt2Y0E8NEe6_FKdPctsKNA" name="nom" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Judc0E8NEe6_FKdPctsKNA" name="prenom" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JuqRIE8NEe6_FKdPctsKNA" name="email" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Ju0pME8NEe6_FKdPctsKNA" name="telephone" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JvBdgE8NEe6_FKdPctsKNA" name="photo" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JvSjQE8NEe6_FKdPctsKNA" name="pseudo" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JvewgE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JvuBEE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Jv7ccE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Jta7AE8NEe6_FKdPctsKNA" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_Jt9tkE8NEe6_FKdPctsKNA" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_JvjpAE8NEe6_FKdPctsKNA" name="Date"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Jw9-QE8NEe6_FKdPctsKNA" name="Role">
+    <ownedAttribute xmi:id="_JyWeUE8NEe6_FKdPctsKNA" name="role_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JypZQE8NEe6_FKdPctsKNA" name="nom" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JywuAE8NEe6_FKdPctsKNA" name="description" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Jy-JYE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JzGsQE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_JzOoEE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J0elQE8NEe6_FKdPctsKNA" name="Rappel">
+    <ownedAttribute xmi:id="_J1X9IE8NEe6_FKdPctsKNA" name="rappel_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J1kKYE8NEe6_FKdPctsKNA" name="heure" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J1vJgE8NEe6_FKdPctsKNA" name="description" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J15hkE8NEe6_FKdPctsKNA" name="preference" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J2G88E8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J2NqoE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J2W0kE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J3QzgE8NEe6_FKdPctsKNA" name="Avis">
+    <ownedAttribute xmi:id="_J4MAkE8NEe6_FKdPctsKNA" name="avis_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J4Zb8E8NEe6_FKdPctsKNA" name="note" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J4lpME8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J4vaME8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J42u8E8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J5rOUE8NEe6_FKdPctsKNA" name="Rendez_vous">
+    <ownedAttribute xmi:id="_J6qs0E8NEe6_FKdPctsKNA" name="rendez_vous_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J63hIE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J6-14E8NEe6_FKdPctsKNA" name="motif" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J7PUkE8NEe6_FKdPctsKNA" name="conterendu" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J7dXAE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J7nIAE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J8kxUE8NEe6_FKdPctsKNA" name="Menu">
+    <ownedAttribute xmi:id="_J9eJME8NEe6_FKdPctsKNA" name="menu_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J9rkkE8NEe6_FKdPctsKNA" name="titre" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J93x0E8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J-CJ4E8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_J-LT0E8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J-_zME8NEe6_FKdPctsKNA" name="Notification">
+    <ownedAttribute xmi:id="_KAY6UE8NEe6_FKdPctsKNA" name="notification_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KAnj0E8NEe6_FKdPctsKNA" name="type" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KA3bcE8NEe6_FKdPctsKNA" name="message" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KBHTEE8NEe6_FKdPctsKNA" name="objet" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KBUHYE8NEe6_FKdPctsKNA" name="motif" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KBcDME8NEe6_FKdPctsKNA" name="expediteur" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KBqssE8NEe6_FKdPctsKNA" name="destinataire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KB1r0E8NEe6_FKdPctsKNA" name="est_archiver" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KCDuQE8NEe6_FKdPctsKNA" name="est_lu" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KCPUcE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KCYeYE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KCfMEE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KDRPME8NEe6_FKdPctsKNA" name="Dossier_medical">
+    <ownedAttribute xmi:id="_KEZ3oE8NEe6_FKdPctsKNA" name="dossier_medical_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KEohIE8NEe6_FKdPctsKNA" name="symptome" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KE0HUE8NEe6_FKdPctsKNA" name="antecedant_medicaux" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KFDX4E8NEe6_FKdPctsKNA" name="diagnostic" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KFQzQE8NEe6_FKdPctsKNA" name="prescription" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KFk8UE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KFwigE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KF8IsE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KHExIE8NEe6_FKdPctsKNA" name="Prescription">
+    <ownedAttribute xmi:id="_KIDBgE8NEe6_FKdPctsKNA" name="prescription_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KIS5IE8NEe6_FKdPctsKNA" name="intituler" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KIhioE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KIu-AE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KI5WEE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KJ9GAE8NEe6_FKdPctsKNA" name="Abonnement">
+    <ownedAttribute xmi:id="_KLPfcE8NEe6_FKdPctsKNA" name="abonnement_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KLglME8NEe6_FKdPctsKNA" name="type" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KLpvIE8NEe6_FKdPctsKNA" name="date_debut" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KL4_sE8NEe6_FKdPctsKNA" name="date_fin" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KMJeYE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KMVroE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KMhR0E8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KNuLsE8NEe6_FKdPctsKNA" name="Medecin">
+    <ownedAttribute xmi:id="_KPQcwE8NEe6_FKdPctsKNA" name="medecin_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KPd4IE8NEe6_FKdPctsKNA" name="nom" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KPkl0E8NEe6_FKdPctsKNA" name="prenom" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KPtIsE8NEe6_FKdPctsKNA" name="email" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KPz2YE8NEe6_FKdPctsKNA" name="telephone" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KP8ZQE8NEe6_FKdPctsKNA" name="adresse" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KQLp0E8NEe6_FKdPctsKNA" name="sexe" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KQZsQE8NEe6_FKdPctsKNA" name="tarif" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KQoVwE8NEe6_FKdPctsKNA" name="disponibilite" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KQ1KEE8NEe6_FKdPctsKNA" name="photo" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KQ-7EE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KRIFAE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KRPZwE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KR_AoE8NEe6_FKdPctsKNA" name="Patient">
+    <ownedAttribute xmi:id="_KTTPQE8NEe6_FKdPctsKNA" name="patient_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KTgDkE8NEe6_FKdPctsKNA" name="nom" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KTpNgE8NEe6_FKdPctsKNA" name="prenom" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KTxwYE8NEe6_FKdPctsKNA" name="date_naissance" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KT9WkE8NEe6_FKdPctsKNA" name="lieu_naissance" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KUKK4E8NEe6_FKdPctsKNA" name="sexe" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KUSGsE8NEe6_FKdPctsKNA" name="adresse" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KUapkE8NEe6_FKdPctsKNA" name="telephone" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KUgwME8NEe6_FKdPctsKNA" name="est_abonne" visibility="private" type="_KUkakE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KUvZsE8NEe6_FKdPctsKNA" name="photo" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KU5KsE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KVCUoE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KVMssE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KUkakE8NEe6_FKdPctsKNA" name="boolean"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KWEPYE8NEe6_FKdPctsKNA" name="Historique">
+    <ownedAttribute xmi:id="_KXvqYE8NEe6_FKdPctsKNA" name="historique_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KX9s0E8NEe6_FKdPctsKNA" name="action" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KYKhIE8NEe6_FKdPctsKNA" name="note" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KYTrEE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KYeDIE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KYn0IE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KZwckE8NEe6_FKdPctsKNA" name="Publicite">
+    <ownedAttribute xmi:id="_KbCO8E8NEe6_FKdPctsKNA" name="publicite_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KbTUsE8NEe6_FKdPctsKNA" name="titre" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KbbQgE8NEe6_FKdPctsKNA" name="description" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KblBgE8NEe6_FKdPctsKNA" name="image" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kb3VYE8NEe6_FKdPctsKNA" name="date_debut" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KcBGYE8NEe6_FKdPctsKNA" name="date_fin" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KcMFgE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KcV2gE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kcj48E8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KdzPEE8NEe6_FKdPctsKNA" name="Log">
+    <ownedAttribute xmi:id="_KgGVIE8NEe6_FKdPctsKNA" name="log_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KgU-oE8NEe6_FKdPctsKNA" name="type" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kgf9wE8NEe6_FKdPctsKNA" name="detail" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KgwccE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kg6NcE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KhFzoE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KiQRQE8NEe6_FKdPctsKNA" name="Categori">
+    <ownedAttribute xmi:id="_KjSzEE8NEe6_FKdPctsKNA" name="id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KjhckE8NEe6_FKdPctsKNA" name="title" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KjuQ4E8NEe6_FKdPctsKNA" name="description" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kj86YE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KkGEUE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KkTfsE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KlSXIE8NEe6_FKdPctsKNA" name="Symptome">
+    <ownedAttribute xmi:id="_KmU48E8NEe6_FKdPctsKNA" name="symptome_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KmjicE8NEe6_FKdPctsKNA" name="titre" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KmvvsE8NEe6_FKdPctsKNA" name="description" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Km6HwE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KnJYUE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KnUXcE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KoLTEE8NEe6_FKdPctsKNA" name="Facture">
+    <ownedAttribute xmi:id="_KpPDAE8NEe6_FKdPctsKNA" name="facture_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KqOhgE8NEe6_FKdPctsKNA" name="montant" visibility="private" type="_KqUBEE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kqg1YE8NEe6_FKdPctsKNA" name="liste_prestation" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KqtpsE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kq2zoE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_Kq_WgE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KqUBEE8NEe6_FKdPctsKNA" name="long"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Kr-N8E8NEe6_FKdPctsKNA" name="Question">
+    <ownedAttribute xmi:id="_Ksz7cE8NEe6_FKdPctsKNA" name="question_id" visibility="private" type="_Jta7AE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KtB94E8NEe6_FKdPctsKNA" name="intitule" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KtNkEE8NEe6_FKdPctsKNA" name="statut" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KtX8IE8NEe6_FKdPctsKNA" name="date" visibility="private" type="_JvjpAE8NEe6_FKdPctsKNA"/>
+    <ownedAttribute xmi:id="_KthtIE8NEe6_FKdPctsKNA" name="commentaire" visibility="private" type="_Jt9tkE8NEe6_FKdPctsKNA"/>
+  </packagedElement>
+</uml:Model>

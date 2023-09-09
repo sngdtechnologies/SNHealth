@@ -3,6 +3,8 @@ import { Skeleton } from "primereact/skeleton"
 import { Controller, useForm } from "react-hook-form";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
+import { Editor } from "primereact/editor";
+import ContentMessage from "./contentMessage";
 
 const ModalChatBody = (props: any) => {
     const conversationAnswer = props.conversationAnswer ? props.conversationAnswer : [];
@@ -30,25 +32,37 @@ const ModalChatBody = (props: any) => {
         setAnswer(answer + 1);
     }
     
-    const messageReceiver = (msg: any) => {
+    const messageReceiver = (msg: any, i: number) => {
         return <>
-            <div className="flex justify-content-start">
+            <div className={"flex justify-content-start receiver-" + i}>
                 <span className='border-1 border-green-500 shadow-4 border-round-right border-round-bottom px-2 py-2 bg-green-500 max-w-20rem'>
-                    { msg }
+                    <ContentMessage message={msg}/>
                 </span>
             </div>
         </>
     }
 
-    const messageSender = (msg: any) => {
+    const messageSender = (msg: any, i: number) => {
         return <>
-            <div className="flex justify-content-end">
+            <div className={"flex justify-content-end sender-" + i}>
                 <span className='border-1 border-primary shadow-4 border-round-left border-round-bottom px-2 py-2 bg-primary max-w-20rem'>
-                    { msg }
+                    <ContentMessage message={msg}/>
                 </span>
             </div>
         </>
     }
+
+    // const renderHeader = () => {
+    //     return (
+    //         <span className="ql-formats">
+    //             <button className="ql-bold" aria-label="Bold"></button>
+    //             <button className="ql-italic" aria-label="Italic"></button>
+    //             <button className="ql-underline" aria-label="Underline"></button>
+    //         </span>
+    //     );
+    // };
+
+    // const header = renderHeader();
 
     const modalFooter = () => {
         return <>
@@ -59,20 +73,21 @@ const ModalChatBody = (props: any) => {
                         control={control}
                         rules={{ required: 'Value is required.' }}
                         render={({ field }) => (
-                            <InputTextarea
-                                id={field.name}
-                                {...field}
-                                className="pr-4"
-                                onChange={e => {
-                                    field.onChange(e.target.value);
-                                    setResponse(e.target.value);
-                                }}
-                                // rows={8} cols={8}
-                             />
+                            <Editor 
+                                id={field.name} 
+                                {...field} 
+                                value={field.value} 
+                                className="message pt-2"
+                                onTextChange={(e) => {
+                                    field.onChange(e.htmlValue);
+                                    setResponse(e.htmlValue);
+                                }} 
+                                // style={{ height: '220px' }} 
+                            />
                         )}
                     />
                 </div>
-                <Button onClick={handleSendMessage} icon="pi pi-send" className='text-xl mt-5 w-3rem' severity="info" rounded text raised aria-label="send"/>
+                <Button onClick={handleSendMessage} icon="pi pi-send" className='text-xl mt-5 w-3rem' severity="info" rounded text aria-label="send"/>
             </div>
         </>
     }
@@ -80,10 +95,10 @@ const ModalChatBody = (props: any) => {
     return <>
         <div className="chat flex flex-column w-full">
             <div className='chat-body px-2 flex flex-column h-full justify-content-between'>
-                <div className="flex flex-column justify-content-end h-full">
-                    { fill.map((m: any) => (
+                <div className="flex flex-column justify-content-end h-full text-sm">
+                    { fill.map((m: any, i: number) => (
                         <>
-                            { m.isAnswer ? messageReceiver(m.name) : messageSender(m.name) }
+                            { m.isAnswer ? messageReceiver(m.name, i) : messageSender(m.name, i) }
                             <div className="mt-4"></div>
                         </>
                     )) }

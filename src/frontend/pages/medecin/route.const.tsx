@@ -6,6 +6,8 @@ export const ROUTE_MEDECIN_RAPPEL = "/medecin/rappel";
 
 export const ROUTE_MEDECIN_COMPTE = "/medecin/compte";
 
+export const ROUTE_MEDECIN_INBOX = "/medecin/inbox";
+
 export const ROUTE_MEDECIN_NOTIFICATION = "/medecin/notification";
 
 export const ROUTE_MEDECIN_RAPPORT = "/medecin/rapport";

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoriController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Medecin\SearchController;
@@ -26,4 +27,10 @@ Route::prefix('categoris')->group(function () {
 
     // "/api/categoris/all"
     Route::get('/all', [CategoriController::class, 'all']);
+});
+
+Route::prefix('questions')->group(function () {
+
+    // "/api/categoris/all"
+    Route::get('/all', [QuestionController::class, 'all']);
 });

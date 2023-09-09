@@ -17,11 +17,10 @@ return new class extends Migration
             $table->string('receipt_id', 254)->nullable();
             $table->string('type', 254)->nullable();
             $table->string('objet', 254)->nullable();
-            $table->string('content', 254)->nullable();
-            $table->string('message', 254)->nullable();
-            $table->string('telephone', 254)->nullable();
-            $table->string('email', 254)->nullable();
+            $table->text('message')->nullable();
             $table->string('motif', 254)->nullable();
+            $table->boolean('is_archive')->nullable();
+            $table->boolean('is_read')->nullable();
             $table->string('statut', 254)->nullable();
             $table->string('commentaire', 254)->nullable();
             $table->dateTime('date')->nullable();
