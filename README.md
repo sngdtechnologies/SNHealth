@@ -1,12 +1,12 @@
-# SNHealth est une application web de télémédecine.
+# SNHealth is a telemedicine web application.
 
-## Ce projet à été développé en utilisant :
-- @Laravel pour le backend
-- @NextJs pour le frontend
-- @MySql pour la base de données
-- @Primereat pour le thème de design
+## This project has been developed using :
+- @Laravel for backend
+- @NextJs for frontend
+- @MySql for database
+- @Primereat design theme
 
 ## Fonctionnalités :
-- Téléconsultation
-- Télésurveillance
-- Recherche de professionel de santé
+- Teleconsultation
+- Telemonitoring
+- Healthcare professional search
